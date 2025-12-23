@@ -1,11 +1,7 @@
 # Built following this example: https://rokuk.org/projects/climateviz/
 # Animation: https://www.r-bloggers.com/2021/05/animated-graph-gif-with-gganimate-ggplot/
-
+total_start <- Sys.time()
 library(ncdf4)
-library(ggplot2)
-library(gganimate)
-library(gifski)
-library(reshape2)
 
 # # Open file
 # data <- nc_open("daily_stats_2024_temp.nc")
@@ -33,9 +29,11 @@ years <- c('2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016
 
 # Predefine the destination matrix columns
 ncols <- 5
-data_red <- matrix(NA, 0, ncols) 
 
 for (year in years) {
+  start_time <- Sys.time()
+  data_red <- matrix(NA, 0, ncols) 
+
   cat('Processing', year, '\n')
   
   # Get temperature data
@@ -44,6 +42,7 @@ for (year in years) {
   # Get the number of days for the year
   n_days <- temp_data$dim$valid_time$len
   temp <- ncvar_get(temp_data, "t2m") # Degrees Kelvin
+  temp <- (temp - 273.15) * 9/5 + 32 # Convert to Farenheit
   nc_close(temp_data)
 
   cat('Temp data read', '\n')
@@ -63,7 +62,7 @@ for (year in years) {
     week_ind_range <- (week_ind * 7 - 6):ifelse(week_ind == 52, n_days, (week_ind * 7))
     
     # Define the starting latitude parameters
-    lat_val <- -89.5
+    lat_val <- 89.5
     year_week <- paste0(year, '-', week_val)
     # Predefine a matrix to hold all the data for one week
     data_week <- matrix(NA, 0, ncols) 
@@ -91,7 +90,7 @@ for (year in years) {
       data_week <- rbind(data_week, data_lat)
       rm(data_lat)
       
-      lat_val <- lat_val + 1
+      lat_val <- lat_val - 1
     }
 
     # Add the week's data to the overall dataset and clear the memory
@@ -103,18 +102,44 @@ for (year in years) {
     week_val <- week_val + 1
   }
 
+  colnames(data_red) <- c('Lat', 'Lon', 'Year_Week', 'Temp', 'Precip')
+  file_name <- paste0('stats-', year, '.csv')
+  write.csv(data_red, file = file_name, row.names = FALSE)
+  run_time <- Sys.time() - start_time
+
   rm(temp)
   rm(precip)
   rm(temp_data)
   rm(precip_data)
-  cat(year, 'complete', '\n')
+  rm(data_red)
+  cat('Finished Year:', year, '- Runtime:', run_time, units(run_time), '\n')
 }
 
-colnames(data_red) <- c('Lat', 'Lon', 'Year_Week', 'Temp', 'Precip')
-write.csv(data_red, file = "agg_1x1_2015_2024_temp_precip.csv", row.names = FALSE)
-Sys.time()
-object_size_bytes <- object.size(data_red)
-print(format(object_size_bytes, units = "auto"))
 
 
+cat('Compiling Data', '\n')
+start_time <- Sys.time()
+data_fin <- matrix(NA, 0, ncols) 
+
+for (year in years) {
+  step_start <- Sys.time()
+  file_name <- paste0('stats-', year, '.csv')
+  dat <- read.csv(file_name)
+
+  data_fin <- rbind(data_fin, dat)
+
+  run_time <- Sys.time() - start_time
+  
+  rm(dat)
+  cat('Compiled Year:', year, '- Runtime:', run_time, units(run_time), '\n')
+}
+
+cat('Writing Table...')
+colnames(data_fin) <- c('Lat', 'Lon', 'Year_Week', 'Temp', 'Precip')
+write.csv(data_fin, file = 'agg_1x1_2015_2024_temp_precip.csv', row.names = FALSE)
+rm(data_fin)
+run_time <- Sys.time() - start_time
+total_run_time <- Sys.time() - total_start
+cat('Data Compilation Complete. Runtime:', run_time, units(run_time), '\n')
+cat('Data Aggregation Complete. Total Runtime:', total_run_time, units(total_run_time))
 

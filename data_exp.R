@@ -1,13 +1,31 @@
 dt <- read.csv('agg_1x1_2015_2024_temp_precip.csv')
 
-provo_lat <- 40
-provo_lon <- 248
+provo_lat <- 40.5
+provo_lon <- 248.5
 
-pro <- dt[which(dt$Lat == 40.5 & dt$Lon == 248.5), ]
+cin_lat <- 39.5
+cin_lon <- 360 - 84.5
 
-pro$week <- sub(".*-", "", pro$Year_Week)
+quito_lat <- -.5
+quito_lon <- 360 - 78.5
 
-plot(pro$week, pro$Temp)
+sydney_lat <- -33.5
+sydney_lon <- 151.5
+
+provo <- dt[which(dt$Lat == provo_lat & dt$Lon == provo_lon), ]
+cincinnati <- dt[which(dt$Lat == cin_lat & dt$Lon == cin_lon), ]
+quito <- dt[which(dt$Lat == quito_lat & dt$Lon == quito_lon), ]
+sydney <- dt[which(dt$Lat == sydney_lat & dt$Lon == sydney_lon), ]
+
+provo$week <- sub(".*-", "", provo$Year_Week)
+cincinnati$week <- sub(".*-", "", cincinnati$Year_Week)
+quito$week <- sub(".*-", "", quito$Year_Week)
+sydney$week <- sub(".*-", "", sydney$Year_Week)
+
+plot(provo$week, provo$Temp)
+plot(cincinnati$week, cincinnati$Temp)
+plot(quito$week, quito$Temp)
+plot(sydney$week, sydney$Temp)
 
 # Look at raw prior to agg: check temperature start/end dates per year
 # Check provo temps in raw data: do they look as expected?
