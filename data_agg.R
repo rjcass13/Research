@@ -3,33 +3,19 @@
 total_start <- Sys.time()
 library(ncdf4)
 
-# # Open file
-# data <- nc_open("daily_stats_2024_temp.nc")
-# print(data)
-
-# # Get vars
+# Variables in datasets
 # Temperature # Degrees Kelvin
 # Longitude # degrees east
 # Latitude # degrees north
 # Time # days since start of year
 
-# # Close file
-# nc_close(data)
-
-
-# # Provo: 40.25 N, 248.25 E (111.75 W)
-# start_date <- as.Date("2024-01-01")
-
-# provo_temp <- temp[248.25*4 + 1, 40.25*4 + 1, ]
-# plot(time + start_date, provo_temp)
-
-
-
+# Define range of included years
 years <- c('2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015')
 
 # Predefine the destination matrix columns
 ncols <- 5
 
+# For each year, extract and aggregate the data, then save it to a file
 for (year in years) {
   start_time <- Sys.time()
   data_red <- matrix(NA, 0, ncols) 
@@ -103,7 +89,7 @@ for (year in years) {
   }
 
   colnames(data_red) <- c('Lat', 'Lon', 'Year_Week', 'Temp', 'Precip')
-  file_name <- paste0('stats-', year, '.csv')
+  file_name <- paste0('stats_', year, '.csv')
   write.csv(data_red, file = file_name, row.names = FALSE)
   run_time <- Sys.time() - start_time
 
@@ -116,11 +102,12 @@ for (year in years) {
 }
 
 
-
+# Prep the final dataset
 cat('Compiling Data', '\n')
 start_time <- Sys.time()
 data_fin <- matrix(NA, 0, ncols) 
 
+# For each year, read the aggregated file and add it to the master set
 for (year in years) {
   step_start <- Sys.time()
   file_name <- paste0('stats-', year, '.csv')
