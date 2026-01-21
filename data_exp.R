@@ -4,8 +4,98 @@ library(dplyr)
 library(sf)
 library(rnaturalearth)
 library(rnaturalearthdata)
+library(splines)
 
-dt <- read.csv('agg_1x1_2015_2024_temp_precip.csv')
+# World Map with Temperature Overlay
+if (TRUE) {
+  # Get relevant data
+  data_2024 <- read.csv('stats_2024.csv')
+  week_1_2024 <- data_2024[which(data_2024$Week == '1'), ]
+  # Convert to -180 to 180 longitude frame
+  week_1_2024 <- week_1_2024 %>%
+    mutate(lon_adj = ifelse(Lon > 180, Lon - 360, Lon))
+
+  world_map <- map_data("world")
+  # 3. Create the plot with multiple layers
+  ggplot() +
+    # Add ocean/land background (optional)
+    geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+                fill = "lightblue", color = "gray80") +
+    # Add temperature tiles/raster
+    geom_tile(data = week_1_2024, aes(x = lon_adj, y = Lat, fill = Temp)) +
+    # Add world map outlines on top
+    geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+                fill = NA, color = "gray40", linewidth = 0.2) +
+    # Color scale for temperature
+    scale_fill_gradient2(low = "blue", mid = "yellow", high = "red",
+                        midpoint = 0, name = "Temperature (°C)") +
+    # Set aspect ratio
+    coord_fixed(1) +
+    # Clean theme
+    theme_void() +
+    labs(title = "Global Temperature Map")
+}
+
+# World Map with Precipitation Overlay
+if (TRUE) {
+  # Get relevant data
+  data_2024 <- read.csv('stats_2024.csv')
+  week_1_2024 <- data_2024[which(data_2024$Week == '1'), ]
+  # Convert to -180 to 180 longitude frame
+  week_1_2024 <- week_1_2024 %>%
+    mutate(lon_adj = ifelse(Lon > 180, Lon - 360, Lon))
+
+  world_map <- map_data("world")
+  # 3. Create the plot with multiple layers
+  ggplot() +
+    # Add ocean/land background (optional)
+    geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+                fill = "lightblue", color = "gray80") +
+    # Add temperature tiles/raster
+    geom_tile(data = week_1_2024, aes(x = lon_adj, y = Lat, fill = Precip)) +
+    # Add world map outlines on top
+    geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+                fill = NA, color = "gray40", linewidth = 0.2) +
+    # Color scale for temperature
+    scale_fill_gradient2(low = "blue", mid = "yellow", high = "red",
+                        midpoint = .001, name = "Precipitation (m)") +
+    # Set aspect ratio
+    coord_fixed(1) +
+    # Clean theme
+    theme_void() +
+    labs(title = "Global Precipitation Map")
+}
+
+# World Map with Elevation Overlay
+if (TRUE) {
+  # Get relevant data
+  data_2024 <- read.csv('stats_elev.csv')
+  # Convert to -180 to 180 longitude frame
+  data_2024 <- data_2024 %>%
+    mutate(lon_adj = ifelse(Lon > 180, Lon - 360, Lon))
+
+  world_map <- map_data("world")
+  # 3. Create the plot with multiple layers
+  ggplot() +
+    # Add ocean/land background (optional)
+    geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+                fill = "lightblue", color = "gray80") +
+    # Add Elevation tiles/raster
+    geom_tile(data = data_2024, aes(x = lon_adj, y = Lat, fill = Elev)) +
+    # Add world map outlines on top
+    geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+                fill = NA, color = "gray40", linewidth = 0.2) +
+    # Color scale for temperature
+    scale_fill_gradient2(low = "blue", mid = "yellow", high = "red",
+                        midpoint = 2500, name = "Elevation (m)") +
+    # Set aspect ratio
+    coord_fixed(1) +
+    # Clean theme
+    theme_void() +
+    labs(title = "Global Geopotential Map")
+}
+
+# dt <- read.csv('agg_1x1_2015_2024_temp_precip.csv')
 
 # Location Plots
 if (FALSE) {
@@ -37,43 +127,37 @@ if (FALSE) {
   plot(sydney$week, sydney$Temp)
 }
 
+data_2024 <- read.csv('stats_2024.csv')
 
-# World Map with Overlay
-if (TRUE) {
-  # Get relevant data
-  data_2024 <- read.csv('stats-2024.csv')
-  week_1_2024 <- data_2024[which(data_2024$Year_Week == '2024-1'), ]
-  # Convert to -180 to 180 longitude frame
-  week_1_2024 <- week_1_2024 %>%
-    mutate(lon_adj = ifelse(Lon > 180, Lon - 360, Lon))
+# plot(dt$Lat, dt$Temp) # Appears negative quadratic (peaks at 0 Lat)
+# plot(dt$Geop, dt$Temp) # Appears negative, slightly curved s shape, but with 2 distinct regions
 
-  world_map <- map_data("world")
-  # 3. Create the plot with multiple layers
-  ggplot() +
-    # Add ocean/land background (optional)
-    geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
-                fill = "lightblue", color = "gray80") +
-    # Add temperature tiles/raster
-    geom_tile(data = week_1_2024, aes(x = lon_adj, y = Lat, fill = Temp)) +
-    # Add world map outlines on top
-    geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
-                fill = NA, color = "gray40", linewidth = 0.2) +
-    # Color scale for temperature
-    scale_fill_gradient2(low = "blue", mid = "yellow", high = "red",
-                        midpoint = 10, name = "Temperature (°F)") +
-    # Set aspect ratio
-    coord_fixed(1) +
-    # Clean theme
-    theme_void() +
-    labs(title = "Global Temperature Map")
-}
+ggplot(data_2024, aes(x = Lat, y = Geop, color = Temp)) +
+  geom_point() +
+  scale_color_gradient2(low = "blue", mid = "yellow", high = "red",
+                        midpoint = 20, name = "Temperature (°F)")
+
+plot(data_2024$Lat, data_2024$Temp) # Appears negative quadratic (peaks at 0 Lat)
+
+# Geopotential
+plot(data_2024$Elev, data_2024$Temp) # Appears negative, slightly curved s shape, but with 2 distinct regions
+# Aggregate data for the year so there is 1 value per location for the year
+yearly_means <- data_2024 %>%
+  group_by(Lat, Lon) %>%
+  summarise(across(c(Temp, Elev), mean, na.rm = TRUE))
+plot(yearly_means$Elev, yearly_means$Temp)
+plot(yearly_means$Lat, yearly_means$Temp)
 
 
+#### See if I can figure out what determines the different branches of the data (bucket them)
+plot(data_2024$Week, data_2024$Temp)
 
+mod <- lm(Temp ~ Lat + I(Lat^2) + ns(Geop) + Week + Geop*Lat, data = data_2024)
+#### Look at including Time and hemisphere, etc., make Week a sine
+#### See if I can make the boundaries of time meet (ie. time 0 = time 52)
+summary(mod)
 
 ############ ToDo ############
-# Get elevation data aggregated
-
 # Research question: 
 # Model temperature as a function of Lat/Elev/Time
 # Look at different splits of the dependents, etc.
