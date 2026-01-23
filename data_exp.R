@@ -5,9 +5,11 @@ library(sf)
 library(rnaturalearth)
 library(rnaturalearthdata)
 library(splines)
+library(splines2)
+library(viridis)
 
 # World Map with Temperature Overlay
-if (TRUE) {
+if (FALSE) {
   # Get relevant data
   data_2024 <- read.csv('stats_2024.csv')
   week_1_2024 <- data_2024[which(data_2024$Week == '1'), ]
@@ -95,10 +97,12 @@ if (TRUE) {
     labs(title = "Global Geopotential Map")
 }
 
-# dt <- read.csv('agg_1x1_2015_2024_temp_precip.csv')
+
 
 # Location Plots
 if (FALSE) {
+  dt <- read.csv('agg_1x1_2015_2024_temp_precip.csv')
+
   provo_lat <- 40.5
   provo_lon <- 248.5
 
@@ -132,37 +136,85 @@ data_2024 <- read.csv('stats_2024.csv')
 # plot(dt$Lat, dt$Temp) # Appears negative quadratic (peaks at 0 Lat)
 # plot(dt$Geop, dt$Temp) # Appears negative, slightly curved s shape, but with 2 distinct regions
 
-ggplot(data_2024, aes(x = Lat, y = Geop, color = Temp)) +
+ggplot(data_2024, aes(x = Lat, y = Elev, color = Temp)) +
   geom_point() +
   scale_color_gradient2(low = "blue", mid = "yellow", high = "red",
-                        midpoint = 20, name = "Temperature (°F)")
+                        midpoint = 0, name = "Temperature (°C)")
 
 plot(data_2024$Lat, data_2024$Temp) # Appears negative quadratic (peaks at 0 Lat)
 
-# Geopotential
-plot(data_2024$Elev, data_2024$Temp) # Appears negative, slightly curved s shape, but with 2 distinct regions
+###### Elevation ######
+# # Appears negative, slightly curved s shape, but with 2 distinct regions
 # Aggregate data for the year so there is 1 value per location for the year
 yearly_means <- data_2024 %>%
   group_by(Lat, Lon) %>%
   summarise(across(c(Temp, Elev), mean, na.rm = TRUE))
-plot(yearly_means$Elev, yearly_means$Temp)
+plot(yearly_means$Elev, yearly_means$Temp, xlab = 'Elevation (m)', ylab = 'Temperature (C)', main = 'Year-Average Temperature vs. Elevation: 2024')
+
+# Create a function to generate a continuous color palette (e.g., red to blue)
+rbPal <- colorRampPalette(c('red','blue'))
+yearly_means$Col <- rbPal(10)[as.numeric(cut(abs(yearly_means$Lat), breaks = 10))]
+plot(yearly_means$Elev, yearly_means$Temp, col = yearly_means$Col)
+
+# Following appears to be Antarctica
+lower_arm <- yearly_means[which(yearly_means$Elev >= 3000 & yearly_means$Temp < -30), ]
+# Following appears to be the Himalayas primarily, with some of the Chilean/Bolivian Sierras
+upper_arm <- yearly_means[which(yearly_means$Elev >= 3000 & yearly_means$Temp > -10), ]
+# Following appears to be Greenland
+small_arm <- yearly_means[which(yearly_means$Elev >= 2800 & yearly_means$Temp > -25 & yearly_means$Temp < -18), ]
+# Try adding a color code with Latitude
+
+
+###### Latitude ######
 plot(yearly_means$Lat, yearly_means$Temp)
 
 
-#### See if I can figure out what determines the different branches of the data (bucket them)
-plot(data_2024$Week, data_2024$Temp)
+###### Latitude * Week ######
+# Aggregate by Longitude so we can see a weekly average at each Latitude 
+lat_means <- data_2024 %>%
+  group_by(Week, Lat) %>%
+  summarise(across(c(Temp), mean, na.rm = TRUE))
+ggplot(lat_means, aes(x = Week, y = Lat, color = Temp)) +
+  geom_point() +
+  scale_color_gradient2(low = "blue", mid = "yellow", high = "red",
+                        midpoint = -20, name = "Temperature (°C)")
+# Northern hemisphere is High-Low-High
+# Southern is Low-High-Low
+# Middle region is relatively flat
 
-mod <- lm(Temp ~ Lat + I(Lat^2) + ns(Geop) + Week + Geop*Lat, data = data_2024)
-#### Look at including Time and hemisphere, etc., make Week a sine
-#### See if I can make the boundaries of time meet (ie. time 0 = time 52)
+# For colors on plots (for publishing) think if it shows well in B/W and colorblind
+# Check out Viridis color scale
+
+
+mod <- lm(Temp ~ Lat + I(Lat^2) + ns(Elev, df = 3) + Week + Elev:Lat + Week:Lat, data = data_2024)
+
+mod <- lm(Temp ~ Lat + I(Lat^2) + ns(Elev, df = 3) + ns(Week, df = 5) + Elev:Lat +ns(Week, df = 5):Lat, data = data_2024)
+
+mod <- lm(Temp ~ Lat + I(Lat^2) + ns(Elev, df = 3) +  Elev:Lat + bSpline(Week, df = 10, Boundary.knots = c(0, 52))*Lat*Elev, data = data_2024)
+
 summary(mod)
 
+dm <- model.matrix(mod)
+plot(dm[, 4], dm[, 6])
+
 ############ ToDo ############
+##############################
+## WRITE AN ABSTRACT
+
+
 # Research question: 
-# Model temperature as a function of Lat/Elev/Time
-# Look at different splits of the dependents, etc.
+
 # after accounting for latitude and time, is the effect of elevation linear or not
-# What is the explanation of why temperatures are colder at higher elevations?
-# Think about what might be the physical interpretations of WHY things interact the way they do
+
+
+
 ### Do a little write-up about all the actual physical features that appear to be important
 ### Do a little write-up about all the statistical features that appear to be important
+
+
+# What is the explanation of why temperatures are colder at higher elevations?
+# Higher Elev: Less atmosphere, less 'entrapment' of energy/heat
+
+# Think about what might be the physical interpretations of WHY things interact the way they do
+# Latitude: Extreme latitudes are angled farthest from sun, less heat
+# Week*Latitude: Seasons are switched in Hemispheres, due to inclination of earth's axis
