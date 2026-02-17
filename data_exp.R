@@ -182,39 +182,52 @@ ggplot(lat_means, aes(x = Week, y = Lat, color = Temp)) +
 # Southern is Low-High-Low
 # Middle region is relatively flat
 
-# For colors on plots (for publishing) think if it shows well in B/W and colorblind
-# Check out Viridis color scale
+
 
 
 mod <- lm(Temp ~ Lat + I(Lat^2) + ns(Elev, df = 3) + Week + Elev:Lat + Week:Lat, data = data_2024)
+AIC(mod) # 23258004
 
 mod <- lm(Temp ~ Lat + I(Lat^2) + ns(Elev, df = 3) + ns(Week, df = 5) + Elev:Lat +ns(Week, df = 5):Lat, data = data_2024)
+AIC(mod) # 21140430
 
-mod <- lm(Temp ~ Lat + I(Lat^2) + ns(Elev, df = 3) +  Elev:Lat + bSpline(Week, df = 10, Boundary.knots = c(0, 52))*Lat*Elev, data = data_2024)
+mod <- lm(Temp ~ Lat + I(Lat^2) + ns(Elev, df = 3) +  Elev:Lat + bSpline(Week, df = 10, Boundary.knots = c(0, 52), periodic = TRUE)*Lat*Elev, data = data_2024)
+AIC(mod) # 20860650
 
-summary(mod)
+mod <- lm(Temp ~ Lat + (I(Lat^2) + ns(Elev, df = 3) +  bSpline(Week, df = 10, Boundary.knots = c(0, 52), periodic = TRUE))^2 + bSpline(Week, df = 10, Boundary.knots = c(0, 52), periodic = TRUE)*Lat*Elev, data = data_2024)
+red_mod <- step(mod, direction = "both")
+AIC(red_mod) # 20418279
+
+
 
 dm <- model.matrix(mod)
 plot(dm[, 4], dm[, 6])
 
-############ ToDo ############
-##############################
-## WRITE AN ABSTRACT
+# Get relevant data
+week_1_ind <- which(data_2024$Week == '1')
+week_1_2024 <- data_2024[week_1_ind, ]
+# Convert to -180 to 180 longitude frame
+week_1_2024 <- week_1_2024 %>% mutate(lon_adj = ifelse(Lon > 180, Lon - 360, Lon))
+stuff_to_plot <- cbind(week_1_2024$Lat, week_1_2024$lon_adj, mod$residuals[week_1_ind])
+colnames(stuff_to_plot) <- c('Lat', 'Lon', 'Residuals')
+world_map <- map_data("world")
 
+  
+# Temperature
+ggplot() +
+  # Add ocean/land background (optional)
+  geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+              fill = "lightblue", color = "gray80") +
+  # Add temperature tiles/raster
+  geom_tile(data = stuff_to_plot, aes(x = Lon, y = Lat, fill = Residuals)) +
+  # Add world map outlines on top
+  geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+              fill = NA, color = "gray40", linewidth = 0.2) +
+  # Color scale for temperature
+  scale_fill_viridis_c(name = "Residuals") +
+  # Set aspect ratio
+  coord_fixed(1) +
+  # Clean theme
+  theme_void() +
+  labs(title = "Global Residuals Map")
 
-# Research question: 
-
-# after accounting for latitude and time, is the effect of elevation linear or not
-
-
-
-### Do a little write-up about all the actual physical features that appear to be important
-### Do a little write-up about all the statistical features that appear to be important
-
-
-# What is the explanation of why temperatures are colder at higher elevations?
-# Higher Elev: Less atmosphere, less 'entrapment' of energy/heat
-
-# Think about what might be the physical interpretations of WHY things interact the way they do
-# Latitude: Extreme latitudes are angled farthest from sun, less heat
-# Week*Latitude: Seasons are switched in Hemispheres, due to inclination of earth's axis

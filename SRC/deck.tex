@@ -1,0 +1,104 @@
+\documentclass{beamer}
+
+% Preamble settings for customization
+\usetheme{Madrid} % A popular theme for a clean look
+\usecolortheme{dolphin} % A color scheme to pair with the theme
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{lmodern}
+\usepackage{animate}
+\usepackage[backend=biber, style=ieee]{biblatex} 
+\addbibresource{refs.bib} 
+\renewcommand*{\mkbibacro}[1]{#1} % To avoid an error where it was trying to use an unavailable font size in bib
+
+% Presentation metadata
+\title{Modeling Global Temperature Variate Effects Over Time}
+\author{RJ Cass}
+\institute{BYU - Student Research Conference}
+\date{28 Feb. 2026}
+
+\begin{document}
+
+% Title slide
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% Table of Contents slide
+\begin{frame}
+    \frametitle{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{Context}
+
+    \begin{frame}
+        \frametitle{What are we doing?}
+        \begin{itemize}
+            \item Want to understand the dependence between climate variables (temperature, precipitation) and geography/time
+            \item Want to create a model to capture the relationship between Latitude, Elevation, and Time, on Temperature and Precipitation
+        \end{itemize} 
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Why are we doing this?}
+        \begin{itemize}
+            \item Want to understand the evolution of the parameters of the model in the modern climate
+            \item Want to establish a baseline relationship of geography/time on climate variables to apply to ancient data
+            \item  
+                \begin{itemize}
+                    \item Paleogene era: 66-23 Mya
+                    \item Proxy data (fossils, deposition layers, etc.)
+                    \item Data Sparsity
+                    \item Makes modeling covariate-dnver? mean structure extremely important
+                    \item $Y(s, t) = x(s, t)\beta + \epsilon(s, t), \epsilon \sim N(0, \sigma^2 I)$
+                    \item Can learn appropriate structure for $x\beta$ from modern data (best design matrix)
+                \end{itemize} 
+            \item Put me through my paces
+        \end{itemize} 
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{How are we doing this?}
+        \begin{itemize}
+            \item Using the ERA5 reanalysis dataset \cite{CopernicusERA5}
+            \item ERA5: 
+            \item Reanalysis: 
+        \end{itemize} 
+    \end{frame}
+
+
+\section{Processs}
+
+    \begin{frame}
+        \frametitle{Data Processing}
+        \begin{itemize}
+            \item ERA5 data comes in a .25x.25 Latitude grid, with daily averages. Reduced this to a 1x1 Latitude grid with Weekly averages
+            \item Used ERA5 Geopotential data, converted to elevation
+        \end{itemize} 
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{EDA}
+        \begin{itemize}
+            \item 
+        \end{itemize} 
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Model}
+        \begin{itemize}
+            \item 
+        \end{itemize} 
+    \end{frame}
+
+    
+\section{Appendix}
+    \begin{frame}{Bibliography}
+        \frametitle{Bibliography}
+
+        \printbibliography
+
+    \end{frame}
+
+\end{document}
