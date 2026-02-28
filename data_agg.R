@@ -120,14 +120,14 @@ for (year in years) {
 
   data_fin <- rbind(data_fin, dat)
 
-  run_time <- Sys.time() - start_time
+  run_time <- Sys.time() - step_start
   
   rm(dat)
   cat('Compiled Year:', year, '- Runtime:', run_time, units(run_time), '\n')
 }
 
 cat('Writing Table...')
-colnames(data_fin) <- c('Lat', 'Lon', 'Week', 'Geop', 'Temp', 'Precip')
+colnames(data_fin) <- c('Lat', 'Lon', 'Week', 'Elev', 'Temp', 'Precip')
 write.csv(data_fin, file = 'agg_1x1_2015_2024_temp_precip.csv', row.names = FALSE)
 rm(data_fin)
 run_time <- Sys.time() - start_time
