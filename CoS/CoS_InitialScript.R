@@ -28,6 +28,7 @@ for(i in 1:100){
 
 y_block = K%*%yobs/25
 
+# Plot the fine grid, and blocked grid, side-by-side
 par(mfrow=c(1,2))
 image.plot(x=1:50,y=1:50,z=matrix(yobs,50,50))
 image.plot(x=1:10,y=1:10,z=matrix(y_block,10,10),zlim=range(yobs))
@@ -39,12 +40,14 @@ image.plot(x=1:10,y=1:10,z=matrix(y_block,10,10),zlim=range(yobs))
 #create the covariance for the averaged model
 #############################################
 cov.upper = matrix(NA,10,10)
+par(mfrow=c(1,1))
 #tri = numeric()
+image.plot(x=1:50,y=1:50,z=matrix(yobs,50,50))
 for(i in 1:10){
   for(j in i:10){
-    #tri = c(tri,(i-1)*10+j)
-    #points(matrix(blocks[(i-1)*10+j,],nrow=1),pch=19,col='red')
     cov.upper[i,j] = sum(exp(-(D[K[1,]==1,K[(i-1)*10+j,]==1])^1))/sum(K[1,])^2
+    # Plot to ensure it is covering the parts desired
+    print(points(pts[K[(i-1)*10+j,]==1,],col='blue',pch=19))
   }
 }
 
