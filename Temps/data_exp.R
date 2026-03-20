@@ -9,22 +9,16 @@ library(splines2)
 library(viridis)
 
 # World Map with Temperature Overlay
-if (FALSE) {
+if (TRUE) {
   # Get relevant data
-  data_2024 <- read.csv('stats_2024.csv')
+  data_2024 <- read.csv('data/stats_2024.csv')
   week_1_2024 <- data_2024[which(data_2024$Week == '1'), ]
-  # Convert to -180 to 180 longitude frame
-  week_1_2024 <- week_1_2024 %>%
-    mutate(lon_adj = ifelse(Lon > 180, Lon - 360, Lon))
 
   world_map <- map_data("world")
   # 3. Create the plot with multiple layers
   ggplot() +
-    # Add ocean/land background (optional)
-    geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
-                fill = "lightblue", color = "gray80") +
     # Add temperature tiles/raster
-    geom_tile(data = week_1_2024, aes(x = lon_adj, y = Lat, fill = Temp)) +
+    geom_tile(data = week_1_2024, aes(x = Lon, y = Lat, fill = Temp)) +
     # Add world map outlines on top
     geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
                 fill = NA, color = "gray40", linewidth = 0.2) +
@@ -97,6 +91,36 @@ if (TRUE) {
     labs(title = "Global Geopotential Map")
 }
 
+# World Map with NDVI Overlay
+if (TRUE) {
+  # Get relevant data
+  data_2024 <- read.csv('stats_ndvi.csv')
+  week_1_2024 <- data_2024[which(data_2024$Week == '1'), ]
+  # Convert to -180 to 180 longitude frame
+  week_1_2024 <- week_1_2024 %>%
+    mutate(lon_adj = ifelse(Lon > 180, Lon - 360, Lon))
+
+
+  world_map <- map_data("world")
+  # 3. Create the plot with multiple layers
+  ggplot() +
+    # Add ocean/land background (optional)
+    # geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+    #             fill = "lightblue", color = "gray80") +
+    # Add Elevation tiles/raster
+    geom_tile(data = week_1_2024, aes(x = lon_adj, y = Lat, fill = NDVI)) +
+    # Add world map outlines on top
+    geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+                fill = NA, color = "gray40", linewidth = 0.2) +
+    # Color scale for temperature
+    scale_fill_gradient2(low = "blue", mid = "yellow", high = "red",
+                        midpoint = 2500, name = "NDVI") +
+    # Set aspect ratio
+    coord_fixed(1) +
+    # Clean theme
+    theme_void() +
+    labs(title = "Global Geopotential Map")
+}
 
 
 # Location Plots
@@ -143,6 +167,8 @@ ggplot(data_2024, aes(x = Lat, y = Elev, color = Temp)) +
 
 plot(data_2024$Lat, data_2024$Temp) # Appears negative quadratic (peaks at 0 Lat)
 
+
+
 ###### Elevation ######
 # # Appears negative, slightly curved s shape, but with 2 distinct regions
 # Aggregate data for the year so there is 1 value per location for the year
@@ -183,6 +209,9 @@ ggplot(lat_means, aes(x = Week, y = Lat, color = Temp)) +
 # Middle region is relatively flat
 
 
+
+###### NDVI ######
+plot(data_2024$NDVI, data_2024$Temp)
 
 
 mod <- lm(Temp ~ Lat + I(Lat^2) + ns(Elev, df = 3) + Week + Elev:Lat + Week:Lat, data = data_2024)

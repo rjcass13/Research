@@ -22,14 +22,11 @@ world_map <- map_data("world") %>%
 if (TRUE) {
   # Get relevant data
   week_1_2024 <- data_2024[which(data_2024$Week == '1'), ]
-  # Convert to -180 to 180 longitude frame
-  week_1_2024 <- week_1_2024 %>%
-    mutate(lon_adj = ifelse(Lon > 180, Lon - 360, Lon))
 
   # Temperature
-  ggplot() +
+  p <- ggplot() +
     # Add temperature tiles/raster
-    geom_tile(data = week_1_2024, aes(x = lon_adj, y = Lat, fill = Temp)) +
+    geom_tile(data = week_1_2024, aes(x = Lon, y = Lat, fill = Temp)) +
     # Add world map outlines on top
     geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
                 fill = NA, color = "gray40", linewidth = 0.2) +
@@ -41,10 +38,12 @@ if (TRUE) {
     theme_void() +
     labs(title = "Global Temperature Map")
 
+  print(p)
+
   # Precipitation
-  ggplot() +
+  p <- ggplot() +
     # Add temperature tiles/raster
-    geom_tile(data = week_1_2024, aes(x = lon_adj, y = Lat, fill = Precip)) +
+    geom_tile(data = week_1_2024, aes(x = Lon, y = Lat, fill = Precip)) +
     # Add world map outlines on top
     geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
                 fill = NA, color = "gray40", linewidth = 0.2) +
@@ -56,10 +55,12 @@ if (TRUE) {
     theme_void() +
     labs(title = "Global Precipitation Map")
 
+  print(p)
+
   # Elevation
-  ggplot() +
+  p <- ggplot() +
     # Add Elevation tiles/raster
-    geom_tile(data = week_1_2024, aes(x = lon_adj, y = Lat, fill = Elev)) +
+    geom_tile(data = week_1_2024, aes(x = Lon, y = Lat, fill = Elev)) +
     # Add world map outlines on top
     geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
                 fill = NA, color = "gray40", linewidth = 0.2) +
@@ -70,36 +71,72 @@ if (TRUE) {
     # Clean theme
     theme_void() +
     labs(title = "Global Elevation Map")
+
+  print(p)
+
+  # NDVI
+  p <- ggplot() +
+    # Add Elevation tiles/raster
+    geom_tile(data = week_1_2024, aes(x = Lon, y = Lat, fill = NDVI)) +
+    # Add world map outlines on top
+    geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+                fill = NA, color = "gray40", linewidth = 0.2) +
+    # Color scale for temperature
+    scale_fill_viridis_c(name = "NDVI") +
+    # Set aspect ratio
+    coord_fixed(1) +
+    # Clean theme
+    theme_void() +
+    labs(title = "Global NDVI Map")
+
+  print(p)
 }
 
 # EDA, individual and interaction effects plots
-if (TRUE) {
+if (FALSE) {
   # Average data across the year
   yearly_means <- data_2024 %>%
     group_by(Lat, Lon) %>%
-    summarise(across(c(Temp, Elev), \(x) mean(x, na.rm = TRUE)))
+    summarise(across(c(Temp, Elev, NDVI), \(x) mean(x, na.rm = TRUE)))
 
   # Average data across the Longitudes
   lat_means <- data_2024 %>%
     group_by(Week, Lat) %>%
-    summarise(across(c(Temp), \(x) mean(x, na.rm = TRUE)))
+    summarise(across(c(Temp, NDVI), \(x) mean(x, na.rm = TRUE)))
+
+  # Yearly-Average Temp. vs. NDVI
+  plot(yearly_means$NDVI, yearly_means$Temp, xlab = 'NDVI', ylab = 'Temperature (C)', main = '2024 Year-Average Temperature vs. NDVI')
 
   # Yearly-Average Temp. vs. Elev.
   plot(yearly_means$Elev, yearly_means$Temp, xlab = 'Elevation (m)', ylab = 'Temperature (C)', main = '2024 Year-Average Temperature vs. Elevation')
 
   # Yearly-Average Temp. vs. Lat.
   plot(yearly_means$Lat, yearly_means$Temp, xlab = 'Latitude', ylab = 'Temperature (C)', main = '2024 Year-Average Temperature vs. Latitude')
+  
+  
   # Latitude x Week
   ggplot(yearly_means, aes(x = Lat, y = Temp, color = Elev)) +
     geom_point() +
     labs(x = 'Latitude', y = 'Temperature', title = '2024 Temperature by Latitude and Elevation') +
     scale_colour_viridis_c(name = "Elevation (m)")
 
-  # Latitude x Week
-  ggplot(lat_means, aes(x = Week, y = Lat, color = Temp)) +
+  # NDVI x Latitude
+  ggplot(data_2024, aes(x = NDVI, y = Temp, color = Lat)) +
     geom_point() +
-    labs(y = 'Latitude', title = '2024 Temperature by Week & Latitude') +
-    scale_colour_viridis_c(name = "Temperature (°C)")
+    labs(y = 'Temperature', title = '2024 Temperature by NDVI & Latitude') +
+    scale_colour_viridis_c(name = "Latitude")
+
+  # NDVI x Week
+  ggplot(data_2024, aes(x = NDVI, y = Temp, color = Week)) +
+    geom_point() +
+    labs(y = 'Temperature', title = '2024 Temperature by NDVI & Week') +
+    scale_colour_viridis_c(name = "Week")
+
+
+  ggplot(lat_means, aes(x = Week, y = Lat, col = NDVI)) +
+    geom_point() +
+    labs(y = 'Latitude', title = '2024 NDVI by Week & Latitude') +
+    scale_colour_viridis_c(name = "NDVI")
 
   # Elevation x Latitude
   ggplot(yearly_means, aes(x = Elev, y = Temp, color = Lat)) +
@@ -119,6 +156,7 @@ if (TRUE) {
 
 ##### MODEL #####
 mod <- lm(Temp ~ (bs(Lat, df = 4) + ns(Elev, df = 3) + bSpline(Week, df = 6, Boundary.knots = c(0, 52), periodic = TRUE))^3, data = data_2024)
+mod_ndvi <- lm(Temp ~ (bs(Lat, df = 4) + ns(Elev, df = 3) + bSpline(Week, df = 6, Boundary.knots = c(0, 52), periodic = TRUE) + NDVI)^3, data = data_2024)
 # Save the model
 saveRDS(mod, '2024_model.rds')
 #mod <- lm(Temp ~ bs(Lat, df = 4)*ns(Elev, df = 3) + bSpline(Week, df = 6, Boundary.knots = c(0, 52), periodic = TRUE)*bs(Lat, df = 4):ns(Elev, df = 3), data = data_2024)
@@ -126,7 +164,7 @@ saveRDS(mod, '2024_model.rds')
 
 
 # Week, color Latitude
-if (TRUE) {
+if (FALSE) {
   n_lat <- 30
   lat <- seq(-90, 90, length = n_lat)
   week <- 0:52
@@ -143,7 +181,7 @@ if (TRUE) {
 }
 
 # Latitude, color Elevation
-if (TRUE) {
+if (FALSE) {
   n_lat <- 30
   n_elev <- 30
   lat <- seq(-90, 90, length = n_lat)
@@ -204,7 +242,7 @@ image_write(animation, "animation.gif")
 if (FALSE) {
   Location <- c('Provo', 'Cincinnati', 'Quito', 'Sydney', 'Falklands')
   Lat <- c(40.5, 39.5, -0.5, -33.5, -51.5)
-  Lon <- c(248.5, 360 - 84.5, 360 - 78.5, 151.5, 360 - 59.5)
+  Lon <- c(360 - 248.5, 360 - (360 - 84.5), 360 - (360 - 78.5), 151.5, 360 - (360 - 59.5))
   n_loc <- length(Location)
   Week <- 0:52
   Elev <- 1000
@@ -217,13 +255,13 @@ if (FALSE) {
   result$Preds <- predict(mod, newdata = result[, c(2, 4, 5)])
   ggplot(result, aes(x = Week, y = Preds, group = Location, color = Location)) +
     geom_line() + 
-    scale_color_viridis_c() + 
+    scale_color_viridis_d() + 
     labs(y = 'Predicted Temperature (C)', 
         title = '2024 Model: Interaction of Week, Latitude (Elev = 0)')
 }
 
 # Latitude, color Week (First Half of Year)
-if (TRUE) {
+if (FALSE) {
   week <- c(1:26)
   lat <- seq(-89.5, 89.5, by = 1)
   elev <- 1000
@@ -239,7 +277,7 @@ if (TRUE) {
 }
 
 # Latitude, color Week (Second Half of Year)
-if (TRUE) {
+if (FALSE) {
   week <- c(31:52, 1:3)
   lat <- seq(-89.5, 89.5, by = 1)
   elev <- 1000
@@ -257,14 +295,11 @@ if (TRUE) {
 
 # Residuals GIF
 if (TRUE) {
-  world_map <- map_data("world")
   plot_list <- vector(mode = "list", length = 52)
   for (i in 1:52) {
     week_ind <- which(data_2024$Week == i)
     week_dat <- data_2024[week_ind, ]
-    # Convert to -180 to 180 longitude frame
-    week_dat <- week_dat %>% mutate(lon_adj = ifelse(Lon > 180, Lon - 360, Lon))
-    stuff_to_plot <- cbind(week_dat$Lat, week_dat$lon_adj, mod$residuals[week_ind])
+    stuff_to_plot <- cbind(week_dat$Lat, week_dat$Lon, mod$residuals[week_ind])
     colnames(stuff_to_plot) <- c('Lat', 'Lon', 'Residuals')
     
     # Temperature
@@ -275,7 +310,7 @@ if (TRUE) {
       geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
                   fill = NA, color = "gray40", linewidth = 0.2) +
       # Color scale for temperature
-      scale_fill_viridis_c(name = "Residuals", limits = c(-15, 15), oob = scales::oob_squish ) +
+      scale_fill_viridis_c(name = "Residuals", limits = c(-15, 15), oob = scales::oob_squish) +
       # Set aspect ratio
       coord_fixed(1) +
       # Clean theme
@@ -304,11 +339,10 @@ if (TRUE) {
   map_resids_ind_avg <- resids %>%
       group_by(Lat, Lon) %>%
       summarise(across(Res, \(x) sum(x, na.rm = TRUE)))
-  map_resids_ind_avg <- map_resids_ind_avg %>% mutate(lon_adj = ifelse(Lon > 180, Lon - 360, Lon))
 
   ggplot() +
     # Add temperature tiles/raster
-    geom_tile(data = map_resids_ind_avg, aes(x = lon_adj, y = Lat, fill = Res)) +
+    geom_tile(data = map_resids_ind_avg, aes(x = Lon, y = Lat, fill = Res)) +
     # Add world map outlines on top
     geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
                 fill = NA, color = "gray40", linewidth = 0.2) +
@@ -335,11 +369,10 @@ if (TRUE) {
   map_resids_ind_avg <- resids %>%
       group_by(Lat, Lon) %>%
       summarise(across(Res, \(x) sum(x, na.rm = TRUE)))
-  map_resids_ind_avg <- map_resids_ind_avg %>% mutate(lon_adj = ifelse(Lon > 180, Lon - 360, Lon))
 
   ggplot() +
     # Add temperature tiles/raster
-    geom_tile(data = map_resids_ind_avg, aes(x = lon_adj, y = Lat, fill = Res)) +
+    geom_tile(data = map_resids_ind_avg, aes(x = Lon, y = Lat, fill = Res)) +
     # Add world map outlines on top
     geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
                 fill = NA, color = "gray60", linewidth = 0.2) +
@@ -360,9 +393,7 @@ if (TRUE) {
   for (i in 1:52) {
     week_ind <- which(data_2024$Week == i)
     week_dat <- data_2024[week_ind, ]
-    # Convert to -180 to 180 longitude frame
-    week_dat <- week_dat %>% mutate(lon_adj = ifelse(Lon > 180, Lon - 360, Lon))
-    stuff_to_plot <- as.data.frame(cbind(week_dat$Lat, week_dat$lon_adj, mod$residuals[week_ind]))
+    stuff_to_plot <- as.data.frame(cbind(week_dat$Lat, week_dat$Lon, mod$residuals[week_ind]))
     colnames(stuff_to_plot) <- c('Lat', 'Lon', 'Residuals')
 
     stuff_to_plot$ind <- ifelse(abs(stuff_to_plot$Residuals) > resid_limit, 1, 0)

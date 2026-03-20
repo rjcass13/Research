@@ -18,7 +18,7 @@ points(pts,pch=19,cex=.5)
 abline(h=((0:10)*5+.5),v=((0:10)*5+.5))
 
 #code 100x2500 K matrix
-
+# K is basically an indicator matrix to identify which sub-poins correspond to which general block
 K = matrix(0,100,2500)
 blocks = cbind(rep(1:10,10),rep(1:10,each=10))
 

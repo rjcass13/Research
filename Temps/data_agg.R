@@ -11,6 +11,7 @@ library(ncdf4)
 
 # Define range of included years
 years <- c('2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015')
+#years <- c('2024')
 
 # Predefine the destination matrix columns
 ncols <- 5
@@ -88,10 +89,17 @@ for (year in years) {
     week_val <- week_val + 1
   }
 
-  geop <- read.csv('stats_elev.csv')
-  data_red <- cbind(data_red[ ,1:3], geop$Elev, data_red[, 4:5])
 
-  colnames(data_red) <- c('Lat', 'Lon', 'Week', 'Elev', 'Temp', 'Precip')
+
+  # Add in the Elevation and NDVI data to each year
+  elev <- read.csv('stats_elev.csv')
+  ndvi <- read.csv('stats_ndvi.csv')
+  data_red <- cbind(data_red[ ,1:3], elev$Elev, ndvi$NDVI, data_red[, 4:5])
+
+  colnames(data_red) <- c('Lat', 'Lon', 'Week', 'Elev', 'NDVI', 'Temp', 'Precip')
+  # Update the Longitude to -180 to 180
+  data_red[, 2] <- ifelse(data_red[, 2] > 180, data_red[, 2] - 360, data_red[, 2])
+
   file_name <- paste0('stats_', year, '.csv')
   write.csv(data_red, file = file_name, row.names = FALSE)
   run_time <- Sys.time() - start_time
@@ -101,7 +109,8 @@ for (year in years) {
   rm(temp_data)
   rm(precip_data)
   rm(data_red)
-  rm(geop)
+  rm(elev)
+  rm(ndvi)
   cat('Finished Year:', year, '- Runtime:', run_time, units(run_time), '\n')
 }
 
@@ -127,7 +136,7 @@ for (year in years) {
 }
 
 cat('Writing Table...')
-colnames(data_fin) <- c('Lat', 'Lon', 'Week', 'Elev', 'Temp', 'Precip')
+colnames(data_fin) <- c('Lat', 'Lon', 'Week', 'Elev', 'NDVI', 'Temp', 'Precip')
 write.csv(data_fin, file = 'agg_1x1_2015_2024_temp_precip.csv', row.names = FALSE)
 rm(data_fin)
 run_time <- Sys.time() - start_time
@@ -137,59 +146,9 @@ cat('Data Aggregation Complete. Total Runtime:', total_run_time, units(total_run
 
 
 
-#########################################
-#### Aggregate the Geopotential data ####
-#########################################
-if (FALSE) {
-  data_red <- matrix(NA, 0, 3) 
-
-  # Get Geopotential data
-  file <- paste0('daily_stats_2024_geop.nc')
-  geop_data <- nc_open(file)
-  geop <- ncvar_get(geop_data, "z") # Geopotential
-  nc_close(geop_data)
-
-  # Define the starting latitude parameters
-  lat_val <- 89.5
-  for (lat_ind in 1:180) {
-    # Define the range of indices to average over for Latitude
-    lat_ind_range <- (lat_ind * 4 - 3):ifelse(lat_ind == 180, 721, (lat_ind * 4))
-
-    lon_val <- .5
-    data_lat <- matrix(NA, 360, 3) 
-    for (lon_ind in 1:360) {
-      # Define the range of indices to average over for Longitude
-      lon_ind_range <- (lon_ind * 4 - 3):(lon_ind * 4)
-      
-      # Get the average temp and precip for this combo of week/lat/lon
-      geop_avg <- mean(geop[lon_ind_range, lat_ind_range, 1])
-
-      # Store the average values with their corresponding lat/lon/week values
-      data_lat[lon_ind,] <- c(lat_val, lon_val, geop_avg)
-
-      lon_val <- lon_val +1
-    }
-
-    # Take the data for that latitude and add it to the week's data and clear the memory
-    data_red <- rbind(data_red, data_lat)
-    rm(data_lat)
-    
-    lat_val <- lat_val - 1
-  }
 
   
 
-  # Convert Geopotential to Height (meters). Use this as reference: https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.geopotential_to_height.html
-  geop <- data_red[, 3]
-  rE <- 6371000 # Average earth radius
-  g <- 9.80665 # Assumed ravitational constant
-  z <- (geop * rE)/(g * rE - geop) # Approxiamate height
-  data_red[ ,3] <- z
 
-  data_red <- as.data.frame(data_red)
-  colnames(data_red) <- c('Lat', 'Lon', 'Elev')
 
-  file_name <- paste0('stats_elev.csv')
-  write.csv(data_red, file = file_name, row.names = FALSE)
-}
-  
+
