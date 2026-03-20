@@ -32,7 +32,7 @@ y_block = K%*%yobs/25
 par(mfrow=c(1,2))
 image.plot(x=1:50,y=1:50,z=matrix(yobs,50,50))
 image.plot(x=1:10,y=1:10,z=matrix(y_block,10,10),zlim=range(yobs))
-
+par(mfrow=c(1,1))
 #points(pts[K[20,]==1,],col='red',pch=19)
 #points(pts[1:20,],col='blue',pch=19)
 
@@ -40,7 +40,6 @@ image.plot(x=1:10,y=1:10,z=matrix(y_block,10,10),zlim=range(yobs))
 #create the covariance for the averaged model
 #############################################
 cov.upper = matrix(NA,10,10)
-par(mfrow=c(1,1))
 #tri = numeric()
 image.plot(x=1:50,y=1:50,z=matrix(yobs,50,50))
 for(i in 1:10){
