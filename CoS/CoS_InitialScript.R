@@ -70,35 +70,94 @@ dmvnorm(c(y_block),sigma=cov.block,log=TRUE)
 ################################
 #function it
 ################################
+library(rSPDE)
+library(mvtnorm)
+
 setup = function(a_res,c){
-  l_res = a_res*c
-  l_pts = cbind(rep(1:l_res,l_res),rep(1:l_res,each=l_res))
-  a_pts = cbind(rep(1:a_res,a_res),rep(1:a_res,each=a_res))
+  l_res = a_res*c # Total Latent length of one side
+  l_pts = cbind(rep(1:l_res,l_res),rep(1:l_res,each=l_res)) # Latent Grid
+  a_pts = cbind(rep(1:a_res,a_res),rep(1:a_res,each=a_res)) # Aerial Grid
   
-  l_D = as.matrix(dist(l_pts))/(l_res-1)
-  
-  K = matrix(a_res^2,l_res^2)
-  for(i in 1:100){
+  l_D = as.matrix(dist(l_pts))/(l_res-1) # Not too sure what this is doing. I know it's supposed to be finding the distances, but from what to what?
+
+  # K is basically an indicator matrix showing which indices of the latent grid correspond to which index of the aerial grid
+  K = matrix(0, a_res^2,l_res^2)
+  for(i in 1:a_res^2){
     K[i,] = l_pts[,1] >= a_pts[i,1]*c-(c-1) & l_pts[,1] <= a_pts[i,1]*c & 
       l_pts[,2] >= a_pts[i,2]*c-(c-1) & l_pts[,2] <= a_pts[i,2]*c
   }
   K = K/c^2
+
   return(list(K=K,l_D=l_D,a_pts=a_pts,l_pts=l_pts))
 }
 
-mk_cov = function(s2,phi,nu,setup){
-  
+
+# Matern Covariance Function: https://en.wikipedia.org/wiki/Mat%C3%A9rn_covariance_function
+mk_cov = function(s2,rho,nu,setup){
+
+  d <- setup$l_D # Distance between two points, pull from setup 
+  # Version I started before find the function: s2 * 2^(1-nu) / gamma(nu) * (sqrt(2*nu) * d / rho)^nu
+  kappa <- sqrt(2*nu)/rho
+  # Function reference: https://search.r-project.org/CRAN/refmans/rSPDE/html/matern.covariance.html
+  matern.covariance(d, kappa, nu, sqrt(s2))
+}
+
+get_likelihood <- function(log_params, y_block, setup) {
+  # Enforce them being positive
+  s2 <- exp(log_params[[1]])
+  rho <- exp(log_params[[2]])
+  nu <- exp(log_params[[3]])
+  mat <- mk_cov(s2, rho, nu, setup)
+  sig <- setup$K %*% mat %*% t(setup$K)
+  dmvnorm(c(y_block), sigma=sig, log=TRUE)
 }
 
 
-yobs_block = c(t(cCB)%*%matrix(rnorm(10^2),ncol=1))
+################################
+# Test Script
+################################
 
-image.plot(1:10,1:10,matrix(yobs_block,10,10))
+# Initialize dimensions
+s2 <- 4
+rho <- 2
+nu <- 2
+aerial_blocks <- 2
+lat_per_dim <- 2
+tot_lat_len <- aerial_blocks * lat_per_dim
+test <- setup(aerial_blocks, lat_per_dim)
+# Generate sample data
+Sig = mk_cov(s2, rho, nu, test)#+diag(1e-6,tot_lat_len^2)
+cSig = chol(Sig)
+yobs = c(t(cSig)%*%matrix(rnorm(tot_lat_len^2),ncol=1))
+y_block = test$K%*%yobs/(tot_lat_len/2)
 
-points(blocks[1:15,],col='blue')
+# Initial parameters: s2, rho, nu
+params <- c(5, 2, 2)
+
+# See if it will return the same parameters I start with
+# Root find
+res <- optim(params, get_likelihood, y_block = y_block, setup = test)
+res$convergence
+# The likelihood roots over the log params, so convert to regular scale
+exp(res$par)
 
 
-X = matrix(rnorm(1e8),1e4,1e4)
-A = matrix(rnorm(1e6),1e2,1e4)
 
-AXA = A%*%X%*%t(A)
+
+# Try fixing nu and just search for sigma and rho
+# Try implemeitng the gradient descent newton-raphson
+
+
+
+
+# yobs_block = c(t(cCB)%*%matrix(rnorm(10^2),ncol=1))
+
+# image.plot(1:10,1:10,matrix(yobs_block,10,10))
+
+# points(blocks[1:15,],col='blue')
+
+
+# X = matrix(rnorm(1e8),1e4,1e4)
+# A = matrix(rnorm(1e6),1e2,1e4)
+
+# AXA = A%*%X%*%t(A)
