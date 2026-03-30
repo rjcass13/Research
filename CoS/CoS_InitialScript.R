@@ -94,23 +94,31 @@ setup = function(a_res,c){
 
 # Matern Covariance Function: https://en.wikipedia.org/wiki/Mat%C3%A9rn_covariance_function
 mk_cov = function(s2,rho,nu,setup){
-
-  d <- setup$l_D # Distance between two points, pull from setup 
-  # Version I started before find the function: s2 * 2^(1-nu) / gamma(nu) * (sqrt(2*nu) * d / rho)^nu
-  kappa <- sqrt(2*nu)/rho
+  d <- setup$l_D+diag(1e-9,tot_lat_len^2) # Distance between two points, pull from setup, include slight variance on diags for stability
+  s2 * 2^(1-nu) / gamma(nu) * (sqrt(2*nu) * d / rho)^nu * besselK(sqrt(2*nu) * d/rho, nu)
+  #kappa <- sqrt(2*nu)/rho
   # Function reference: https://search.r-project.org/CRAN/refmans/rSPDE/html/matern.covariance.html
-  matern.covariance(d, kappa, nu, sqrt(s2))
+  #matern.covariance(d, kappa, nu, sqrt(s2))
 }
 
 get_likelihood <- function(log_params, y_block, setup) {
   # Enforce them being positive
   s2 <- exp(log_params[[1]])
   rho <- exp(log_params[[2]])
-  nu <- exp(log_params[[3]])
+  #nu <- exp(log_params[[3]])
+  nu <- 2
   mat <- mk_cov(s2, rho, nu, setup)
   sig <- setup$K %*% mat %*% t(setup$K)
   dmvnorm(c(y_block), sigma=sig, log=TRUE)
 }
+
+get_likelihood_2 <- function(s2, rho, y_block, setup) {
+  nu <- 3/2
+  mat <- mk_cov(s2, rho, nu, setup)
+  sig <- setup$K %*% mat %*% t(setup$K)
+  dmvnorm(c(y_block), sigma=sig, log=TRUE)
+}
+
 
 
 ################################
@@ -118,21 +126,24 @@ get_likelihood <- function(log_params, y_block, setup) {
 ################################
 
 # Initialize dimensions
-s2 <- 4
-rho <- 2
-nu <- 2
+s2 <- 3
+rho <- 3
+nu <- 3/2
 aerial_blocks <- 2
 lat_per_dim <- 2
 tot_lat_len <- aerial_blocks * lat_per_dim
 test <- setup(aerial_blocks, lat_per_dim)
 # Generate sample data
-Sig = mk_cov(s2, rho, nu, test)#+diag(1e-6,tot_lat_len^2)
+Sig = mk_cov(s2, rho, nu, test)+diag(1e-6,tot_lat_len^2)
 cSig = chol(Sig)
-yobs = c(t(cSig)%*%matrix(rnorm(tot_lat_len^2),ncol=1))
+#yobs = c(t(cSig)%*%matrix(rnorm(tot_lat_len^2),ncol=1))
+ybos <- rmvnorm(tot_lat_len^2, mean = rep(0, tot_lat_len^2), sigma = Sig)
 y_block = test$K%*%yobs/(tot_lat_len/2)
 
+
+
 # Initial parameters: s2, rho, nu
-params <- c(5, 2, 2)
+params <- c(5, 1.5)
 
 # See if it will return the same parameters I start with
 # Root find
@@ -141,8 +152,17 @@ res$convergence
 # The likelihood roots over the log params, so convert to regular scale
 exp(res$par)
 
-
-
+library(ggplot2)
+library(viridis)
+s2_vec <- seq(1, 10, length = 1000)
+rho_vec <- seq(1, 10, length = 1000)
+dt <- as.data.frame(expand.grid(s2_vec, rho_vec))
+colnames(dt) <- c('s2', 'rho')
+dt$lik <- mapply(get_likelihood_2, s2 = dt$s2, rho = dt$rho, MoreArgs = list(y_block = y_block, setup = test))
+ggplot(dt, aes(x = s2, y = rho, color = lik)) +
+  geom_point() +
+  labs(x = 's2', y = 'rho', title = 'Likelihood') +
+  scale_colour_viridis_c(name = "Likelihood")
 
 # Try fixing nu and just search for sigma and rho
 # Try implemeitng the gradient descent newton-raphson
