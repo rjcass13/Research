@@ -106,13 +106,15 @@ get_likelihood <- function(log_params, y_block, setup) {
   s2 <- exp(log_params[[1]])
   rho <- exp(log_params[[2]])
   #nu <- exp(log_params[[3]])
-  nu <- 2
+  nu <- 3/2
   mat <- mk_cov(s2, rho, nu, setup)
   sig <- setup$K %*% mat %*% t(setup$K)
   dmvnorm(c(y_block), sigma=sig, log=TRUE)
 }
 
-get_likelihood_2 <- function(s2, rho, y_block, setup) {
+get_likelihood_2 <- function(params, y_block, setup) {
+  s2 <- exp(log_params[[1]])
+  rho <- exp(log_params[[2]])
   nu <- 3/2
   mat <- mk_cov(s2, rho, nu, setup)
   sig <- setup$K %*% mat %*% t(setup$K)
@@ -136,8 +138,8 @@ test <- setup(aerial_blocks, lat_per_dim)
 # Generate sample data
 Sig = mk_cov(s2, rho, nu, test)+diag(1e-6,tot_lat_len^2)
 cSig = chol(Sig)
-#yobs = c(t(cSig)%*%matrix(rnorm(tot_lat_len^2),ncol=1))
-ybos <- rmvnorm(tot_lat_len^2, mean = rep(0, tot_lat_len^2), sigma = Sig)
+yobs = c(t(cSig)%*%matrix(rnorm(tot_lat_len^2),ncol=1))
+#yobs <- rmvnorm(tot_lat_len^2, mean = rep(0, tot_lat_len^2), sigma = Sig)
 y_block = test$K%*%yobs/(tot_lat_len/2)
 
 
@@ -147,15 +149,15 @@ params <- c(5, 1.5)
 
 # See if it will return the same parameters I start with
 # Root find
-res <- optim(params, get_likelihood, y_block = y_block, setup = test)
+res <- optim(params, get_likelihood_2, y_block = y_block, setup = test)
 res$convergence
 # The likelihood roots over the log params, so convert to regular scale
 exp(res$par)
 
 library(ggplot2)
 library(viridis)
-s2_vec <- seq(1, 10, length = 1000)
-rho_vec <- seq(1, 10, length = 1000)
+s2_vec <- seq(1, 10, length = 100)
+rho_vec <- seq(1, 10, length = 100)
 dt <- as.data.frame(expand.grid(s2_vec, rho_vec))
 colnames(dt) <- c('s2', 'rho')
 dt$lik <- mapply(get_likelihood_2, s2 = dt$s2, rho = dt$rho, MoreArgs = list(y_block = y_block, setup = test))
@@ -163,6 +165,8 @@ ggplot(dt, aes(x = s2, y = rho, color = lik)) +
   geom_point() +
   labs(x = 's2', y = 'rho', title = 'Likelihood') +
   scale_colour_viridis_c(name = "Likelihood")
+
+dt[dt$lik == max(dt$lik, na.rm = TRUE), ]
 
 # Try fixing nu and just search for sigma and rho
 # Try implemeitng the gradient descent newton-raphson

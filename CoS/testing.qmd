@@ -1,0 +1,65 @@
+
+```{r setup}
+library(rSPDE)
+library(mvtnorm)
+library(ggplot2)
+library(viridis)
+source(funcs.R)
+```
+
+```{r 2_param_test}
+# Initialize dimensions
+s2 <- 3
+rho <- 3
+nu <- 3/2
+aerial_blocks <- 2
+lat_per_dim <- 2
+tot_lat_len <- aerial_blocks * lat_per_dim
+test <- setup(aerial_blocks, lat_per_dim)
+# Generate sample data
+Sig = mk_cov(s2, rho, nu, test)+diag(1e-6,tot_lat_len^2)
+cSig = chol(Sig)
+yobs = c(t(cSig)%*%matrix(rnorm(tot_lat_len^2),ncol=1))
+#yobs <- rmvnorm(tot_lat_len^2, mean = rep(0, tot_lat_len^2), sigma = Sig)
+y_block = test$K%*%yobs/(tot_lat_len/2)
+
+
+
+# Initial parameters: s2, rho, nu
+params <- c(5, 1.5)
+
+# See if it will return the same parameters I start with
+# Root find
+res <- optim(params, get_likelihood_2_param_optim, y_block = y_block, setup = test)
+res$convergence
+# The likelihood roots over the log params, so convert to regular scale
+exp(res$par)
+
+
+s2_vec <- seq(1, 10, length = 100)
+rho_vec <- seq(1, 10, length = 100)
+dt <- as.data.frame(expand.grid(s2_vec, rho_vec))
+colnames(dt) <- c('s2', 'rho')
+dt$lik <- mapply(get_likelihood_2, s2 = dt$s2, rho = dt$rho, MoreArgs = list(y_block = y_block, setup = test))
+ggplot(dt, aes(x = s2, y = rho, color = lik)) +
+  geom_point() +
+  labs(x = 's2', y = 'rho', title = 'Likelihood') +
+  scale_colour_viridis_c(name = "Likelihood")
+
+dt[dt$lik == max(dt$lik, na.rm = TRUE), ]
+
+# Try fixing nu and just search for sigma and rho
+# Try implemeitng the gradient descent newton-raphson
+
+```
+
+```{r notes}
+
+
+# Try fixing nu and just search for sigma and rho
+# Try implemeitng the gradient descent newton-raphson
+
+
+```
+
+
