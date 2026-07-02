@@ -16,23 +16,11 @@ log_params <- log(c(1, 2, 1))
 
 
 # Initialize grids
-dims <- read.csv('possible_dims_square_2304.csv')
-
-# aerial_width <-  c(2, 3, 4, 6, 8, 12, 24)
-# aerial_height <- c(2, 3, 4, 6, 8, 12, 24)
-# lat_width <-    c(12, 8, 6, 4, 3, 2, 1)
-# lat_height <-   c(12, 8, 6, 4, 3, 2, 1)
-# dims <- cbind(aerial_width, aerial_height, lat_width, lat_height)
+dims <- read.csv('possible_dims_100.csv')
 
 
-#aerial_width <- seq(2, 6, by = 1)
-#aerial_height <- seq(2, 6, by = 1)
-#lat_width <- seq(1, 6, by = 1)
-#lat_height <- seq(1, 6, by = 1)
-#dims <- expand.grid(aerial_width, aerial_height, lat_width, lat_height)
 overall_start_time <- Sys.time()
-
-n_sim <- 50
+n_sim <- 10
 # Duration, TotalPoints, A_W, A_H, L_W, L_H, true_s2, true_rho, true_nu, est_s2, est_rho, est_nu
 res <- matrix(NA, nrow = nrow(dims)*n_sim, ncol = 12)
 
@@ -81,7 +69,7 @@ print(Sys.time())
 res <- as.data.frame(res)
 colnames(res) <- c('Duration', 'TotalPoints', 'A_W', 'A_H', 'L_W', 'L_H', 
   'true_s2', 'true_rho', 'true_nu', 'est_s2', 'est_rho', 'est_nu')
-write.csv(res, 'sim_results_2304_possible_dims_50_sims.csv', row.names = FALSE)
+write.csv(res, 'sim_results_100_possible_dims_510_sims_server.csv', row.names = FALSE)
 
 
 
