@@ -1,4 +1,4 @@
-library(rSPDE)
+#library(rSPDE)
 library(mvtnorm)
 library(ggplot2)
 
@@ -59,10 +59,10 @@ setup_rect <- function(A_W, A_H, L_W, L_H){
 # Matern Covariance Function: https://en.wikipedia.org/wiki/Mat%C3%A9rn_covariance_function
 mk_cov = function(s2,rho,nu,setup){
   d <- setup$l_D+diag(1e-9,nrow(setup$l_D)) # Distance between two points, pull from setup, include slight variance on diags for stability
-  #s2 * 2^(1-nu) / gamma(nu) * (sqrt(2*nu) * d / rho)^nu * besselK(sqrt(2*nu) * d/rho, nu)
-  kappa <- sqrt(2*nu)/rho
+  s2 * 2^(1-nu) / gamma(nu) * (sqrt(2*nu) * d / rho)^nu * besselK(sqrt(2*nu) * d/rho, nu)
+  #kappa <- sqrt(2*nu)/rho
   # Function reference: https://search.r-project.org/CRAN/refmans/rSPDE/html/matern.covariance.html
-  matern.covariance(d, kappa, nu, sqrt(s2))
+  #matern.covariance(d, kappa, nu, sqrt(s2))
 }
 
 get_likelihood_manual <- function(s2, rho, nu, y_block, setup) {
