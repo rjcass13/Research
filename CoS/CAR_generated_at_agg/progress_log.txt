@@ -1,0 +1,1658 @@
+[Covariance: iCAR] Started.
+[Sim 1] Started.
+[Sim 2] Started.
+[Sim 3] Started.
+[Sim 4] Started.
+[Sim 5] Started.
+[Sim 6] Started.
+[Sim 7] Started.
+[Sim 8] Started.
+[Sim 9] Started.
+[Sim 10] Started.
+[Sim 11] Started.
+[Sim 12] Started.
+[Sim 13] Started.
+[Sim 14] Started.
+[Sim 15] Started.
+[Sim 16] Started.
+[Sim 17] Started.
+[Sim 18] Started.
+[Sim 19] Started.
+[Sim 20] Started.
+[Sim 21] Started.
+[Sim 22] Started.
+[Sim 23] Started.
+[Sim 24] Started.
+[Sim 25] Started.
+[Sim 26] Started.
+[Sim 27] Started.
+[Sim 28] Started.
+[Sim 29] Started.
+[Sim 30] Started.
+[Sim 31] Started.
+[Sim 32] Started.
+[Sim 33] Started.
+[Sim 34] Started.
+[Sim 35] Started.
+[Sim 36] Started.
+[Sim 37] Started.
+[Sim 38] Started.
+[Sim 39] Started.
+[Sim 40] Started.
+[Sim 41] Started.
+[Sim 42] Started.
+[Sim 43] Started.
+[Sim 44] Started.
+[Sim 45] Started.
+[Sim 46] Started.
+[Sim 47] Started.
+[Sim 48] Started.
+[Sim 49] Started.
+[Sim 50] Started.
+[Sim 17] Dim 1/9 (A=2) done in 287.4 secs.
+[Sim 23] Dim 1/9 (A=2) done in 304.6 secs.
+[Sim 11] Dim 1/9 (A=2) done in 331.0 secs.
+[Sim 30] Dim 1/9 (A=2) done in 311.5 secs.
+[Sim 25] Dim 1/9 (A=2) done in 325.8 secs.
+[Sim 5] Dim 1/9 (A=2) done in 352.3 secs.
+[Sim 1] Dim 1/9 (A=2) done in 362.1 secs.
+[Sim 31] Dim 1/9 (A=2) done in 331.6 secs.
+[Sim 9] Dim 1/9 (A=2) done in 356.3 secs.
+[Sim 15] Dim 1/9 (A=2) done in 350.6 secs.
+[Sim 6] Dim 1/9 (A=2) done in 373.3 secs.
+[Sim 28] Dim 1/9 (A=2) done in 353.8 secs.
+[Sim 41] Dim 1/9 (A=2) done in 348.4 secs.
+[Sim 21] Dim 1/9 (A=2) done in 369.9 secs.
+[Sim 42] Dim 1/9 (A=2) done in 358.4 secs.
+[Sim 14] Dim 1/9 (A=2) done in 393.0 secs.
+[Sim 32] Dim 1/9 (A=2) done in 376.7 secs.
+[Sim 18] Dim 1/9 (A=2) done in 396.8 secs.
+[Sim 47] Dim 1/9 (A=2) done in 375.3 secs.
+[Sim 27] Dim 1/9 (A=2) done in 397.6 secs.
+[Sim 38] Dim 1/9 (A=2) done in 390.3 secs.
+[Sim 22] Dim 1/9 (A=2) done in 421.6 secs.
+[Sim 7] Dim 1/9 (A=2) done in 439.6 secs.
+[Sim 2] Dim 1/9 (A=2) done in 454.7 secs.
+[Sim 50] Dim 1/9 (A=2) done in 407.7 secs.
+[Sim 13] Dim 1/9 (A=2) done in 445.8 secs.
+[Sim 24] Dim 1/9 (A=2) done in 435.9 secs.
+[Sim 44] Dim 1/9 (A=2) done in 415.7 secs.
+[Sim 45] Dim 1/9 (A=2) done in 423.3 secs.
+[Sim 34] Dim 1/9 (A=2) done in 444.3 secs.
+[Sim 26] Dim 1/9 (A=2) done in 452.5 secs.
+[Sim 43] Dim 1/9 (A=2) done in 441.3 secs.
+[Sim 19] Dim 1/9 (A=2) done in 472.0 secs.
+[Sim 48] Dim 1/9 (A=2) done in 443.7 secs.
+[Sim 37] Dim 1/9 (A=2) done in 454.9 secs.
+[Sim 40] Dim 1/9 (A=2) done in 454.9 secs.
+[Sim 29] Dim 1/9 (A=2) done in 475.7 secs.
+[Sim 33] Dim 1/9 (A=2) done in 472.6 secs.
+[Sim 3] Dim 1/9 (A=2) done in 507.0 secs.
+[Sim 36] Dim 1/9 (A=2) done in 470.5 secs.
+[Sim 35] Dim 1/9 (A=2) done in 480.6 secs.
+[Sim 4] Dim 1/9 (A=2) done in 538.9 secs.
+[Sim 8] Dim 1/9 (A=2) done in 537.9 secs.
+[Sim 16] Dim 1/9 (A=2) done in 581.3 secs.
+[Sim 46] Dim 1/9 (A=2) done in 580.8 secs.
+[Sim 49] Dim 1/9 (A=2) done in 612.7 secs.
+[Sim 15] Dim 2/9 (A=3) done in 334.7 secs.
+[Sim 12] Dim 1/9 (A=2) done in 702.2 secs.
+[Sim 14] Dim 2/9 (A=3) done in 312.0 secs.
+[Sim 9] Dim 2/9 (A=3) done in 359.4 secs.
+[Sim 32] Dim 2/9 (A=3) done in 364.0 secs.
+[Sim 30] Dim 2/9 (A=3) done in 446.1 secs.
+[Sim 31] Dim 2/9 (A=3) done in 429.5 secs.
+[Sim 17] Dim 2/9 (A=3) done in 522.6 secs.
+[Sim 48] Dim 2/9 (A=3) done in 358.3 secs.
+[Sim 44] Dim 2/9 (A=3) done in 390.3 secs.
+[Sim 40] Dim 2/9 (A=3) done in 384.9 secs.
+[Sim 13] Dim 2/9 (A=3) done in 441.6 secs.
+[Sim 39] Dim 1/9 (A=2) done in 861.2 secs.
+[Sim 50] Dim 2/9 (A=3) done in 451.6 secs.
+[Sim 18] Dim 2/9 (A=3) done in 505.3 secs.
+[Sim 7] Dim 2/9 (A=3) done in 476.3 secs.
+[Sim 19] Dim 2/9 (A=3) done in 437.3 secs.
+[Sim 24] Dim 2/9 (A=3) done in 472.6 secs.
+[Sim 16] Dim 2/9 (A=3) done in 336.8 secs.
+[Sim 28] Dim 2/9 (A=3) done in 553.9 secs.
+[Sim 4] Dim 2/9 (A=3) done in 408.8 secs.
+[Sim 27] Dim 2/9 (A=3) done in 526.5 secs.
+[Sim 20] Dim 1/9 (A=2) done in 947.8 secs.
+[Sim 23] Dim 2/9 (A=3) done in 648.9 secs.
+[Sim 46] Dim 2/9 (A=3) done in 363.2 secs.
+[Sim 5] Dim 2/9 (A=3) done in 637.6 secs.
+[Sim 47] Dim 2/9 (A=3) done in 579.8 secs.
+[Sim 42] Dim 2/9 (A=3) done in 608.9 secs.
+[Sim 33] Dim 2/9 (A=3) done in 508.8 secs.
+[Sim 38] Dim 2/9 (A=3) done in 620.2 secs.
+[Sim 41] Dim 2/9 (A=3) done in 690.5 secs.
+[Sim 22] Dim 2/9 (A=3) done in 660.2 secs.
+[Sim 35] Dim 2/9 (A=3) done in 594.9 secs.
+[Sim 2] Dim 2/9 (A=3) done in 674.1 secs.
+[Sim 6] Dim 2/9 (A=3) done in 762.2 secs.
+[Sim 8] Dim 2/9 (A=3) done in 597.1 secs.
+[Sim 26] Dim 2/9 (A=3) done in 667.9 secs.
+[Sim 15] Dim 3/9 (A=4) done in 450.1 secs.
+[Sim 37] Dim 2/9 (A=3) done in 656.7 secs.
+[Sim 30] Dim 3/9 (A=4) done in 366.4 secs.
+[Sim 11] Dim 2/9 (A=3) done in 826.2 secs.
+[Sim 14] Dim 3/9 (A=4) done in 474.3 secs.
+[Sim 36] Dim 2/9 (A=3) done in 693.3 secs.
+[Sim 43] Dim 2/9 (A=3) done in 716.7 secs.
+[Sim 3] Dim 2/9 (A=3) done in 723.5 secs.
+[Sim 25] Dim 2/9 (A=3) done in 882.3 secs.
+[Sim 17] Dim 3/9 (A=4) done in 412.2 secs.
+[Sim 49] Dim 2/9 (A=3) done in 580.8 secs.
+[Sim 9] Dim 3/9 (A=4) done in 524.1 secs.
+[Sim 45] Dim 2/9 (A=3) done in 786.5 secs.
+[Sim 1] Dim 2/9 (A=3) done in 907.9 secs.
+[Sim 48] Dim 3/9 (A=4) done in 436.8 secs.
+[Sim 34] Dim 2/9 (A=3) done in 808.5 secs.
+[Sim 29] Dim 2/9 (A=3) done in 798.3 secs.
+[Sim 4] Dim 3/9 (A=4) done in 357.0 secs.
+[Sim 5] Dim 3/9 (A=4) done in 318.6 secs.
+[Sim 21] Dim 2/9 (A=3) done in 923.8 secs.
+[Sim 8] Dim 3/9 (A=4) done in 197.6 secs.
+[Sim 19] Dim 3/9 (A=4) done in 421.9 secs.
+[Sim 37] Dim 3/9 (A=4) done in 218.6 secs.
+[Sim 16] Dim 3/9 (A=4) done in 468.1 secs.
+[Sim 7] Dim 3/9 (A=4) done in 482.3 secs.
+[Sim 12] Dim 2/9 (A=3) done in 690.9 secs.
+[Sim 23] Dim 3/9 (A=4) done in 444.5 secs.
+[Sim 33] Dim 3/9 (A=4) done in 414.3 secs.
+[Sim 31] Dim 3/9 (A=4) done in 637.9 secs.
+[Sim 13] Dim 3/9 (A=4) done in 571.9 secs.
+[Sim 6] Dim 3/9 (A=4) done in 333.2 secs.
+[Sim 27] Dim 3/9 (A=4) done in 539.0 secs.
+[Sim 28] Dim 3/9 (A=4) done in 557.2 secs.
+[Sim 2] Dim 3/9 (A=4) done in 373.9 secs.
+[Sim 32] Dim 3/9 (A=4) done in 748.3 secs.
+[Sim 47] Dim 3/9 (A=4) done in 525.7 secs.
+[Sim 24] Dim 3/9 (A=4) done in 601.3 secs.
+[Sim 29] Dim 3/9 (A=4) done in 243.3 secs.
+[Sim 46] Dim 3/9 (A=4) done in 557.5 secs.
+[Sim 14] Dim 4/9 (A=6) done in 368.6 secs.
+[Sim 30] Dim 4/9 (A=6) done in 405.9 secs.
+[Sim 49] Dim 3/9 (A=4) done in 323.9 secs.
+[Sim 40] Dim 3/9 (A=4) done in 709.6 secs.
+[Sim 10] Dim 1/9 (A=2) done in 1590.2 secs.
+[Sim 43] Dim 3/9 (A=4) done in 406.3 secs.
+[Sim 18] Dim 3/9 (A=4) done in 699.4 secs.
+[Sim 42] Dim 3/9 (A=4) done in 610.6 secs.
+[Sim 38] Dim 3/9 (A=4) done in 585.2 secs.
+[Sim 21] Dim 3/9 (A=4) done in 326.3 secs.
+[Sim 41] Dim 3/9 (A=4) done in 571.1 secs.
+[Sim 9] Dim 4/9 (A=6) done in 407.2 secs.
+[Sim 44] Dim 3/9 (A=4) done in 805.7 secs.
+[Sim 50] Dim 3/9 (A=4) done in 804.5 secs.
+[Sim 39] Dim 2/9 (A=3) done in 849.3 secs.
+[Sim 7] Dim 4/9 (A=6) done in 388.5 secs.
+[Sim 11] Dim 3/9 (A=4) done in 626.3 secs.
+[Sim 5] Dim 4/9 (A=6) done in 485.6 secs.
+[Sim 35] Dim 3/9 (A=4) done in 697.5 secs.
+[Sim 3] Dim 3/9 (A=4) done in 582.2 secs.
+[Sim 22] Dim 3/9 (A=4) done in 727.2 secs.
+[Sim 20] Dim 2/9 (A=3) done in 878.6 secs.
+[Sim 26] Dim 3/9 (A=4) done in 704.1 secs.
+[Sim 37] Dim 4/9 (A=6) done in 493.3 secs.
+[Sim 6] Dim 4/9 (A=6) done in 395.5 secs.
+[Sim 45] Dim 3/9 (A=4) done in 619.6 secs.
+[Sim 36] Dim 3/9 (A=4) done in 682.0 secs.
+[Sim 15] Dim 4/9 (A=6) done in 740.8 secs.
+[Sim 10] Dim 2/9 (A=3) done in 318.4 secs.
+[Sim 31] Dim 4/9 (A=6) done in 500.0 secs.
+[Sim 2] Dim 4/9 (A=6) done in 434.3 secs.
+[Sim 8] Dim 4/9 (A=6) done in 611.0 secs.
+[Sim 24] Dim 4/9 (A=6) done in 434.1 secs.
+[Sim 17] Dim 4/9 (A=6) done in 760.9 secs.
+[Sim 12] Dim 3/9 (A=4) done in 602.3 secs.
+[Sim 27] Dim 4/9 (A=6) done in 578.8 secs.
+[Sim 23] Dim 4/9 (A=6) done in 657.7 secs.
+[Sim 29] Dim 4/9 (A=6) done in 534.9 secs.
+[Sim 4] Dim 4/9 (A=6) done in 781.2 secs.
+[Sim 16] Dim 4/9 (A=6) done in 694.7 secs.
+[Sim 14] Dim 5/9 (A=8) done in 542.6 secs.
+[Sim 48] Dim 4/9 (A=6) done in 826.6 secs.
+[Sim 1] Dim 3/9 (A=4) done in 848.0 secs.
+[Sim 33] Dim 4/9 (A=6) done in 691.3 secs.
+[Sim 25] Dim 3/9 (A=4) done in 897.7 secs.
+[Sim 28] Dim 4/9 (A=6) done in 648.5 secs.
+[Sim 38] Dim 4/9 (A=6) done in 509.5 secs.
+[Sim 19] Dim 4/9 (A=6) done in 795.0 secs.
+[Sim 47] Dim 4/9 (A=6) done in 630.3 secs.
+[Sim 26] Dim 4/9 (A=6) done in 340.1 secs.
+[Sim 32] Dim 4/9 (A=6) done in 670.1 secs.
+[Sim 35] Dim 4/9 (A=6) done in 390.1 secs.
+[Sim 49] Dim 4/9 (A=6) done in 644.7 secs.
+[Sim 9] Dim 5/9 (A=8) done in 556.4 secs.
+[Sim 46] Dim 4/9 (A=6) done in 668.9 secs.
+[Sim 13] Dim 4/9 (A=6) done in 753.0 secs.
+[Sim 42] Dim 4/9 (A=6) done in 620.8 secs.
+[Sim 11] Dim 4/9 (A=6) done in 447.8 secs.
+[Sim 21] Dim 4/9 (A=6) done in 606.5 secs.
+[Sim 34] Dim 3/9 (A=4) done in 965.2 secs.
+[Sim 39] Dim 3/9 (A=4) done in 525.3 secs.
+[Sim 3] Dim 4/9 (A=6) done in 562.6 secs.
+[Sim 22] Dim 4/9 (A=6) done in 544.8 secs.
+[Sim 15] Dim 5/9 (A=8) done in 493.3 secs.
+[Sim 45] Dim 4/9 (A=6) done in 516.3 secs.
+[Sim 5] Dim 5/9 (A=8) done in 598.2 secs.
+[Sim 43] Dim 4/9 (A=6) done in 811.1 secs.
+[Sim 18] Dim 4/9 (A=6) done in 818.6 secs.
+[Sim 40] Dim 4/9 (A=6) done in 861.0 secs.
+[Sim 29] Dim 5/9 (A=8) done in 371.9 secs.
+[Sim 24] Dim 5/9 (A=8) done in 491.7 secs.
+[Sim 23] Dim 5/9 (A=8) done in 384.3 secs.
+[Sim 20] Dim 3/9 (A=4) done in 638.0 secs.
+[Sim 12] Dim 4/9 (A=6) done in 478.4 secs.
+[Sim 30] Dim 5/9 (A=8) done in 925.0 secs.
+[Sim 48] Dim 5/9 (A=8) done in 393.2 secs.
+[Sim 8] Dim 5/9 (A=8) done in 568.8 secs.
+[Sim 50] Dim 4/9 (A=6) done in 811.8 secs.
+[Sim 41] Dim 4/9 (A=6) done in 880.4 secs.
+[Sim 44] Dim 4/9 (A=6) done in 877.9 secs.
+[Sim 25] Dim 4/9 (A=6) done in 404.6 secs.
+[Sim 19] Dim 5/9 (A=8) done in 391.5 secs.
+[Sim 34] Dim 4/9 (A=6) done in 312.8 secs.
+[Sim 47] Dim 5/9 (A=8) done in 411.4 secs.
+[Sim 37] Dim 5/9 (A=8) done in 711.6 secs.
+[Sim 11] Dim 5/9 (A=8) done in 334.0 secs.
+[Sim 36] Dim 4/9 (A=6) done in 716.1 secs.
+[Sim 2] Dim 5/9 (A=8) done in 671.0 secs.
+[Sim 4] Dim 5/9 (A=8) done in 526.7 secs.
+[Sim 31] Dim 5/9 (A=8) done in 689.3 secs.
+[Sim 7] Dim 5/9 (A=8) done in 841.2 secs.
+[Sim 21] Dim 5/9 (A=8) done in 394.7 secs.
+[Sim 16] Dim 5/9 (A=8) done in 552.6 secs.
+[Sim 17] Dim 5/9 (A=8) done in 654.7 secs.
+[Sim 1] Dim 4/9 (A=6) done in 554.8 secs.
+[Sim 28] Dim 5/9 (A=8) done in 542.7 secs.
+[Sim 13] Dim 5/9 (A=8) done in 468.3 secs.
+[Sim 33] Dim 5/9 (A=8) done in 574.2 secs.
+[Sim 39] Dim 4/9 (A=6) done in 431.5 secs.
+[Sim 10] Dim 3/9 (A=4) done in 800.4 secs.
+[Sim 6] Dim 5/9 (A=8) done in 926.1 secs.
+[Sim 26] Dim 5/9 (A=8) done in 622.3 secs.
+[Sim 22] Dim 5/9 (A=8) done in 476.4 secs.
+[Sim 35] Dim 5/9 (A=8) done in 683.9 secs.
+[Sim 18] Dim 5/9 (A=8) done in 484.5 secs.
+[Sim 3] Dim 5/9 (A=8) done in 552.7 secs.
+[Sim 49] Dim 5/9 (A=8) done in 726.5 secs.
+[Sim 38] Dim 5/9 (A=8) done in 812.7 secs.
+[Sim 12] Dim 5/9 (A=8) done in 487.6 secs.
+[Sim 25] Dim 5/9 (A=8) done in 453.8 secs.
+[Sim 42] Dim 5/9 (A=8) done in 785.8 secs.
+[Sim 45] Dim 5/9 (A=8) done in 648.3 secs.
+[Sim 20] Dim 4/9 (A=6) done in 568.5 secs.
+[Sim 9] Dim 6/9 (A=12) done in 843.9 secs.
+[Sim 27] Dim 5/9 (A=8) done in 994.4 secs.
+[Sim 41] Dim 5/9 (A=8) done in 548.7 secs.
+[Sim 32] Dim 5/9 (A=8) done in 915.7 secs.
+[Sim 36] Dim 5/9 (A=8) done in 528.1 secs.
+[Sim 1] Dim 5/9 (A=8) done in 457.9 secs.
+[Sim 43] Dim 5/9 (A=8) done in 711.3 secs.
+[Sim 44] Dim 5/9 (A=8) done in 625.2 secs.
+[Sim 50] Dim 5/9 (A=8) done in 678.8 secs.
+[Sim 46] Dim 5/9 (A=8) done in 1036.8 secs.
+[Sim 39] Dim 5/9 (A=8) done in 554.8 secs.
+[Sim 48] Dim 6/9 (A=12) done in 756.4 secs.
+[Sim 15] Dim 6/9 (A=12) done in 894.5 secs.
+[Sim 5] Dim 6/9 (A=12) done in 963.0 secs.
+[Sim 21] Dim 6/9 (A=12) done in 719.9 secs.
+[Sim 24] Dim 6/9 (A=12) done in 916.8 secs.
+[Sim 34] Dim 5/9 (A=8) done in 813.0 secs.
+[Sim 47] Dim 6/9 (A=12) done in 811.4 secs.
+[Sim 14] Dim 6/9 (A=12) done in 1301.2 secs.
+[Sim 40] Dim 5/9 (A=8) done in 1049.0 secs.
+[Sim 30] Dim 6/9 (A=12) done in 1026.9 secs.
+[Sim 31] Dim 6/9 (A=12) done in 903.7 secs.
+[Sim 17] Dim 6/9 (A=12) done in 873.5 secs.
+[Sim 23] Dim 6/9 (A=12) done in 1068.0 secs.
+[Sim 8] Dim 6/9 (A=12) done in 1021.2 secs.
+[Sim 2] Dim 6/9 (A=12) done in 935.2 secs.
+[Sim 11] Dim 6/9 (A=12) done in 1043.7 secs.
+[Sim 13] Dim 6/9 (A=12) done in 987.5 secs.
+[Sim 4] Dim 6/9 (A=12) done in 1067.7 secs.
+[Sim 37] Dim 6/9 (A=12) done in 1124.3 secs.
+[Sim 16] Dim 6/9 (A=12) done in 1091.8 secs.
+[Sim 33] Dim 6/9 (A=12) done in 1047.9 secs.
+[Sim 10] Dim 4/9 (A=6) done in 1052.0 secs.
+[Sim 7] Dim 6/9 (A=12) done in 1138.4 secs.
+[Sim 22] Dim 6/9 (A=12) done in 996.7 secs.
+[Sim 19] Dim 6/9 (A=12) done in 1363.5 secs.
+[Sim 28] Dim 6/9 (A=12) done in 1254.2 secs.
+[Sim 39] Dim 6/9 (A=12) done in 685.5 secs.
+[Sim 26] Dim 6/9 (A=12) done in 1138.5 secs.
+[Sim 43] Dim 6/9 (A=12) done in 852.0 secs.
+[Sim 18] Dim 6/9 (A=12) done in 1088.4 secs.
+[Sim 46] Dim 6/9 (A=12) done in 761.0 secs.
+[Sim 29] Dim 6/9 (A=12) done in 1611.4 secs.
+[Sim 50] Dim 6/9 (A=12) done in 865.3 secs.
+[Sim 36] Dim 6/9 (A=12) done in 950.0 secs.
+[Sim 3] Dim 6/9 (A=12) done in 1178.4 secs.
+[Sim 27] Dim 6/9 (A=12) done in 1058.0 secs.
+[Sim 12] Dim 6/9 (A=12) done in 1207.5 secs.
+[Sim 6] Dim 6/9 (A=12) done in 1425.5 secs.
+[Sim 20] Dim 5/9 (A=8) done in 1184.0 secs.
+[Sim 45] Dim 6/9 (A=12) done in 1233.5 secs.
+[Sim 42] Dim 6/9 (A=12) done in 1266.3 secs.
+[Sim 25] Dim 6/9 (A=12) done in 1309.8 secs.
+[Sim 41] Dim 6/9 (A=12) done in 1233.9 secs.
+[Sim 34] Dim 6/9 (A=12) done in 939.6 secs.
+[Sim 1] Dim 6/9 (A=12) done in 1191.5 secs.
+[Sim 35] Dim 6/9 (A=12) done in 1462.9 secs.
+[Sim 44] Dim 6/9 (A=12) done in 1285.9 secs.
+[Sim 49] Dim 6/9 (A=12) done in 1694.1 secs.
+[Sim 40] Dim 6/9 (A=12) done in 1172.0 secs.
+[Sim 10] Dim 5/9 (A=8) done in 974.9 secs.
+[Sim 38] Dim 6/9 (A=12) done in 1872.3 secs.
+[Sim 32] Dim 6/9 (A=12) done in 1764.2 secs.
+[Sim 20] Dim 6/9 (A=12) done in 1455.5 secs.
+[Sim 25] Dim 7/9 (A=16) done in 1537.3 secs.
+[Sim 7] Dim 7/9 (A=16) done in 2330.3 secs.
+[Sim 10] Dim 6/9 (A=12) done in 1430.7 secs.
+[Sim 1] Dim 7/9 (A=16) done in 1915.8 secs.
+[Sim 44] Dim 7/9 (A=16) done in 1823.5 secs.
+[Sim 2] Dim 7/9 (A=16) done in 2764.2 secs.
+[Sim 11] Dim 7/9 (A=16) done in 2714.6 secs.
+[Sim 13] Dim 7/9 (A=16) done in 2675.7 secs.
+[Sim 46] Dim 7/9 (A=16) done in 2350.8 secs.
+[Sim 31] Dim 7/9 (A=16) done in 3081.6 secs.
+[Sim 45] Dim 7/9 (A=16) done in 2410.7 secs.
+[Sim 8] Dim 7/9 (A=16) done in 3183.9 secs.
+[Sim 21] Dim 7/9 (A=16) done in 3395.9 secs.
+[Sim 37] Dim 7/9 (A=16) done in 3208.1 secs.
+[Sim 33] Dim 7/9 (A=16) done in 3213.4 secs.
+[Sim 17] Dim 7/9 (A=16) done in 3432.5 secs.
+[Sim 23] Dim 7/9 (A=16) done in 3632.7 secs.
+[Sim 9] Dim 7/9 (A=16) done in 4205.6 secs.
+[Sim 39] Dim 7/9 (A=16) done in 3456.3 secs.
+[Sim 29] Dim 7/9 (A=16) done in 3374.0 secs.
+[Sim 4] Dim 7/9 (A=16) done in 3842.6 secs.
+[Sim 12] Dim 7/9 (A=16) done in 3382.9 secs.
+[Sim 15] Dim 7/9 (A=16) done in 4377.8 secs.
+[Sim 30] Dim 7/9 (A=16) done in 4161.9 secs.
+[Sim 5] Dim 7/9 (A=16) done in 4333.4 secs.
+[Sim 20] Dim 7/9 (A=16) done in 2029.3 secs.
+[Sim 16] Dim 7/9 (A=16) done in 3985.2 secs.
+[Sim 14] Dim 7/9 (A=16) done in 4368.8 secs.
+[Sim 3] Dim 7/9 (A=16) done in 3708.0 secs.
+[Sim 47] Dim 7/9 (A=16) done in 4494.9 secs.
+[Sim 36] Dim 7/9 (A=16) done in 3812.3 secs.
+[Sim 24] Dim 7/9 (A=16) done in 4598.9 secs.
+[Sim 50] Dim 7/9 (A=16) done in 3997.2 secs.
+[Sim 48] Dim 7/9 (A=16) done in 4847.3 secs.
+[Sim 38] Dim 7/9 (A=16) done in 3412.1 secs.
+[Sim 27] Dim 7/9 (A=16) done in 4191.1 secs.
+[Sim 40] Dim 7/9 (A=16) done in 3687.9 secs.
+[Sim 19] Dim 7/9 (A=16) done in 4498.8 secs.
+[Sim 42] Dim 7/9 (A=16) done in 4107.2 secs.
+[Sim 18] Dim 7/9 (A=16) done in 4502.2 secs.
+[Sim 22] Dim 7/9 (A=16) done in 4675.8 secs.
+[Sim 35] Dim 7/9 (A=16) done in 4192.5 secs.
+[Sim 26] Dim 7/9 (A=16) done in 4596.4 secs.
+[Sim 34] Dim 7/9 (A=16) done in 4305.3 secs.
+[Sim 49] Dim 7/9 (A=16) done in 4110.8 secs.
+[Sim 6] Dim 7/9 (A=16) done in 4660.6 secs.
+[Sim 10] Dim 7/9 (A=16) done in 2738.2 secs.
+[Sim 28] Dim 7/9 (A=16) done in 5095.6 secs.
+[Sim 41] Dim 7/9 (A=16) done in 4831.0 secs.
+[Sim 43] Dim 7/9 (A=16) done in 5253.2 secs.
+[Sim 32] Dim 7/9 (A=16) done in 4813.7 secs.
+[Sim 2] Dim 8/9 (A=24) done in 4220.3 secs.
+[Sim 46] Dim 8/9 (A=24) done in 4330.3 secs.
+[Sim 13] Dim 8/9 (A=24) done in 4476.8 secs.
+[Sim 25] Dim 8/9 (A=24) done in 5207.6 secs.
+[Sim 31] Dim 8/9 (A=24) done in 4856.0 secs.
+[Sim 44] Dim 8/9 (A=24) done in 5499.1 secs.
+[Sim 23] Dim 8/9 (A=24) done in 4610.9 secs.
+[Sim 33] Dim 8/9 (A=24) done in 4830.2 secs.
+[Sim 20] Dim 8/9 (A=24) done in 4282.2 secs.
+[Sim 11] Dim 8/9 (A=24) done in 6078.2 secs.
+[Sim 7] Dim 8/9 (A=24) done in 6568.5 secs.
+[Sim 1] Dim 8/9 (A=24) done in 6773.5 secs.
+[Sim 45] Dim 8/9 (A=24) done in 6941.4 secs.
+[Sim 40] Dim 8/9 (A=24) done in 5996.3 secs.
+[Sim 26] Dim 8/9 (A=24) done in 5956.4 secs.
+[Sim 12] Dim 8/9 (A=24) done in 7323.4 secs.
+[Sim 5] Dim 8/9 (A=24) done in 7308.9 secs.
+[Sim 32] Dim 8/9 (A=24) done in 5763.6 secs.
+[Sim 18] Dim 8/9 (A=24) done in 7002.7 secs.
+[Sim 37] Dim 8/9 (A=24) done in 8848.2 secs.
+[Sim 39] Dim 8/9 (A=24) done in 8364.8 secs.
+[Sim 14] Dim 8/9 (A=24) done in 8025.1 secs.
+[Sim 29] Dim 8/9 (A=24) done in 8371.6 secs.
+[Sim 34] Dim 8/9 (A=24) done in 7202.6 secs.
+[Sim 27] Dim 8/9 (A=24) done in 7566.7 secs.
+[Sim 10] Dim 8/9 (A=24) done in 6982.2 secs.
+[Sim 19] Dim 8/9 (A=24) done in 7656.5 secs.
+[Sim 24] Dim 8/9 (A=24) done in 8168.6 secs.
+[Sim 30] Dim 8/9 (A=24) done in 8768.8 secs.
+[Sim 21] Dim 8/9 (A=24) done in 9796.6 secs.
+[Sim 3] Dim 8/9 (A=24) done in 8751.2 secs.
+[Sim 16] Dim 8/9 (A=24) done in 8917.1 secs.
+[Sim 6] Dim 8/9 (A=24) done in 7768.2 secs.
+[Sim 43] Dim 8/9 (A=24) done in 7462.8 secs.
+[Sim 47] Dim 8/9 (A=24) done in 8835.2 secs.
+[Sim 15] Dim 8/9 (A=24) done in 9091.9 secs.
+[Sim 17] Dim 8/9 (A=24) done in 9829.2 secs.
+[Sim 35] Dim 8/9 (A=24) done in 8429.0 secs.
+[Sim 48] Dim 8/9 (A=24) done in 9094.7 secs.
+[Sim 9] Dim 8/9 (A=24) done in 10110.9 secs.
+[Sim 50] Dim 8/9 (A=24) done in 9468.4 secs.
+[Sim 42] Dim 8/9 (A=24) done in 9162.4 secs.
+[Sim 8] Dim 8/9 (A=24) done in 10841.7 secs.
+[Sim 36] Dim 8/9 (A=24) done in 9694.5 secs.
+[Sim 49] Dim 8/9 (A=24) done in 8998.5 secs.
+[Sim 38] Dim 8/9 (A=24) done in 9598.7 secs.
+[Sim 4] Dim 8/9 (A=24) done in 10642.3 secs.
+[Sim 22] Dim 8/9 (A=24) done in 9779.3 secs.
+[Sim 28] Dim 8/9 (A=24) done in 9778.0 secs.
+[Sim 41] Dim 8/9 (A=24) done in 11482.1 secs.
+[Sim 11] Dim 9/9 (A=48) done in 39449.1 secs.
+[Sim 11] Complete.
+[Sim 37] Dim 9/9 (A=48) done in 38848.4 secs.
+[Sim 37] Complete.
+[Sim 44] Dim 9/9 (A=48) done in 43594.5 secs.
+[Sim 44] Complete.
+[Sim 13] Dim 9/9 (A=48) done in 45061.3 secs.
+[Sim 13] Complete.
+[Sim 45] Dim 9/9 (A=48) done in 42747.6 secs.
+[Sim 45] Complete.
+[Sim 46] Dim 9/9 (A=48) done in 45762.6 secs.
+[Sim 46] Complete.
+[Sim 1] Dim 9/9 (A=48) done in 43974.2 secs.
+[Sim 1] Complete.
+[Sim 6] Dim 9/9 (A=48) done in 40570.7 secs.
+[Sim 6] Complete.
+[Sim 12] Dim 9/9 (A=48) done in 42486.0 secs.
+[Sim 12] Complete.
+[Sim 18] Dim 9/9 (A=48) done in 42341.9 secs.
+[Sim 18] Complete.
+[Sim 27] Dim 9/9 (A=48) done in 42232.4 secs.
+[Sim 27] Complete.
+[Sim 7] Dim 9/9 (A=48) done in 45747.2 secs.
+[Sim 7] Complete.
+[Sim 36] Dim 9/9 (A=48) done in 41362.9 secs.
+[Sim 36] Complete.
+[Sim 10] Dim 9/9 (A=48) done in 43183.6 secs.
+[Sim 10] Complete.
+[Sim 16] Dim 9/9 (A=48) done in 42450.6 secs.
+[Sim 16] Complete.
+[Sim 2] Dim 9/9 (A=48) done in 48623.0 secs.
+[Sim 2] Complete.
+[Sim 26] Dim 9/9 (A=48) done in 44845.9 secs.
+[Sim 26] Complete.
+[Sim 33] Dim 9/9 (A=48) done in 47927.1 secs.
+[Sim 33] Complete.
+[Sim 40] Dim 9/9 (A=48) done in 45366.6 secs.
+[Sim 40] Complete.
+[Sim 30] Dim 9/9 (A=48) done in 43423.7 secs.
+[Sim 30] Complete.
+[Sim 8] Dim 9/9 (A=48) done in 42724.5 secs.
+[Sim 8] Complete.
+[Sim 15] Dim 9/9 (A=48) done in 43587.6 secs.
+[Sim 15] Complete.
+[Sim 19] Dim 9/9 (A=48) done in 44414.8 secs.
+[Sim 19] Complete.
+[Sim 3] Dim 9/9 (A=48) done in 43909.9 secs.
+[Sim 3] Complete.
+[Sim 35] Dim 9/9 (A=48) done in 43646.2 secs.
+[Sim 35] Complete.
+[Sim 42] Dim 9/9 (A=48) done in 43439.6 secs.
+[Sim 42] Complete.
+[Sim 25] Dim 9/9 (A=48) done in 49993.6 secs.
+[Sim 25] Complete.
+[Sim 43] Dim 9/9 (A=48) done in 44721.3 secs.
+[Sim 43] Complete.
+[Sim 50] Dim 9/9 (A=48) done in 43931.8 secs.
+[Sim 50] Complete.
+[Sim 48] Dim 9/9 (A=48) done in 44336.2 secs.
+[Sim 48] Complete.
+[Sim 34] Dim 9/9 (A=48) done in 45727.4 secs.
+[Sim 34] Complete.
+[Sim 21] Dim 9/9 (A=48) done in 45322.3 secs.
+[Sim 21] Complete.
+[Sim 23] Dim 9/9 (A=48) done in 50429.2 secs.
+[Sim 23] Complete.
+[Sim 24] Dim 9/9 (A=48) done in 46270.9 secs.
+[Sim 24] Complete.
+[Sim 47] Dim 9/9 (A=48) done in 46114.1 secs.
+[Sim 47] Complete.
+[Sim 20] Dim 9/9 (A=48) done in 50872.1 secs.
+[Sim 20] Complete.
+[Sim 28] Dim 9/9 (A=48) done in 44063.9 secs.
+[Sim 28] Complete.
+[Sim 49] Dim 9/9 (A=48) done in 45299.6 secs.
+[Sim 49] Complete.
+[Sim 31] Dim 9/9 (A=48) done in 51616.7 secs.
+[Sim 31] Complete.
+[Sim 41] Dim 9/9 (A=48) done in 42536.9 secs.
+[Sim 41] Complete.
+[Sim 14] Dim 9/9 (A=48) done in 47366.9 secs.
+[Sim 14] Complete.
+[Sim 4] Dim 9/9 (A=48) done in 45812.3 secs.
+[Sim 4] Complete.
+[Sim 39] Dim 9/9 (A=48) done in 48661.5 secs.
+[Sim 39] Complete.
+[Sim 9] Dim 9/9 (A=48) done in 47202.7 secs.
+[Sim 9] Complete.
+[Sim 17] Dim 9/9 (A=48) done in 47870.4 secs.
+[Sim 17] Complete.
+[Sim 32] Dim 9/9 (A=48) done in 49258.8 secs.
+[Sim 32] Complete.
+[Sim 5] Dim 9/9 (A=48) done in 49846.9 secs.
+[Sim 5] Complete.
+[Sim 38] Dim 9/9 (A=48) done in 47530.2 secs.
+[Sim 38] Complete.
+[Sim 22] Dim 9/9 (A=48) done in 47130.6 secs.
+[Sim 22] Complete.
+[Sim 29] Dim 9/9 (A=48) done in 50337.7 secs.
+[Sim 29] Complete.
+[Covariance: iCAR] Complete.
+[Covariance: car95] Started.
+[Sim 1] Started.
+[Sim 2] Started.
+[Sim 3] Started.
+[Sim 4] Started.
+[Sim 5] Started.
+[Sim 6] Started.
+[Sim 7] Started.
+[Sim 8] Started.
+[Sim 9] Started.
+[Sim 10] Started.
+[Sim 11] Started.
+[Sim 12] Started.
+[Sim 13] Started.
+[Sim 14] Started.
+[Sim 15] Started.
+[Sim 16] Started.
+[Sim 17] Started.
+[Sim 18] Started.
+[Sim 19] Started.
+[Sim 20] Started.
+[Sim 21] Started.
+[Sim 22] Started.
+[Sim 23] Started.
+[Sim 24] Started.
+[Sim 25] Started.
+[Sim 26] Started.
+[Sim 27] Started.
+[Sim 28] Started.
+[Sim 29] Started.
+[Sim 30] Started.
+[Sim 31] Started.
+[Sim 32] Started.
+[Sim 33] Started.
+[Sim 34] Started.
+[Sim 35] Started.
+[Sim 36] Started.
+[Sim 37] Started.
+[Sim 38] Started.
+[Sim 39] Started.
+[Sim 40] Started.
+[Sim 41] Started.
+[Sim 42] Started.
+[Sim 43] Started.
+[Sim 44] Started.
+[Sim 45] Started.
+[Sim 46] Started.
+[Sim 47] Started.
+[Sim 48] Started.
+[Sim 49] Started.
+[Sim 50] Started.
+[Sim 2] Dim 1/9 (A=2) done in 190.9 secs.
+[Sim 24] Dim 1/9 (A=2) done in 179.1 secs.
+[Sim 11] Dim 1/9 (A=2) done in 190.4 secs.
+[Sim 48] Dim 1/9 (A=2) done in 170.6 secs.
+[Sim 12] Dim 1/9 (A=2) done in 202.3 secs.
+[Sim 4] Dim 1/9 (A=2) done in 213.6 secs.
+[Sim 42] Dim 1/9 (A=2) done in 185.5 secs.
+[Sim 7] Dim 1/9 (A=2) done in 215.2 secs.
+[Sim 8] Dim 1/9 (A=2) done in 215.8 secs.
+[Sim 27] Dim 1/9 (A=2) done in 208.2 secs.
+[Sim 18] Dim 1/9 (A=2) done in 217.8 secs.
+[Sim 17] Dim 1/9 (A=2) done in 222.1 secs.
+[Sim 28] Dim 1/9 (A=2) done in 223.5 secs.
+[Sim 13] Dim 1/9 (A=2) done in 237.3 secs.
+[Sim 47] Dim 1/9 (A=2) done in 227.5 secs.
+[Sim 43] Dim 1/9 (A=2) done in 231.9 secs.
+[Sim 41] Dim 1/9 (A=2) done in 239.6 secs.
+[Sim 5] Dim 1/9 (A=2) done in 268.8 secs.
+[Sim 33] Dim 1/9 (A=2) done in 246.6 secs.
+[Sim 9] Dim 1/9 (A=2) done in 268.9 secs.
+[Sim 29] Dim 1/9 (A=2) done in 252.7 secs.
+[Sim 3] Dim 1/9 (A=2) done in 289.1 secs.
+[Sim 19] Dim 1/9 (A=2) done in 322.5 secs.
+[Sim 11] Dim 2/9 (A=3) done in 152.2 secs.
+[Sim 36] Dim 1/9 (A=2) done in 330.7 secs.
+[Sim 50] Dim 1/9 (A=2) done in 333.2 secs.
+[Sim 35] Dim 1/9 (A=2) done in 344.7 secs.
+[Sim 31] Dim 1/9 (A=2) done in 349.6 secs.
+[Sim 15] Dim 1/9 (A=2) done in 367.5 secs.
+[Sim 22] Dim 1/9 (A=2) done in 361.3 secs.
+[Sim 23] Dim 1/9 (A=2) done in 363.4 secs.
+[Sim 6] Dim 1/9 (A=2) done in 395.2 secs.
+[Sim 26] Dim 1/9 (A=2) done in 381.2 secs.
+[Sim 34] Dim 1/9 (A=2) done in 381.4 secs.
+[Sim 46] Dim 1/9 (A=2) done in 375.5 secs.
+[Sim 39] Dim 1/9 (A=2) done in 386.4 secs.
+[Sim 32] Dim 1/9 (A=2) done in 391.1 secs.
+[Sim 20] Dim 1/9 (A=2) done in 408.0 secs.
+[Sim 30] Dim 1/9 (A=2) done in 403.7 secs.
+[Sim 1] Dim 1/9 (A=2) done in 429.2 secs.
+[Sim 2] Dim 2/9 (A=3) done in 254.6 secs.
+[Sim 27] Dim 2/9 (A=3) done in 215.8 secs.
+[Sim 10] Dim 1/9 (A=2) done in 442.8 secs.
+[Sim 38] Dim 1/9 (A=2) done in 427.0 secs.
+[Sim 7] Dim 2/9 (A=3) done in 237.6 secs.
+[Sim 17] Dim 2/9 (A=3) done in 222.6 secs.
+[Sim 18] Dim 2/9 (A=3) done in 228.7 secs.
+[Sim 16] Dim 1/9 (A=2) done in 468.1 secs.
+[Sim 12] Dim 2/9 (A=3) done in 271.8 secs.
+[Sim 42] Dim 2/9 (A=3) done in 272.4 secs.
+[Sim 45] Dim 1/9 (A=2) done in 465.0 secs.
+[Sim 44] Dim 1/9 (A=2) done in 470.6 secs.
+[Sim 49] Dim 1/9 (A=2) done in 475.1 secs.
+[Sim 40] Dim 1/9 (A=2) done in 481.5 secs.
+[Sim 25] Dim 1/9 (A=2) done in 531.8 secs.
+[Sim 29] Dim 2/9 (A=3) done in 287.4 secs.
+[Sim 5] Dim 2/9 (A=3) done in 298.8 secs.
+[Sim 23] Dim 2/9 (A=3) done in 223.0 secs.
+[Sim 9] Dim 2/9 (A=3) done in 330.6 secs.
+[Sim 48] Dim 2/9 (A=3) done in 412.0 secs.
+[Sim 13] Dim 2/9 (A=3) done in 378.9 secs.
+[Sim 22] Dim 2/9 (A=3) done in 264.8 secs.
+[Sim 44] Dim 2/9 (A=3) done in 148.5 secs.
+[Sim 14] Dim 1/9 (A=2) done in 652.8 secs.
+[Sim 19] Dim 2/9 (A=3) done in 335.9 secs.
+[Sim 30] Dim 2/9 (A=3) done in 258.9 secs.
+[Sim 39] Dim 2/9 (A=3) done in 279.2 secs.
+[Sim 41] Dim 2/9 (A=3) done in 435.2 secs.
+[Sim 36] Dim 2/9 (A=3) done in 347.8 secs.
+[Sim 35] Dim 2/9 (A=3) done in 337.6 secs.
+[Sim 42] Dim 3/9 (A=4) done in 232.4 secs.
+[Sim 16] Dim 2/9 (A=3) done in 247.2 secs.
+[Sim 21] Dim 1/9 (A=2) done in 712.1 secs.
+[Sim 15] Dim 2/9 (A=3) done in 350.7 secs.
+[Sim 27] Dim 3/9 (A=4) done in 285.9 secs.
+[Sim 38] Dim 2/9 (A=3) done in 294.4 secs.
+[Sim 33] Dim 2/9 (A=3) done in 480.3 secs.
+[Sim 17] Dim 3/9 (A=4) done in 300.2 secs.
+[Sim 25] Dim 2/9 (A=3) done in 211.3 secs.
+[Sim 32] Dim 2/9 (A=3) done in 354.7 secs.
+[Sim 8] Dim 2/9 (A=3) done in 557.4 secs.
+[Sim 50] Dim 2/9 (A=3) done in 425.8 secs.
+[Sim 5] Dim 3/9 (A=4) done in 236.6 secs.
+[Sim 37] Dim 1/9 (A=2) done in 800.7 secs.
+[Sim 9] Dim 3/9 (A=4) done in 223.9 secs.
+[Sim 48] Dim 3/9 (A=4) done in 239.7 secs.
+[Sim 46] Dim 2/9 (A=3) done in 449.6 secs.
+[Sim 11] Dim 3/9 (A=4) done in 511.5 secs.
+[Sim 43] Dim 2/9 (A=3) done in 602.7 secs.
+[Sim 34] Dim 2/9 (A=3) done in 465.9 secs.
+[Sim 24] Dim 2/9 (A=3) done in 694.5 secs.
+[Sim 44] Dim 3/9 (A=4) done in 242.5 secs.
+[Sim 29] Dim 3/9 (A=4) done in 334.1 secs.
+[Sim 45] Dim 2/9 (A=3) done in 401.5 secs.
+[Sim 13] Dim 3/9 (A=4) done in 287.2 secs.
+[Sim 14] Dim 2/9 (A=3) done in 255.2 secs.
+[Sim 12] Dim 3/9 (A=4) done in 435.6 secs.
+[Sim 28] Dim 2/9 (A=3) done in 689.7 secs.
+[Sim 18] Dim 3/9 (A=4) done in 484.0 secs.
+[Sim 4] Dim 2/9 (A=3) done in 743.7 secs.
+[Sim 41] Dim 3/9 (A=4) done in 270.4 secs.
+[Sim 20] Dim 2/9 (A=3) done in 554.1 secs.
+[Sim 47] Dim 2/9 (A=3) done in 728.5 secs.
+[Sim 2] Dim 3/9 (A=4) done in 554.3 secs.
+[Sim 25] Dim 3/9 (A=4) done in 241.2 secs.
+[Sim 30] Dim 3/9 (A=4) done in 324.7 secs.
+[Sim 9] Dim 4/9 (A=6) done in 198.0 secs.
+[Sim 31] Dim 2/9 (A=3) done in 674.3 secs.
+[Sim 40] Dim 2/9 (A=3) done in 539.1 secs.
+[Sim 46] Dim 3/9 (A=4) done in 223.9 secs.
+[Sim 6] Dim 2/9 (A=3) done in 687.6 secs.
+[Sim 1] Dim 2/9 (A=3) done in 658.8 secs.
+[Sim 32] Dim 3/9 (A=4) done in 331.0 secs.
+[Sim 35] Dim 3/9 (A=4) done in 395.8 secs.
+[Sim 7] Dim 3/9 (A=4) done in 702.8 secs.
+[Sim 5] Dim 4/9 (A=6) done in 354.3 secs.
+[Sim 15] Dim 3/9 (A=4) done in 434.3 secs.
+[Sim 26] Dim 2/9 (A=3) done in 774.1 secs.
+[Sim 27] Dim 4/9 (A=6) done in 451.9 secs.
+[Sim 4] Dim 3/9 (A=4) done in 228.6 secs.
+[Sim 10] Dim 2/9 (A=3) done in 743.1 secs.
+[Sim 3] Dim 2/9 (A=3) done in 928.5 secs.
+[Sim 17] Dim 4/9 (A=6) done in 474.0 secs.
+[Sim 49] Dim 2/9 (A=3) done in 723.9 secs.
+[Sim 29] Dim 4/9 (A=6) done in 339.6 secs.
+[Sim 19] Dim 3/9 (A=4) done in 579.5 secs.
+[Sim 36] Dim 3/9 (A=4) done in 547.2 secs.
+[Sim 22] Dim 3/9 (A=4) done in 617.8 secs.
+[Sim 48] Dim 4/9 (A=6) done in 405.3 secs.
+[Sim 25] Dim 4/9 (A=6) done in 257.7 secs.
+[Sim 34] Dim 3/9 (A=4) done in 413.6 secs.
+[Sim 42] Dim 4/9 (A=6) done in 568.2 secs.
+[Sim 18] Dim 4/9 (A=6) done in 344.7 secs.
+[Sim 2] Dim 4/9 (A=6) done in 293.5 secs.
+[Sim 28] Dim 3/9 (A=4) done in 371.8 secs.
+[Sim 20] Dim 3/9 (A=4) done in 341.1 secs.
+[Sim 16] Dim 3/9 (A=4) done in 607.5 secs.
+[Sim 23] Dim 3/9 (A=4) done in 736.4 secs.
+[Sim 12] Dim 4/9 (A=6) done in 423.6 secs.
+[Sim 38] Dim 3/9 (A=4) done in 592.9 secs.
+[Sim 8] Dim 3/9 (A=4) done in 568.4 secs.
+[Sim 37] Dim 2/9 (A=3) done in 519.1 secs.
+[Sim 31] Dim 3/9 (A=4) done in 309.3 secs.
+[Sim 39] Dim 3/9 (A=4) done in 669.0 secs.
+[Sim 50] Dim 3/9 (A=4) done in 578.5 secs.
+[Sim 30] Dim 4/9 (A=6) done in 371.8 secs.
+[Sim 33] Dim 3/9 (A=4) done in 655.0 secs.
+[Sim 22] Dim 4/9 (A=6) done in 193.7 secs.
+[Sim 40] Dim 3/9 (A=4) done in 418.4 secs.
+[Sim 21] Dim 2/9 (A=3) done in 748.5 secs.
+[Sim 15] Dim 4/9 (A=6) done in 314.8 secs.
+[Sim 49] Dim 3/9 (A=4) done in 253.6 secs.
+[Sim 6] Dim 3/9 (A=4) done in 416.1 secs.
+[Sim 32] Dim 4/9 (A=6) done in 410.5 secs.
+[Sim 24] Dim 3/9 (A=4) done in 623.7 secs.
+[Sim 45] Dim 3/9 (A=4) done in 618.9 secs.
+[Sim 38] Dim 4/9 (A=6) done in 226.2 secs.
+[Sim 43] Dim 3/9 (A=4) done in 716.9 secs.
+[Sim 44] Dim 4/9 (A=6) done in 735.5 secs.
+[Sim 14] Dim 3/9 (A=4) done in 719.1 secs.
+[Sim 34] Dim 4/9 (A=6) done in 356.4 secs.
+[Sim 31] Dim 4/9 (A=6) done in 307.7 secs.
+[Sim 37] Dim 3/9 (A=4) done in 318.6 secs.
+[Sim 7] Dim 4/9 (A=6) done in 515.8 secs.
+[Sim 2] Dim 5/9 (A=8) done in 404.1 secs.
+[Sim 36] Dim 4/9 (A=6) done in 451.5 secs.
+[Sim 17] Dim 5/9 (A=8) done in 484.2 secs.
+[Sim 47] Dim 3/9 (A=4) done in 730.2 secs.
+[Sim 25] Dim 5/9 (A=8) done in 461.1 secs.
+[Sim 20] Dim 4/9 (A=6) done in 413.7 secs.
+[Sim 21] Dim 3/9 (A=4) done in 262.6 secs.
+[Sim 42] Dim 5/9 (A=8) done in 455.4 secs.
+[Sim 48] Dim 5/9 (A=8) done in 509.4 secs.
+[Sim 30] Dim 5/9 (A=8) done in 391.0 secs.
+[Sim 8] Dim 4/9 (A=6) done in 429.6 secs.
+[Sim 28] Dim 4/9 (A=6) done in 490.6 secs.
+[Sim 11] Dim 4/9 (A=6) done in 941.3 secs.
+[Sim 41] Dim 4/9 (A=6) done in 833.9 secs.
+[Sim 13] Dim 4/9 (A=6) done in 900.4 secs.
+[Sim 45] Dim 4/9 (A=6) done in 301.6 secs.
+[Sim 35] Dim 4/9 (A=6) done in 730.4 secs.
+[Sim 39] Dim 4/9 (A=6) done in 479.2 secs.
+[Sim 27] Dim 5/9 (A=8) done in 683.6 secs.
+[Sim 1] Dim 3/9 (A=4) done in 782.7 secs.
+[Sim 29] Dim 5/9 (A=8) done in 646.8 secs.
+[Sim 16] Dim 4/9 (A=6) done in 552.0 secs.
+[Sim 12] Dim 5/9 (A=8) done in 546.4 secs.
+[Sim 18] Dim 5/9 (A=8) done in 604.0 secs.
+[Sim 47] Dim 4/9 (A=6) done in 201.3 secs.
+[Sim 24] Dim 4/9 (A=6) done in 406.6 secs.
+[Sim 4] Dim 4/9 (A=6) done in 739.5 secs.
+[Sim 5] Dim 5/9 (A=8) done in 776.5 secs.
+[Sim 9] Dim 5/9 (A=8) done in 910.9 secs.
+[Sim 10] Dim 3/9 (A=4) done in 748.2 secs.
+[Sim 32] Dim 5/9 (A=8) done in 441.4 secs.
+[Sim 43] Dim 4/9 (A=6) done in 380.1 secs.
+[Sim 46] Dim 4/9 (A=6) done in 914.4 secs.
+[Sim 38] Dim 5/9 (A=8) done in 444.6 secs.
+[Sim 3] Dim 3/9 (A=4) done in 809.8 secs.
+[Sim 26] Dim 3/9 (A=4) done in 856.7 secs.
+[Sim 22] Dim 5/9 (A=8) done in 581.6 secs.
+[Sim 19] Dim 4/9 (A=6) done in 787.5 secs.
+[Sim 36] Dim 5/9 (A=8) done in 343.7 secs.
+[Sim 49] Dim 4/9 (A=6) done in 581.3 secs.
+[Sim 6] Dim 4/9 (A=6) done in 578.5 secs.
+[Sim 34] Dim 5/9 (A=8) done in 459.7 secs.
+[Sim 23] Dim 4/9 (A=6) done in 762.8 secs.
+[Sim 33] Dim 4/9 (A=6) done in 700.9 secs.
+[Sim 21] Dim 4/9 (A=6) done in 385.2 secs.
+[Sim 50] Dim 4/9 (A=6) done in 781.3 secs.
+[Sim 40] Dim 4/9 (A=6) done in 688.3 secs.
+[Sim 14] Dim 4/9 (A=6) done in 522.0 secs.
+[Sim 44] Dim 5/9 (A=8) done in 535.4 secs.
+[Sim 7] Dim 5/9 (A=8) done in 542.1 secs.
+[Sim 37] Dim 4/9 (A=6) done in 574.5 secs.
+[Sim 1] Dim 4/9 (A=6) done in 388.4 secs.
+[Sim 41] Dim 5/9 (A=8) done in 467.4 secs.
+[Sim 31] Dim 5/9 (A=8) done in 627.5 secs.
+[Sim 39] Dim 5/9 (A=8) done in 452.2 secs.
+[Sim 16] Dim 5/9 (A=8) done in 420.1 secs.
+[Sim 28] Dim 5/9 (A=8) done in 517.1 secs.
+[Sim 15] Dim 5/9 (A=8) done in 850.9 secs.
+[Sim 3] Dim 4/9 (A=6) done in 325.3 secs.
+[Sim 20] Dim 5/9 (A=8) done in 653.3 secs.
+[Sim 10] Dim 4/9 (A=6) done in 447.5 secs.
+[Sim 13] Dim 5/9 (A=8) done in 580.9 secs.
+[Sim 45] Dim 5/9 (A=8) done in 581.6 secs.
+[Sim 19] Dim 5/9 (A=8) done in 378.6 secs.
+[Sim 43] Dim 5/9 (A=8) done in 490.9 secs.
+[Sim 8] Dim 5/9 (A=8) done in 695.9 secs.
+[Sim 24] Dim 5/9 (A=8) done in 562.1 secs.
+[Sim 26] Dim 4/9 (A=6) done in 486.5 secs.
+[Sim 46] Dim 5/9 (A=8) done in 560.4 secs.
+[Sim 47] Dim 5/9 (A=8) done in 635.9 secs.
+[Sim 11] Dim 5/9 (A=8) done in 757.8 secs.
+[Sim 49] Dim 5/9 (A=8) done in 522.3 secs.
+[Sim 4] Dim 5/9 (A=8) done in 672.5 secs.
+[Sim 17] Dim 6/9 (A=12) done in 907.4 secs.
+[Sim 25] Dim 6/9 (A=12) done in 901.7 secs.
+[Sim 23] Dim 5/9 (A=8) done in 569.3 secs.
+[Sim 29] Dim 6/9 (A=12) done in 823.0 secs.
+[Sim 21] Dim 5/9 (A=8) done in 607.3 secs.
+[Sim 37] Dim 5/9 (A=8) done in 518.5 secs.
+[Sim 50] Dim 5/9 (A=8) done in 637.2 secs.
+[Sim 14] Dim 5/9 (A=8) done in 647.4 secs.
+[Sim 30] Dim 6/9 (A=12) done in 1061.2 secs.
+[Sim 33] Dim 5/9 (A=8) done in 745.6 secs.
+[Sim 40] Dim 5/9 (A=8) done in 725.6 secs.
+[Sim 18] Dim 6/9 (A=12) done in 997.9 secs.
+[Sim 12] Dim 6/9 (A=12) done in 1019.7 secs.
+[Sim 42] Dim 6/9 (A=12) done in 1166.8 secs.
+[Sim 5] Dim 6/9 (A=12) done in 974.2 secs.
+[Sim 3] Dim 5/9 (A=8) done in 559.0 secs.
+[Sim 48] Dim 6/9 (A=12) done in 1178.1 secs.
+[Sim 44] Dim 6/9 (A=12) done in 786.3 secs.
+[Sim 6] Dim 5/9 (A=8) done in 927.3 secs.
+[Sim 10] Dim 5/9 (A=8) done in 635.7 secs.
+[Sim 2] Dim 6/9 (A=12) done in 1329.0 secs.
+[Sim 1] Dim 5/9 (A=8) done in 795.4 secs.
+[Sim 41] Dim 6/9 (A=12) done in 781.4 secs.
+[Sim 27] Dim 6/9 (A=12) done in 1195.0 secs.
+[Sim 22] Dim 6/9 (A=12) done in 1043.5 secs.
+[Sim 9] Dim 6/9 (A=12) done in 1164.4 secs.
+[Sim 35] Dim 5/9 (A=8) done in 1338.9 secs.
+[Sim 36] Dim 6/9 (A=12) done in 1212.5 secs.
+[Sim 31] Dim 6/9 (A=12) done in 971.9 secs.
+[Sim 7] Dim 6/9 (A=12) done in 1139.1 secs.
+[Sim 16] Dim 6/9 (A=12) done in 1052.7 secs.
+[Sim 38] Dim 6/9 (A=12) done in 1353.2 secs.
+[Sim 20] Dim 6/9 (A=12) done in 997.8 secs.
+[Sim 8] Dim 6/9 (A=12) done in 921.9 secs.
+[Sim 32] Dim 6/9 (A=12) done in 1453.8 secs.
+[Sim 26] Dim 5/9 (A=8) done in 905.6 secs.
+[Sim 19] Dim 6/9 (A=12) done in 1030.7 secs.
+[Sim 28] Dim 6/9 (A=12) done in 1148.8 secs.
+[Sim 45] Dim 6/9 (A=12) done in 1152.8 secs.
+[Sim 15] Dim 6/9 (A=12) done in 1236.3 secs.
+[Sim 34] Dim 6/9 (A=12) done in 1467.2 secs.
+[Sim 39] Dim 6/9 (A=12) done in 1287.3 secs.
+[Sim 24] Dim 6/9 (A=12) done in 1161.4 secs.
+[Sim 46] Dim 6/9 (A=12) done in 1119.7 secs.
+[Sim 47] Dim 6/9 (A=12) done in 1127.2 secs.
+[Sim 43] Dim 6/9 (A=12) done in 1272.9 secs.
+[Sim 21] Dim 6/9 (A=12) done in 995.4 secs.
+[Sim 13] Dim 6/9 (A=12) done in 1343.6 secs.
+[Sim 11] Dim 6/9 (A=12) done in 1179.3 secs.
+[Sim 4] Dim 6/9 (A=12) done in 1176.5 secs.
+[Sim 10] Dim 6/9 (A=12) done in 858.1 secs.
+[Sim 23] Dim 6/9 (A=12) done in 1246.0 secs.
+[Sim 37] Dim 6/9 (A=12) done in 1247.0 secs.
+[Sim 6] Dim 6/9 (A=12) done in 1017.4 secs.
+[Sim 14] Dim 6/9 (A=12) done in 1237.0 secs.
+[Sim 49] Dim 6/9 (A=12) done in 1474.9 secs.
+[Sim 33] Dim 6/9 (A=12) done in 1242.1 secs.
+[Sim 50] Dim 6/9 (A=12) done in 1336.9 secs.
+[Sim 40] Dim 6/9 (A=12) done in 1421.9 secs.
+[Sim 1] Dim 6/9 (A=12) done in 1265.6 secs.
+[Sim 35] Dim 6/9 (A=12) done in 1214.5 secs.
+[Sim 3] Dim 6/9 (A=12) done in 1531.5 secs.
+[Sim 26] Dim 6/9 (A=12) done in 1165.4 secs.
+[Sim 41] Dim 7/9 (A=16) done in 1618.1 secs.
+[Sim 30] Dim 7/9 (A=16) done in 1990.3 secs.
+[Sim 29] Dim 7/9 (A=16) done in 2263.2 secs.
+[Sim 48] Dim 7/9 (A=16) done in 2021.4 secs.
+[Sim 42] Dim 7/9 (A=16) done in 2130.0 secs.
+[Sim 25] Dim 7/9 (A=16) done in 2511.9 secs.
+[Sim 17] Dim 7/9 (A=16) done in 2564.6 secs.
+[Sim 44] Dim 7/9 (A=16) done in 2520.4 secs.
+[Sim 12] Dim 7/9 (A=16) done in 2643.3 secs.
+[Sim 31] Dim 7/9 (A=16) done in 2301.5 secs.
+[Sim 7] Dim 7/9 (A=16) done in 2277.0 secs.
+[Sim 27] Dim 7/9 (A=16) done in 2695.6 secs.
+[Sim 22] Dim 7/9 (A=16) done in 2684.8 secs.
+[Sim 36] Dim 7/9 (A=16) done in 2510.4 secs.
+[Sim 5] Dim 7/9 (A=16) done in 2935.7 secs.
+[Sim 8] Dim 7/9 (A=16) done in 2489.4 secs.
+[Sim 2] Dim 7/9 (A=16) done in 2868.3 secs.
+[Sim 18] Dim 7/9 (A=16) done in 3095.9 secs.
+[Sim 16] Dim 7/9 (A=16) done in 2643.3 secs.
+[Sim 34] Dim 7/9 (A=16) done in 2435.5 secs.
+[Sim 9] Dim 7/9 (A=16) done in 2927.9 secs.
+[Sim 28] Dim 7/9 (A=16) done in 2634.9 secs.
+[Sim 39] Dim 7/9 (A=16) done in 2623.3 secs.
+[Sim 50] Dim 7/9 (A=16) done in 2268.2 secs.
+[Sim 47] Dim 7/9 (A=16) done in 2773.0 secs.
+[Sim 32] Dim 7/9 (A=16) done in 3101.6 secs.
+[Sim 20] Dim 7/9 (A=16) done in 3142.6 secs.
+[Sim 24] Dim 7/9 (A=16) done in 2908.0 secs.
+[Sim 19] Dim 7/9 (A=16) done in 3122.2 secs.
+[Sim 21] Dim 7/9 (A=16) done in 2907.9 secs.
+[Sim 33] Dim 7/9 (A=16) done in 2566.8 secs.
+[Sim 38] Dim 7/9 (A=16) done in 3346.2 secs.
+[Sim 15] Dim 7/9 (A=16) done in 3149.5 secs.
+[Sim 46] Dim 7/9 (A=16) done in 3210.0 secs.
+[Sim 11] Dim 7/9 (A=16) done in 3151.2 secs.
+[Sim 4] Dim 7/9 (A=16) done in 3127.0 secs.
+[Sim 6] Dim 7/9 (A=16) done in 2927.6 secs.
+[Sim 23] Dim 7/9 (A=16) done in 3069.0 secs.
+[Sim 40] Dim 7/9 (A=16) done in 2716.0 secs.
+[Sim 3] Dim 7/9 (A=16) done in 2637.3 secs.
+[Sim 43] Dim 7/9 (A=16) done in 3475.7 secs.
+[Sim 35] Dim 7/9 (A=16) done in 2849.0 secs.
+[Sim 1] Dim 7/9 (A=16) done in 2936.1 secs.
+[Sim 37] Dim 7/9 (A=16) done in 3277.0 secs.
+[Sim 10] Dim 7/9 (A=16) done in 3443.3 secs.
+[Sim 49] Dim 7/9 (A=16) done in 3304.2 secs.
+[Sim 45] Dim 7/9 (A=16) done in 3905.4 secs.
+[Sim 14] Dim 7/9 (A=16) done in 3425.2 secs.
+[Sim 26] Dim 7/9 (A=16) done in 2984.6 secs.
+[Sim 13] Dim 7/9 (A=16) done in 3910.1 secs.
+[Sim 30] Dim 8/9 (A=24) done in 7810.5 secs.
+[Sim 16] Dim 8/9 (A=24) done in 6719.8 secs.
+[Sim 31] Dim 8/9 (A=24) done in 7192.1 secs.
+[Sim 36] Dim 8/9 (A=24) done in 7228.3 secs.
+[Sim 17] Dim 8/9 (A=24) done in 7833.4 secs.
+[Sim 12] Dim 8/9 (A=24) done in 7488.6 secs.
+[Sim 44] Dim 8/9 (A=24) done in 7633.3 secs.
+[Sim 48] Dim 8/9 (A=24) done in 8198.9 secs.
+[Sim 29] Dim 8/9 (A=24) done in 8221.1 secs.
+[Sim 5] Dim 8/9 (A=24) done in 7817.7 secs.
+[Sim 28] Dim 8/9 (A=24) done in 7680.9 secs.
+[Sim 34] Dim 8/9 (A=24) done in 7926.7 secs.
+[Sim 8] Dim 8/9 (A=24) done in 8066.8 secs.
+[Sim 22] Dim 8/9 (A=24) done in 8237.3 secs.
+[Sim 38] Dim 8/9 (A=24) done in 7299.5 secs.
+[Sim 7] Dim 8/9 (A=24) done in 8382.0 secs.
+[Sim 41] Dim 8/9 (A=24) done in 9384.3 secs.
+[Sim 20] Dim 8/9 (A=24) done in 7657.9 secs.
+[Sim 50] Dim 8/9 (A=24) done in 7903.0 secs.
+[Sim 25] Dim 8/9 (A=24) done in 9438.9 secs.
+[Sim 11] Dim 8/9 (A=24) done in 7831.1 secs.
+[Sim 6] Dim 8/9 (A=24) done in 7853.6 secs.
+[Sim 2] Dim 8/9 (A=24) done in 8925.3 secs.
+[Sim 15] Dim 8/9 (A=24) done in 8107.2 secs.
+[Sim 39] Dim 8/9 (A=24) done in 8626.6 secs.
+[Sim 43] Dim 8/9 (A=24) done in 7681.7 secs.
+[Sim 24] Dim 8/9 (A=24) done in 8655.2 secs.
+[Sim 10] Dim 8/9 (A=24) done in 7907.3 secs.
+[Sim 40] Dim 8/9 (A=24) done in 8225.6 secs.
+[Sim 32] Dim 8/9 (A=24) done in 8746.0 secs.
+[Sim 9] Dim 8/9 (A=24) done in 9319.6 secs.
+[Sim 42] Dim 8/9 (A=24) done in 10457.8 secs.
+[Sim 47] Dim 8/9 (A=24) done in 9062.0 secs.
+[Sim 46] Dim 8/9 (A=24) done in 8643.5 secs.
+[Sim 18] Dim 8/9 (A=24) done in 9659.6 secs.
+[Sim 35] Dim 8/9 (A=24) done in 8469.7 secs.
+[Sim 19] Dim 8/9 (A=24) done in 9207.6 secs.
+[Sim 45] Dim 8/9 (A=24) done in 8551.9 secs.
+[Sim 21] Dim 8/9 (A=24) done in 9447.3 secs.
+[Sim 13] Dim 8/9 (A=24) done in 8446.7 secs.
+[Sim 23] Dim 8/9 (A=24) done in 9297.9 secs.
+[Sim 27] Dim 8/9 (A=24) done in 10663.5 secs.
+[Sim 3] Dim 8/9 (A=24) done in 9357.4 secs.
+[Sim 4] Dim 8/9 (A=24) done in 9598.8 secs.
+[Sim 37] Dim 8/9 (A=24) done in 9342.1 secs.
+[Sim 26] Dim 8/9 (A=24) done in 9153.4 secs.
+[Sim 33] Dim 8/9 (A=24) done in 10082.7 secs.
+[Sim 14] Dim 8/9 (A=24) done in 9849.5 secs.
+[Sim 1] Dim 8/9 (A=24) done in 10217.8 secs.
+[Sim 49] Dim 8/9 (A=24) done in 10138.7 secs.
+[Sim 31] Dim 9/9 (A=48) done in 42915.6 secs.
+[Sim 31] Complete.
+[Sim 11] Dim 9/9 (A=48) done in 43923.3 secs.
+[Sim 11] Complete.
+[Sim 39] Dim 9/9 (A=48) done in 44476.3 secs.
+[Sim 39] Complete.
+[Sim 37] Dim 9/9 (A=48) done in 43079.2 secs.
+[Sim 37] Complete.
+[Sim 29] Dim 9/9 (A=48) done in 47012.8 secs.
+[Sim 29] Complete.
+[Sim 17] Dim 9/9 (A=48) done in 48506.7 secs.
+[Sim 17] Complete.
+[Sim 44] Dim 9/9 (A=48) done in 49322.0 secs.
+[Sim 44] Complete.
+[Sim 1] Dim 9/9 (A=48) done in 45002.0 secs.
+[Sim 1] Complete.
+[Sim 41] Dim 9/9 (A=48) done in 49217.2 secs.
+[Sim 41] Complete.
+[Sim 30] Dim 9/9 (A=48) done in 50750.0 secs.
+[Sim 30] Complete.
+[Sim 47] Dim 9/9 (A=48) done in 47998.0 secs.
+[Sim 47] Complete.
+[Sim 28] Dim 9/9 (A=48) done in 50021.1 secs.
+[Sim 28] Complete.
+[Sim 38] Dim 9/9 (A=48) done in 49885.7 secs.
+[Sim 38] Complete.
+[Sim 23] Dim 9/9 (A=48) done in 47676.8 secs.
+[Sim 23] Complete.
+[Sim 25] Dim 9/9 (A=48) done in 49605.6 secs.
+[Sim 25] Complete.
+[Sim 8] Dim 9/9 (A=48) done in 50486.1 secs.
+[Sim 8] Complete.
+[Sim 48] Dim 9/9 (A=48) done in 51712.0 secs.
+[Sim 48] Complete.
+[Sim 10] Dim 9/9 (A=48) done in 49923.5 secs.
+[Sim 10] Complete.
+[Sim 2] Dim 9/9 (A=48) done in 50649.8 secs.
+[Sim 2] Complete.
+[Sim 40] Dim 9/9 (A=48) done in 50401.6 secs.
+[Sim 40] Complete.
+[Sim 22] Dim 9/9 (A=48) done in 52061.6 secs.
+[Sim 22] Complete.
+[Sim 7] Dim 9/9 (A=48) done in 52181.2 secs.
+[Sim 7] Complete.
+[Sim 21] Dim 9/9 (A=48) done in 50120.2 secs.
+[Sim 21] Complete.
+[Sim 4] Dim 9/9 (A=48) done in 49729.1 secs.
+[Sim 4] Complete.
+[Sim 45] Dim 9/9 (A=48) done in 50272.8 secs.
+[Sim 45] Complete.
+[Sim 20] Dim 9/9 (A=48) done in 52418.3 secs.
+[Sim 20] Complete.
+[Sim 50] Dim 9/9 (A=48) done in 52450.9 secs.
+[Sim 50] Complete.
+[Sim 12] Dim 9/9 (A=48) done in 53749.0 secs.
+[Sim 12] Complete.
+[Sim 19] Dim 9/9 (A=48) done in 51380.8 secs.
+[Sim 19] Complete.
+[Sim 35] Dim 9/9 (A=48) done in 51527.5 secs.
+[Sim 35] Complete.
+[Sim 18] Dim 9/9 (A=48) done in 51771.1 secs.
+[Sim 18] Complete.
+[Sim 42] Dim 9/9 (A=48) done in 51958.6 secs.
+[Sim 42] Complete.
+[Sim 24] Dim 9/9 (A=48) done in 52400.2 secs.
+[Sim 24] Complete.
+[Sim 5] Dim 9/9 (A=48) done in 54091.1 secs.
+[Sim 5] Complete.
+[Sim 49] Dim 9/9 (A=48) done in 50572.0 secs.
+[Sim 49] Complete.
+[Sim 43] Dim 9/9 (A=48) done in 53274.6 secs.
+[Sim 43] Complete.
+[Sim 33] Dim 9/9 (A=48) done in 51479.3 secs.
+[Sim 33] Complete.
+[Sim 6] Dim 9/9 (A=48) done in 53482.3 secs.
+[Sim 6] Complete.
+[Sim 15] Dim 9/9 (A=48) done in 53748.9 secs.
+[Sim 15] Complete.
+[Sim 9] Dim 9/9 (A=48) done in 53250.6 secs.
+[Sim 9] Complete.
+[Sim 32] Dim 9/9 (A=48) done in 53542.9 secs.
+[Sim 32] Complete.
+[Sim 34] Dim 9/9 (A=48) done in 54871.5 secs.
+[Sim 34] Complete.
+[Sim 3] Dim 9/9 (A=48) done in 52391.5 secs.
+[Sim 3] Complete.
+[Sim 16] Dim 9/9 (A=48) done in 56170.5 secs.
+[Sim 16] Complete.
+[Sim 26] Dim 9/9 (A=48) done in 52225.9 secs.
+[Sim 26] Complete.
+[Sim 36] Dim 9/9 (A=48) done in 56226.2 secs.
+[Sim 36] Complete.
+[Sim 27] Dim 9/9 (A=48) done in 53031.1 secs.
+[Sim 27] Complete.
+[Sim 14] Dim 9/9 (A=48) done in 53403.5 secs.
+[Sim 14] Complete.
+[Sim 13] Dim 9/9 (A=48) done in 54833.4 secs.
+[Sim 13] Complete.
+[Sim 46] Dim 9/9 (A=48) done in 55706.5 secs.
+[Sim 46] Complete.
+[Covariance: car95] Complete.
+[Covariance: car75] Started.
+[Sim 1] Started.
+[Sim 2] Started.
+[Sim 3] Started.
+[Sim 4] Started.
+[Sim 5] Started.
+[Sim 6] Started.
+[Sim 7] Started.
+[Sim 8] Started.
+[Sim 9] Started.
+[Sim 10] Started.
+[Sim 11] Started.
+[Sim 12] Started.
+[Sim 13] Started.
+[Sim 14] Started.
+[Sim 15] Started.
+[Sim 16] Started.
+[Sim 17] Started.
+[Sim 18] Started.
+[Sim 19] Started.
+[Sim 20] Started.
+[Sim 21] Started.
+[Sim 22] Started.
+[Sim 23] Started.
+[Sim 24] Started.
+[Sim 25] Started.
+[Sim 26] Started.
+[Sim 27] Started.
+[Sim 28] Started.
+[Sim 29] Started.
+[Sim 30] Started.
+[Sim 31] Started.
+[Sim 32] Started.
+[Sim 33] Started.
+[Sim 34] Started.
+[Sim 35] Started.
+[Sim 36] Started.
+[Sim 37] Started.
+[Sim 38] Started.
+[Sim 39] Started.
+[Sim 40] Started.
+[Sim 41] Started.
+[Sim 42] Started.
+[Sim 43] Started.
+[Sim 44] Started.
+[Sim 45] Started.
+[Sim 46] Started.
+[Sim 47] Started.
+[Sim 48] Started.
+[Sim 49] Started.
+[Sim 50] Started.
+[Sim 14] Dim 1/9 (A=2) done in 176.8 secs.
+[Sim 32] Dim 1/9 (A=2) done in 203.2 secs.
+[Sim 9] Dim 1/9 (A=2) done in 231.9 secs.
+[Sim 48] Dim 1/9 (A=2) done in 215.2 secs.
+[Sim 24] Dim 1/9 (A=2) done in 251.4 secs.
+[Sim 26] Dim 1/9 (A=2) done in 266.1 secs.
+[Sim 45] Dim 1/9 (A=2) done in 259.5 secs.
+[Sim 37] Dim 1/9 (A=2) done in 291.6 secs.
+[Sim 16] Dim 1/9 (A=2) done in 308.6 secs.
+[Sim 50] Dim 1/9 (A=2) done in 290.2 secs.
+[Sim 44] Dim 1/9 (A=2) done in 293.9 secs.
+[Sim 2] Dim 1/9 (A=2) done in 326.6 secs.
+[Sim 17] Dim 1/9 (A=2) done in 317.4 secs.
+[Sim 27] Dim 1/9 (A=2) done in 344.3 secs.
+[Sim 1] Dim 1/9 (A=2) done in 372.4 secs.
+[Sim 34] Dim 1/9 (A=2) done in 347.2 secs.
+[Sim 18] Dim 1/9 (A=2) done in 373.1 secs.
+[Sim 6] Dim 1/9 (A=2) done in 390.2 secs.
+[Sim 8] Dim 1/9 (A=2) done in 396.1 secs.
+[Sim 36] Dim 1/9 (A=2) done in 380.2 secs.
+[Sim 28] Dim 1/9 (A=2) done in 398.1 secs.
+[Sim 20] Dim 1/9 (A=2) done in 406.2 secs.
+[Sim 15] Dim 1/9 (A=2) done in 413.2 secs.
+[Sim 33] Dim 1/9 (A=2) done in 414.0 secs.
+[Sim 43] Dim 1/9 (A=2) done in 414.4 secs.
+[Sim 31] Dim 1/9 (A=2) done in 426.8 secs.
+[Sim 49] Dim 1/9 (A=2) done in 425.6 secs.
+[Sim 4] Dim 1/9 (A=2) done in 463.7 secs.
+[Sim 11] Dim 1/9 (A=2) done in 467.8 secs.
+[Sim 46] Dim 1/9 (A=2) done in 445.0 secs.
+[Sim 21] Dim 1/9 (A=2) done in 466.3 secs.
+[Sim 35] Dim 1/9 (A=2) done in 463.0 secs.
+[Sim 13] Dim 1/9 (A=2) done in 481.0 secs.
+[Sim 5] Dim 1/9 (A=2) done in 500.6 secs.
+[Sim 39] Dim 1/9 (A=2) done in 484.3 secs.
+[Sim 47] Dim 1/9 (A=2) done in 480.6 secs.
+[Sim 22] Dim 1/9 (A=2) done in 505.0 secs.
+[Sim 41] Dim 1/9 (A=2) done in 495.6 secs.
+[Sim 38] Dim 1/9 (A=2) done in 516.2 secs.
+[Sim 14] Dim 2/9 (A=3) done in 378.5 secs.
+[Sim 48] Dim 2/9 (A=3) done in 330.5 secs.
+[Sim 7] Dim 1/9 (A=2) done in 574.7 secs.
+[Sim 23] Dim 1/9 (A=2) done in 570.0 secs.
+[Sim 25] Dim 1/9 (A=2) done in 572.3 secs.
+[Sim 17] Dim 2/9 (A=3) done in 274.7 secs.
+[Sim 12] Dim 1/9 (A=2) done in 602.6 secs.
+[Sim 19] Dim 1/9 (A=2) done in 608.2 secs.
+[Sim 30] Dim 1/9 (A=2) done in 607.6 secs.
+[Sim 31] Dim 2/9 (A=3) done in 204.1 secs.
+[Sim 40] Dim 1/9 (A=2) done in 630.8 secs.
+[Sim 45] Dim 2/9 (A=3) done in 376.8 secs.
+[Sim 36] Dim 2/9 (A=3) done in 263.3 secs.
+[Sim 50] Dim 2/9 (A=3) done in 346.8 secs.
+[Sim 42] Dim 1/9 (A=2) done in 658.8 secs.
+[Sim 16] Dim 2/9 (A=3) done in 395.7 secs.
+[Sim 26] Dim 2/9 (A=3) done in 439.0 secs.
+[Sim 34] Dim 2/9 (A=3) done in 367.1 secs.
+[Sim 6] Dim 2/9 (A=3) done in 356.0 secs.
+[Sim 44] Dim 2/9 (A=3) done in 454.3 secs.
+[Sim 27] Dim 2/9 (A=3) done in 445.5 secs.
+[Sim 39] Dim 2/9 (A=3) done in 303.0 secs.
+[Sim 3] Dim 1/9 (A=2) done in 814.2 secs.
+[Sim 48] Dim 3/9 (A=4) done in 239.2 secs.
+[Sim 13] Dim 2/9 (A=3) done in 329.5 secs.
+[Sim 2] Dim 2/9 (A=3) done in 503.5 secs.
+[Sim 43] Dim 2/9 (A=3) done in 389.3 secs.
+[Sim 4] Dim 2/9 (A=3) done in 380.6 secs.
+[Sim 32] Dim 2/9 (A=3) done in 619.2 secs.
+[Sim 7] Dim 2/9 (A=3) done in 273.0 secs.
+[Sim 21] Dim 2/9 (A=3) done in 383.0 secs.
+[Sim 20] Dim 2/9 (A=3) done in 456.0 secs.
+[Sim 29] Dim 1/9 (A=2) done in 864.6 secs.
+[Sim 47] Dim 2/9 (A=3) done in 375.7 secs.
+[Sim 41] Dim 2/9 (A=3) done in 372.0 secs.
+[Sim 49] Dim 2/9 (A=3) done in 437.7 secs.
+[Sim 46] Dim 2/9 (A=3) done in 431.9 secs.
+[Sim 24] Dim 2/9 (A=3) done in 642.8 secs.
+[Sim 32] Dim 3/9 (A=4) done in 90.2 secs.
+[Sim 40] Dim 2/9 (A=3) done in 286.1 secs.
+[Sim 8] Dim 2/9 (A=3) done in 546.0 secs.
+[Sim 45] Dim 3/9 (A=4) done in 290.1 secs.
+[Sim 50] Dim 3/9 (A=4) done in 291.0 secs.
+[Sim 36] Dim 3/9 (A=4) done in 310.3 secs.
+[Sim 25] Dim 2/9 (A=3) done in 395.9 secs.
+[Sim 28] Dim 2/9 (A=3) done in 571.9 secs.
+[Sim 31] Dim 3/9 (A=4) done in 339.8 secs.
+[Sim 12] Dim 2/9 (A=3) done in 406.8 secs.
+[Sim 1] Dim 2/9 (A=3) done in 648.9 secs.
+[Sim 11] Dim 2/9 (A=3) done in 556.3 secs.
+[Sim 38] Dim 2/9 (A=3) done in 488.8 secs.
+[Sim 9] Dim 2/9 (A=3) done in 802.9 secs.
+[Sim 16] Dim 3/9 (A=4) done in 326.0 secs.
+[Sim 18] Dim 2/9 (A=3) done in 657.0 secs.
+[Sim 6] Dim 3/9 (A=4) done in 304.3 secs.
+[Sim 37] Dim 2/9 (A=3) done in 743.0 secs.
+[Sim 42] Dim 2/9 (A=3) done in 416.8 secs.
+[Sim 10] Dim 1/9 (A=2) done in 1125.5 secs.
+[Sim 19] Dim 2/9 (A=3) done in 522.3 secs.
+[Sim 22] Dim 2/9 (A=3) done in 626.6 secs.
+[Sim 7] Dim 3/9 (A=4) done in 299.7 secs.
+[Sim 47] Dim 3/9 (A=4) done in 280.5 secs.
+[Sim 30] Dim 2/9 (A=3) done in 560.6 secs.
+[Sim 39] Dim 3/9 (A=4) done in 377.6 secs.
+[Sim 26] Dim 3/9 (A=4) done in 474.4 secs.
+[Sim 33] Dim 2/9 (A=3) done in 763.8 secs.
+[Sim 37] Dim 3/9 (A=4) done in 148.8 secs.
+[Sim 15] Dim 2/9 (A=3) done in 788.8 secs.
+[Sim 5] Dim 2/9 (A=3) done in 717.0 secs.
+[Sim 23] Dim 2/9 (A=3) done in 632.7 secs.
+[Sim 43] Dim 3/9 (A=4) done in 405.6 secs.
+[Sim 44] Dim 3/9 (A=4) done in 478.0 secs.
+[Sim 35] Dim 2/9 (A=3) done in 784.3 secs.
+[Sim 10] Dim 2/9 (A=3) done in 165.6 secs.
+[Sim 29] Dim 2/9 (A=3) done in 413.4 secs.
+[Sim 4] Dim 3/9 (A=4) done in 455.9 secs.
+[Sim 13] Dim 3/9 (A=4) done in 488.1 secs.
+[Sim 17] Dim 3/9 (A=4) done in 710.0 secs.
+[Sim 31] Dim 4/9 (A=6) done in 321.7 secs.
+[Sim 26] Dim 4/9 (A=6) done in 119.4 secs.
+[Sim 49] Dim 3/9 (A=4) done in 433.4 secs.
+[Sim 16] Dim 4/9 (A=6) done in 314.7 secs.
+[Sim 24] Dim 3/9 (A=4) done in 486.1 secs.
+[Sim 14] Dim 3/9 (A=4) done in 837.5 secs.
+[Sim 7] Dim 4/9 (A=6) done in 257.6 secs.
+[Sim 19] Dim 3/9 (A=4) done in 274.1 secs.
+[Sim 30] Dim 3/9 (A=4) done in 231.8 secs.
+[Sim 46] Dim 3/9 (A=4) done in 529.8 secs.
+[Sim 34] Dim 3/9 (A=4) done in 703.0 secs.
+[Sim 21] Dim 3/9 (A=4) done in 583.5 secs.
+[Sim 38] Dim 3/9 (A=4) done in 421.7 secs.
+[Sim 42] Dim 3/9 (A=4) done in 349.8 secs.
+[Sim 48] Dim 4/9 (A=6) done in 647.5 secs.
+[Sim 3] Dim 2/9 (A=3) done in 659.2 secs.
+[Sim 32] Dim 4/9 (A=6) done in 541.2 secs.
+[Sim 41] Dim 3/9 (A=4) done in 585.5 secs.
+[Sim 20] Dim 3/9 (A=4) done in 614.1 secs.
+[Sim 8] Dim 3/9 (A=4) done in 548.4 secs.
+[Sim 15] Dim 3/9 (A=4) done in 284.5 secs.
+[Sim 5] Dim 3/9 (A=4) done in 291.7 secs.
+[Sim 6] Dim 4/9 (A=6) done in 466.5 secs.
+[Sim 2] Dim 3/9 (A=4) done in 704.3 secs.
+[Sim 18] Dim 3/9 (A=4) done in 494.1 secs.
+[Sim 27] Dim 3/9 (A=4) done in 730.9 secs.
+[Sim 11] Dim 3/9 (A=4) done in 569.6 secs.
+[Sim 40] Dim 3/9 (A=4) done in 670.4 secs.
+[Sim 39] Dim 4/9 (A=6) done in 459.1 secs.
+[Sim 47] Dim 4/9 (A=6) done in 518.7 secs.
+[Sim 28] Dim 3/9 (A=4) done in 704.6 secs.
+[Sim 25] Dim 3/9 (A=4) done in 715.5 secs.
+[Sim 14] Dim 4/9 (A=6) done in 312.9 secs.
+[Sim 35] Dim 3/9 (A=4) done in 453.2 secs.
+[Sim 22] Dim 3/9 (A=4) done in 616.8 secs.
+[Sim 4] Dim 4/9 (A=6) done in 471.4 secs.
+[Sim 50] Dim 4/9 (A=6) done in 821.8 secs.
+[Sim 46] Dim 4/9 (A=6) done in 351.7 secs.
+[Sim 43] Dim 4/9 (A=6) done in 559.2 secs.
+[Sim 33] Dim 3/9 (A=4) done in 616.5 secs.
+[Sim 9] Dim 3/9 (A=4) done in 779.2 secs.
+[Sim 1] Dim 3/9 (A=4) done in 852.2 secs.
+[Sim 19] Dim 4/9 (A=6) done in 456.8 secs.
+[Sim 37] Dim 4/9 (A=6) done in 669.5 secs.
+[Sim 11] Dim 4/9 (A=6) done in 295.0 secs.
+[Sim 36] Dim 4/9 (A=6) done in 917.6 secs.
+[Sim 17] Dim 4/9 (A=6) done in 584.9 secs.
+[Sim 31] Dim 5/9 (A=8) done in 592.6 secs.
+[Sim 27] Dim 4/9 (A=6) done in 367.6 secs.
+[Sim 12] Dim 3/9 (A=4) done in 894.0 secs.
+[Sim 21] Dim 4/9 (A=6) done in 479.7 secs.
+[Sim 33] Dim 4/9 (A=6) done in 112.8 secs.
+[Sim 5] Dim 4/9 (A=6) done in 461.1 secs.
+[Sim 18] Dim 4/9 (A=6) done in 435.3 secs.
+[Sim 44] Dim 4/9 (A=6) done in 717.6 secs.
+[Sim 20] Dim 4/9 (A=6) done in 494.2 secs.
+[Sim 10] Dim 3/9 (A=4) done in 702.5 secs.
+[Sim 24] Dim 4/9 (A=6) done in 612.2 secs.
+[Sim 28] Dim 4/9 (A=6) done in 320.6 secs.
+[Sim 23] Dim 3/9 (A=4) done in 805.0 secs.
+[Sim 8] Dim 4/9 (A=6) done in 543.4 secs.
+[Sim 6] Dim 5/9 (A=8) done in 525.7 secs.
+[Sim 42] Dim 4/9 (A=6) done in 612.4 secs.
+[Sim 13] Dim 4/9 (A=6) done in 779.1 secs.
+[Sim 2] Dim 4/9 (A=6) done in 580.3 secs.
+[Sim 41] Dim 4/9 (A=6) done in 640.1 secs.
+[Sim 30] Dim 4/9 (A=6) done in 722.0 secs.
+[Sim 7] Dim 5/9 (A=8) done in 747.3 secs.
+[Sim 26] Dim 5/9 (A=8) done in 843.0 secs.
+[Sim 25] Dim 4/9 (A=6) done in 469.9 secs.
+[Sim 3] Dim 3/9 (A=4) done in 711.6 secs.
+[Sim 38] Dim 4/9 (A=6) done in 734.2 secs.
+[Sim 49] Dim 4/9 (A=6) done in 886.1 secs.
+[Sim 32] Dim 5/9 (A=8) done in 742.0 secs.
+[Sim 4] Dim 5/9 (A=8) done in 480.2 secs.
+[Sim 34] Dim 4/9 (A=6) done in 816.7 secs.
+[Sim 14] Dim 5/9 (A=8) done in 556.5 secs.
+[Sim 17] Dim 5/9 (A=8) done in 386.2 secs.
+[Sim 10] Dim 4/9 (A=6) done in 298.8 secs.
+[Sim 12] Dim 4/9 (A=6) done in 396.8 secs.
+[Sim 16] Dim 5/9 (A=8) done in 968.9 secs.
+[Sim 45] Dim 4/9 (A=6) done in 1391.2 secs.
+[Sim 48] Dim 5/9 (A=8) done in 897.1 secs.
+[Sim 40] Dim 4/9 (A=6) done in 771.1 secs.
+[Sim 39] Dim 5/9 (A=8) done in 761.8 secs.
+[Sim 50] Dim 5/9 (A=8) done in 640.4 secs.
+[Sim 20] Dim 5/9 (A=8) done in 439.4 secs.
+[Sim 29] Dim 3/9 (A=4) done in 1140.5 secs.
+[Sim 27] Dim 5/9 (A=8) done in 548.1 secs.
+[Sim 35] Dim 4/9 (A=6) done in 745.0 secs.
+[Sim 9] Dim 4/9 (A=6) done in 690.8 secs.
+[Sim 13] Dim 5/9 (A=8) done in 443.0 secs.
+[Sim 47] Dim 5/9 (A=8) done in 855.2 secs.
+[Sim 15] Dim 4/9 (A=6) done in 1048.6 secs.
+[Sim 28] Dim 5/9 (A=8) done in 536.1 secs.
+[Sim 2] Dim 5/9 (A=8) done in 448.5 secs.
+[Sim 43] Dim 5/9 (A=8) done in 778.9 secs.
+[Sim 22] Dim 4/9 (A=6) done in 840.0 secs.
+[Sim 44] Dim 5/9 (A=8) done in 635.0 secs.
+[Sim 19] Dim 5/9 (A=8) done in 750.8 secs.
+[Sim 8] Dim 5/9 (A=8) done in 598.2 secs.
+[Sim 41] Dim 5/9 (A=8) done in 523.5 secs.
+[Sim 36] Dim 5/9 (A=8) done in 757.1 secs.
+[Sim 42] Dim 5/9 (A=8) done in 599.3 secs.
+[Sim 3] Dim 4/9 (A=6) done in 480.4 secs.
+[Sim 21] Dim 5/9 (A=8) done in 741.2 secs.
+[Sim 34] Dim 5/9 (A=8) done in 416.2 secs.
+[Sim 5] Dim 5/9 (A=8) done in 722.6 secs.
+[Sim 24] Dim 5/9 (A=8) done in 687.4 secs.
+[Sim 37] Dim 5/9 (A=8) done in 820.2 secs.
+[Sim 46] Dim 5/9 (A=8) done in 940.9 secs.
+[Sim 31] Dim 6/9 (A=12) done in 839.8 secs.
+[Sim 1] Dim 4/9 (A=6) done in 885.0 secs.
+[Sim 38] Dim 5/9 (A=8) done in 629.5 secs.
+[Sim 6] Dim 6/9 (A=12) done in 834.4 secs.
+[Sim 18] Dim 5/9 (A=8) done in 923.2 secs.
+[Sim 33] Dim 5/9 (A=8) done in 991.4 secs.
+[Sim 23] Dim 4/9 (A=6) done in 919.4 secs.
+[Sim 45] Dim 5/9 (A=8) done in 618.0 secs.
+[Sim 3] Dim 5/9 (A=8) done in 317.8 secs.
+[Sim 11] Dim 5/9 (A=8) done in 1155.9 secs.
+[Sim 30] Dim 5/9 (A=8) done in 934.5 secs.
+[Sim 17] Dim 6/9 (A=12) done in 834.3 secs.
+[Sim 7] Dim 6/9 (A=12) done in 996.7 secs.
+[Sim 49] Dim 5/9 (A=8) done in 952.0 secs.
+[Sim 10] Dim 5/9 (A=8) done in 882.1 secs.
+[Sim 14] Dim 6/9 (A=12) done in 913.2 secs.
+[Sim 29] Dim 4/9 (A=6) done in 767.3 secs.
+[Sim 25] Dim 5/9 (A=8) done in 1039.9 secs.
+[Sim 35] Dim 5/9 (A=8) done in 763.8 secs.
+[Sim 12] Dim 5/9 (A=8) done in 946.9 secs.
+[Sim 26] Dim 6/9 (A=12) done in 1110.3 secs.
+[Sim 40] Dim 5/9 (A=8) done in 902.8 secs.
+[Sim 1] Dim 5/9 (A=8) done in 539.5 secs.
+[Sim 32] Dim 6/9 (A=12) done in 1165.1 secs.
+[Sim 9] Dim 5/9 (A=8) done in 900.0 secs.
+[Sim 50] Dim 6/9 (A=12) done in 1013.9 secs.
+[Sim 39] Dim 6/9 (A=12) done in 1050.3 secs.
+[Sim 22] Dim 5/9 (A=8) done in 875.2 secs.
+[Sim 43] Dim 6/9 (A=12) done in 903.3 secs.
+[Sim 16] Dim 6/9 (A=12) done in 1165.3 secs.
+[Sim 15] Dim 5/9 (A=8) done in 982.9 secs.
+[Sim 27] Dim 6/9 (A=12) done in 1081.7 secs.
+[Sim 4] Dim 6/9 (A=12) done in 1363.9 secs.
+[Sim 48] Dim 6/9 (A=12) done in 1280.4 secs.
+[Sim 41] Dim 6/9 (A=12) done in 1037.6 secs.
+[Sim 34] Dim 6/9 (A=12) done in 1029.4 secs.
+[Sim 36] Dim 6/9 (A=12) done in 1053.1 secs.
+[Sim 19] Dim 6/9 (A=12) done in 1116.2 secs.
+[Sim 44] Dim 6/9 (A=12) done in 1152.5 secs.
+[Sim 21] Dim 6/9 (A=12) done in 1126.4 secs.
+[Sim 13] Dim 6/9 (A=12) done in 1269.0 secs.
+[Sim 28] Dim 6/9 (A=12) done in 1249.0 secs.
+[Sim 8] Dim 6/9 (A=12) done in 1197.0 secs.
+[Sim 29] Dim 5/9 (A=8) done in 640.9 secs.
+[Sim 2] Dim 6/9 (A=12) done in 1292.5 secs.
+[Sim 37] Dim 6/9 (A=12) done in 1226.2 secs.
+[Sim 30] Dim 6/9 (A=12) done in 853.8 secs.
+[Sim 23] Dim 5/9 (A=8) done in 1002.4 secs.
+[Sim 38] Dim 6/9 (A=12) done in 1158.3 secs.
+[Sim 24] Dim 6/9 (A=12) done in 1297.9 secs.
+[Sim 20] Dim 6/9 (A=12) done in 1583.4 secs.
+[Sim 42] Dim 6/9 (A=12) done in 1359.8 secs.
+[Sim 33] Dim 6/9 (A=12) done in 1121.4 secs.
+[Sim 46] Dim 6/9 (A=12) done in 1361.8 secs.
+[Sim 5] Dim 6/9 (A=12) done in 1411.4 secs.
+[Sim 47] Dim 6/9 (A=12) done in 1576.9 secs.
+[Sim 49] Dim 6/9 (A=12) done in 1005.0 secs.
+[Sim 3] Dim 6/9 (A=12) done in 1226.0 secs.
+[Sim 18] Dim 6/9 (A=12) done in 1331.0 secs.
+[Sim 25] Dim 6/9 (A=12) done in 1022.4 secs.
+[Sim 10] Dim 6/9 (A=12) done in 1073.0 secs.
+[Sim 45] Dim 6/9 (A=12) done in 1472.4 secs.
+[Sim 40] Dim 6/9 (A=12) done in 1162.9 secs.
+[Sim 12] Dim 6/9 (A=12) done in 1243.6 secs.
+[Sim 22] Dim 6/9 (A=12) done in 1069.0 secs.
+[Sim 1] Dim 6/9 (A=12) done in 1262.8 secs.
+[Sim 9] Dim 6/9 (A=12) done in 1164.1 secs.
+[Sim 11] Dim 6/9 (A=12) done in 1540.7 secs.
+[Sim 6] Dim 7/9 (A=16) done in 1716.8 secs.
+[Sim 35] Dim 6/9 (A=12) done in 1375.0 secs.
+[Sim 15] Dim 6/9 (A=12) done in 1330.8 secs.
+[Sim 29] Dim 6/9 (A=12) done in 1069.9 secs.
+[Sim 31] Dim 7/9 (A=16) done in 2256.2 secs.
+[Sim 23] Dim 6/9 (A=12) done in 1290.9 secs.
+[Sim 14] Dim 7/9 (A=16) done in 2068.8 secs.
+[Sim 7] Dim 7/9 (A=16) done in 2473.1 secs.
+[Sim 32] Dim 7/9 (A=16) done in 2252.1 secs.
+[Sim 26] Dim 7/9 (A=16) done in 2407.6 secs.
+[Sim 17] Dim 7/9 (A=16) done in 2680.3 secs.
+[Sim 19] Dim 7/9 (A=16) done in 2173.0 secs.
+[Sim 48] Dim 7/9 (A=16) done in 2351.0 secs.
+[Sim 16] Dim 7/9 (A=16) done in 2538.7 secs.
+[Sim 34] Dim 7/9 (A=16) done in 2478.0 secs.
+[Sim 36] Dim 7/9 (A=16) done in 2479.6 secs.
+[Sim 5] Dim 7/9 (A=16) done in 2145.9 secs.
+[Sim 4] Dim 7/9 (A=16) done in 2773.5 secs.
+[Sim 8] Dim 7/9 (A=16) done in 2656.5 secs.
+[Sim 30] Dim 7/9 (A=16) done in 2628.2 secs.
+[Sim 38] Dim 7/9 (A=16) done in 2604.9 secs.
+[Sim 21] Dim 7/9 (A=16) done in 2851.2 secs.
+[Sim 24] Dim 7/9 (A=16) done in 2656.9 secs.
+[Sim 43] Dim 7/9 (A=16) done in 3182.1 secs.
+[Sim 41] Dim 7/9 (A=16) done in 2986.7 secs.
+[Sim 37] Dim 7/9 (A=16) done in 2781.7 secs.
+[Sim 44] Dim 7/9 (A=16) done in 2989.4 secs.
+[Sim 42] Dim 7/9 (A=16) done in 2737.8 secs.
+[Sim 27] Dim 7/9 (A=16) done in 3241.0 secs.
+[Sim 39] Dim 7/9 (A=16) done in 3378.5 secs.
+[Sim 20] Dim 7/9 (A=16) done in 2849.8 secs.
+[Sim 40] Dim 7/9 (A=16) done in 2423.5 secs.
+[Sim 13] Dim 7/9 (A=16) done in 3097.3 secs.
+[Sim 2] Dim 7/9 (A=16) done in 3042.6 secs.
+[Sim 47] Dim 7/9 (A=16) done in 2790.1 secs.
+[Sim 3] Dim 7/9 (A=16) done in 2709.1 secs.
+[Sim 50] Dim 7/9 (A=16) done in 3484.9 secs.
+[Sim 28] Dim 7/9 (A=16) done in 3135.8 secs.
+[Sim 46] Dim 7/9 (A=16) done in 2866.0 secs.
+[Sim 35] Dim 7/9 (A=16) done in 2386.6 secs.
+[Sim 49] Dim 7/9 (A=16) done in 2851.5 secs.
+[Sim 22] Dim 7/9 (A=16) done in 2797.3 secs.
+[Sim 33] Dim 7/9 (A=16) done in 3349.0 secs.
+[Sim 1] Dim 7/9 (A=16) done in 2912.9 secs.
+[Sim 18] Dim 7/9 (A=16) done in 3250.4 secs.
+[Sim 25] Dim 7/9 (A=16) done in 3288.4 secs.
+[Sim 9] Dim 7/9 (A=16) done in 2971.9 secs.
+[Sim 45] Dim 7/9 (A=16) done in 3191.4 secs.
+[Sim 15] Dim 7/9 (A=16) done in 2788.1 secs.
+[Sim 10] Dim 7/9 (A=16) done in 3490.6 secs.
+[Sim 29] Dim 7/9 (A=16) done in 3001.1 secs.
+[Sim 12] Dim 7/9 (A=16) done in 3471.1 secs.
+[Sim 11] Dim 7/9 (A=16) done in 3385.2 secs.
+[Sim 23] Dim 7/9 (A=16) done in 2789.3 secs.
+[Sim 6] Dim 8/9 (A=24) done in 8138.1 secs.
+[Sim 19] Dim 8/9 (A=24) done in 6948.0 secs.
+[Sim 16] Dim 8/9 (A=24) done in 7017.3 secs.
+[Sim 31] Dim 8/9 (A=24) done in 8161.6 secs.
+[Sim 13] Dim 8/9 (A=24) done in 6539.1 secs.
+[Sim 4] Dim 8/9 (A=24) done in 7152.9 secs.
+[Sim 2] Dim 8/9 (A=24) done in 6728.8 secs.
+[Sim 34] Dim 8/9 (A=24) done in 7701.1 secs.
+[Sim 38] Dim 8/9 (A=24) done in 7318.0 secs.
+[Sim 8] Dim 8/9 (A=24) done in 7588.5 secs.
+[Sim 32] Dim 8/9 (A=24) done in 8817.4 secs.
+[Sim 39] Dim 8/9 (A=24) done in 7714.0 secs.
+[Sim 14] Dim 8/9 (A=24) done in 9339.6 secs.
+[Sim 21] Dim 8/9 (A=24) done in 8036.2 secs.
+[Sim 7] Dim 8/9 (A=24) done in 9207.2 secs.
+[Sim 3] Dim 8/9 (A=24) done in 7917.2 secs.
+[Sim 28] Dim 8/9 (A=24) done in 8117.0 secs.
+[Sim 30] Dim 8/9 (A=24) done in 8511.9 secs.
+[Sim 41] Dim 8/9 (A=24) done in 8707.3 secs.
+[Sim 17] Dim 8/9 (A=24) done in 9612.4 secs.
+[Sim 49] Dim 8/9 (A=24) done in 8409.6 secs.
+[Sim 24] Dim 8/9 (A=24) done in 8815.8 secs.
+[Sim 48] Dim 8/9 (A=24) done in 9578.4 secs.
+[Sim 26] Dim 8/9 (A=24) done in 10185.8 secs.
+[Sim 27] Dim 8/9 (A=24) done in 9205.5 secs.
+[Sim 50] Dim 8/9 (A=24) done in 9091.2 secs.
+[Sim 47] Dim 8/9 (A=24) done in 9222.9 secs.
+[Sim 5] Dim 8/9 (A=24) done in 9955.5 secs.
+[Sim 45] Dim 8/9 (A=24) done in 8600.8 secs.
+[Sim 22] Dim 8/9 (A=24) done in 8905.8 secs.
+[Sim 42] Dim 8/9 (A=24) done in 9516.4 secs.
+[Sim 15] Dim 8/9 (A=24) done in 8877.9 secs.
+[Sim 36] Dim 8/9 (A=24) done in 10394.4 secs.
+[Sim 37] Dim 8/9 (A=24) done in 9880.0 secs.
+[Sim 25] Dim 8/9 (A=24) done in 9065.4 secs.
+[Sim 33] Dim 8/9 (A=24) done in 9366.5 secs.
+[Sim 11] Dim 8/9 (A=24) done in 8883.4 secs.
+[Sim 29] Dim 8/9 (A=24) done in 9115.4 secs.
+[Sim 20] Dim 8/9 (A=24) done in 10193.1 secs.
+[Sim 18] Dim 8/9 (A=24) done in 9688.8 secs.
+[Sim 35] Dim 8/9 (A=24) done in 10183.2 secs.
+[Sim 9] Dim 8/9 (A=24) done in 9725.9 secs.
+[Sim 46] Dim 8/9 (A=24) done in 10400.5 secs.
+[Sim 1] Dim 8/9 (A=24) done in 9975.2 secs.
+[Sim 43] Dim 8/9 (A=24) done in 10832.4 secs.
+[Sim 23] Dim 8/9 (A=24) done in 9577.0 secs.
+[Sim 44] Dim 8/9 (A=24) done in 11472.8 secs.
+[Sim 10] Dim 8/9 (A=24) done in 10558.8 secs.
+[Sim 12] Dim 8/9 (A=24) done in 10563.1 secs.
+[Sim 40] Dim 8/9 (A=24) done in 11799.7 secs.
+[Sim 3] Dim 9/9 (A=48) done in 37049.0 secs.
+[Sim 3] Complete.
+[Sim 21] Dim 9/9 (A=48) done in 38977.8 secs.
+[Sim 21] Complete.
+[Sim 27] Dim 9/9 (A=48) done in 39095.7 secs.
+[Sim 27] Complete.
+[Sim 5] Dim 9/9 (A=48) done in 40567.8 secs.
+[Sim 5] Complete.
+[Sim 43] Dim 9/9 (A=48) done in 39357.7 secs.
+[Sim 43] Complete.
+[Sim 38] Dim 9/9 (A=48) done in 43243.1 secs.
+[Sim 38] Complete.
+[Sim 41] Dim 9/9 (A=48) done in 42507.7 secs.
+[Sim 41] Complete.
+[Sim 17] Dim 9/9 (A=48) done in 43865.1 secs.
+[Sim 17] Complete.
+[Sim 39] Dim 9/9 (A=48) done in 45159.0 secs.
+[Sim 39] Complete.
+[Sim 49] Dim 9/9 (A=48) done in 44673.8 secs.
+[Sim 49] Complete.
+[Sim 26] Dim 9/9 (A=48) done in 44278.6 secs.
+[Sim 26] Complete.
+[Sim 42] Dim 9/9 (A=48) done in 43867.9 secs.
+[Sim 42] Complete.
+[Sim 35] Dim 9/9 (A=48) done in 43085.5 secs.
+[Sim 35] Complete.
+[Sim 4] Dim 9/9 (A=48) done in 47152.6 secs.
+[Sim 4] Complete.
+[Sim 25] Dim 9/9 (A=48) done in 44669.0 secs.
+[Sim 25] Complete.
+[Sim 16] Dim 9/9 (A=48) done in 50014.9 secs.
+[Sim 16] Complete.
+[Sim 23] Dim 9/9 (A=48) done in 45834.4 secs.
+[Sim 23] Complete.
+[Sim 22] Dim 9/9 (A=48) done in 47391.5 secs.
+[Sim 22] Complete.
+[Sim 37] Dim 9/9 (A=48) done in 47108.3 secs.
+[Sim 37] Complete.
+[Sim 33] Dim 9/9 (A=48) done in 47037.6 secs.
+[Sim 33] Complete.
+[Sim 47] Dim 9/9 (A=48) done in 48257.8 secs.
+[Sim 47] Complete.
+[Sim 24] Dim 9/9 (A=48) done in 49138.2 secs.
+[Sim 24] Complete.
+[Sim 12] Dim 9/9 (A=48) done in 46578.2 secs.
+[Sim 12] Complete.
+[Sim 34] Dim 9/9 (A=48) done in 51282.3 secs.
+[Sim 34] Complete.
+[Sim 1] Dim 9/9 (A=48) done in 47765.9 secs.
+[Sim 1] Complete.
+[Sim 15] Dim 9/9 (A=48) done in 49292.0 secs.
+[Sim 15] Complete.
+[Sim 2] Dim 9/9 (A=48) done in 52230.0 secs.
+[Sim 2] Complete.
+[Sim 7] Dim 9/9 (A=48) done in 51239.8 secs.
+[Sim 7] Complete.
+[Sim 10] Dim 9/9 (A=48) done in 48683.0 secs.
+[Sim 10] Complete.
+[Sim 32] Dim 9/9 (A=48) done in 52800.5 secs.
+[Sim 32] Complete.
+[Sim 36] Dim 9/9 (A=48) done in 50673.6 secs.
+[Sim 36] Complete.
+[Sim 14] Dim 9/9 (A=48) done in 52663.5 secs.
+[Sim 14] Complete.
+[Sim 20] Dim 9/9 (A=48) done in 50257.1 secs.
+[Sim 20] Complete.
+[Sim 50] Dim 9/9 (A=48) done in 51317.6 secs.
+[Sim 50] Complete.
+[Sim 30] Dim 9/9 (A=48) done in 52328.0 secs.
+[Sim 30] Complete.
+[Sim 13] Dim 9/9 (A=48) done in 54005.1 secs.
+[Sim 13] Complete.
+[Sim 48] Dim 9/9 (A=48) done in 52544.3 secs.
+[Sim 48] Complete.
+[Sim 29] Dim 9/9 (A=48) done in 51107.5 secs.
+[Sim 29] Complete.
+[Sim 45] Dim 9/9 (A=48) done in 51941.1 secs.
+[Sim 45] Complete.
+[Sim 19] Dim 9/9 (A=48) done in 55393.7 secs.
+[Sim 19] Complete.
+[Sim 40] Dim 9/9 (A=48) done in 49733.1 secs.
+[Sim 40] Complete.
+[Sim 18] Dim 9/9 (A=48) done in 51248.9 secs.
+[Sim 18] Complete.
+[Sim 8] Dim 9/9 (A=48) done in 54544.6 secs.
+[Sim 8] Complete.
+[Sim 11] Dim 9/9 (A=48) done in 51825.9 secs.
+[Sim 11] Complete.
+[Sim 6] Dim 9/9 (A=48) done in 56020.3 secs.
+[Sim 6] Complete.
+[Sim 44] Dim 9/9 (A=48) done in 50811.6 secs.
+[Sim 44] Complete.
+[Sim 31] Dim 9/9 (A=48) done in 56022.8 secs.
+[Sim 31] Complete.
+[Sim 28] Dim 9/9 (A=48) done in 54667.7 secs.
+[Sim 28] Complete.
+[Sim 46] Dim 9/9 (A=48) done in 52414.8 secs.
+[Sim 46] Complete.
+[Sim 9] Dim 9/9 (A=48) done in 53454.3 secs.
+[Sim 9] Complete.
+[Covariance: car75] Complete.
+Total Elapsed Time: 2.40948690250516
+End Time: 21:42:16

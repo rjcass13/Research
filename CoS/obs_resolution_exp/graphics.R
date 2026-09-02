@@ -1,4 +1,6 @@
 library(dplyr)
+source("funcs.R")
+library(fields)
 dt <- read.csv('square_48_sims_100.csv')
 
 dt_agg <- dt %>%
@@ -29,3 +31,5 @@ plot(dt_agg$A_W, dt_agg$mean_nu)
 abline(h = dt_agg$mean_true_nu, col = 'blue')
 
 plot(dt_agg$A_W, dt_agg$var_est_nu)
+
+
