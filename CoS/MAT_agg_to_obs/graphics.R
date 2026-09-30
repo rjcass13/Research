@@ -101,7 +101,7 @@ final_layout <- (
 ) + 
   plot_layout(ncol = 3, widths = c(0.1, 1, 1), heights = c(0.2, 1, 1, 1, .5)) + 
   plot_annotation(
-    title = "True Value Exploration: Generated at Latent",
+    title = "Matern Covariance: Generated at Latent",
     theme = theme(
       plot.title = element_text(
         hjust = 0.5,             # Centers the title
@@ -113,7 +113,7 @@ final_layout <- (
   )
 
 ggsave(
-  filename = "true_val_exp_gen_at_lat.png",
+  filename = "mat_agg_to_obs.png",
   plot = final_layout,
   width = 8,          # Width in inches (or cm / mm)
   height = 10,         # Height in inches

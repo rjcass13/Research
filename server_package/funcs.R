@@ -1,6 +1,7 @@
 #library(rSPDE)
 library(mvtnorm)
 library(parallel)
+library(spaMM)
 
 #####################
 # General Sim Funcs #
@@ -211,6 +212,118 @@ run_one_sim <- function(j, aerial_dims, latent_dims, K_vec, l_D, log_params, cho
       total_var
     )
     cat(sprintf("[Sim %d] Dim %d/%d (A=%d) done in %.1f secs.\n", j, i, length(aerial_dims), A, sim_duration),
+        file = progress_file, append = TRUE)
+  }
+  cat(sprintf("[Sim %d] Complete.\n", j), file = progress_file, append = TRUE)
+  sim_rows
+}
+
+as_spam_data <- function(y_obs, A) {
+  a_pts <- cbind(rep(1:A, A), rep(1:A, each = A))
+  data.frame(
+    x   = (a_pts[, 1] - 0.5) / A,
+    y   = (a_pts[, 2] - 0.5) / A,
+    obs = as.vector(y_obs)
+  )
+}
+
+test_true_vals_geo <- function(true_vals, n_sim, progress_file, log_params, aerial_dims, latent_dims, K_vec, l_D, cl) {
+  # True Data
+  sim_true_s2 <- true_vals[[1]]
+  sim_true_rho <- true_vals[[2]]
+  sim_true_nu <- true_vals[[3]]
+  sig_true <- mk_cov(sim_true_s2, sim_true_rho, sim_true_nu, l_D)
+  chol_true <- chol(sig_true)
+
+  cat(sprintf("[True Values: %g, %g, %g] Started.\n", sim_true_s2, sim_true_rho, sim_true_nu), file = progress_file, append = TRUE)
+  
+  clusterExport(cl, c("sig_true", "chol_true"),
+                envir = environment())
+
+  results_list <- parLapply(cl, 1:n_sim, run_one_sim_geo, 
+    aerial_dims = aerial_dims, latent_dims = latent_dims, 
+    K_vec = K_vec, l_D = l_D, log_params = log_params,
+    chol_true = chol_true, sim_true_s2 = sim_true_s2,
+    sim_true_rho = sim_true_rho, sim_true_nu = sim_true_nu,
+    progress_file = progress_file)
+  # Combine: each list element is a 9-row matrix; rbind all 50 → 450 rows
+  res <- as.data.frame(do.call(rbind, results_list))
+
+  cat(sprintf("[True Values: %g, %g, %g] Complete.\n", sim_true_s2, sim_true_rho, sim_true_nu), file = progress_file, append = TRUE)
+  res
+}
+
+run_one_sim_geo <- function(j, aerial_dims, latent_dims, K_vec, l_D, log_params, chol_true, sim_true_s2, sim_true_rho, sim_true_nu, progress_file) {
+  
+  cat(sprintf("[Sim %d] Started.\n", j), file = progress_file, append = TRUE)
+  
+  y_true <- as.vector(crossprod(chol_true, rnorm(nrow(chol_true))))
+
+  sim_rows <- matrix(NA, nrow = length(aerial_dims), ncol = 17)
+  for (i in seq_along(aerial_dims)) {
+    A <- aerial_dims[i]
+    L <- latent_dims[i]
+    max_dim <- A*L
+    K <- K_vec[[i]]
+
+    y_obs <- K %*% y_true
+
+    total_var <- var(y_obs)
+
+    # Do the normal fitting
+    man_sim_start_time <- Sys.time()
+    val <- optim(
+      log_params, mvnorm_lik,
+      method = "L-BFGS-B", lower = c(-10, -10, -10), upper = c(3, 3, 3),
+      y_block = y_obs, K = K, l_D = l_D, param_list = c(0, 0, 0)
+    )
+    man_sim_duration <- as.numeric(Sys.time() - man_sim_start_time, units = "secs")
+
+    # Do the geoR::likfit method
+    start_sig <- exp(log_params[1])
+    start_rho <- exp(log_params[2])
+    start_nu <- exp(log_params[3])
+    geo_sim_start_time <- Sys.time()
+    geo_obs <- as_spam_data(y_obs, A)
+    fit_spamm <- tryCatch(
+      spaMM::fitme(
+        obs ~ 1 + Matern(1 | x + y),
+        data   = geo_obs,
+        init   = list(lambda = start_sig, rho = 1/start_rho, nu = start_nu),
+        method = "REML"
+      ),
+      error = function(e) {
+        cat(sprintf("[Sim %d] spaMM error at A=%d: %s\n", j, A, conditionMessage(e)),
+            file = progress_file, append = TRUE)
+        NULL
+      }
+    )
+    if (is.null(fit_spamm)) {
+      spamm_s2  <- NA
+      spamm_rho <- NA
+      spamm_nu  <- NA
+    } else {
+      spamm_s2  <- fit_spamm$lambda[[1]]
+      spamm_rho <- 1 / fit_spamm$corrPars[[1]]$rho   # spaMM's rho = 1/range
+      spamm_nu  <- fit_spamm$corrPars[[1]]$nu
+    }
+    geo_sim_duration <- as.numeric(Sys.time() - geo_sim_start_time, units = "secs")
+
+    # Duration_man, Duration_geo, TotalPoints, 
+    # A_W, A_H, L_W, L_H, 
+    # true_s2, true_rho, true_nu, 
+    # est_s2_man, est_rho_man, est_nu_man, 
+    # est_s2_geo, est_rho_geo, est_nu_geo, 
+    # total_variance
+    sim_rows[i, ] <- c(
+      man_sim_duration, geo_sim_duration, max_dim^2, 
+      A, A, L, L,
+      sim_true_s2, sim_true_rho, sim_true_nu,
+      exp(val$par[1]), exp(val$par[2]), exp(val$par[3]),
+      spamm_s2, spamm_rho, spamm_nu,
+      total_var
+    )
+    cat(sprintf("[Sim %d] Dim %d/%d (A=%d) done in %.1f secs.\n", j, i, length(aerial_dims), A, man_sim_duration+geo_sim_duration),
         file = progress_file, append = TRUE)
   }
   cat(sprintf("[Sim %d] Complete.\n", j), file = progress_file, append = TRUE)
