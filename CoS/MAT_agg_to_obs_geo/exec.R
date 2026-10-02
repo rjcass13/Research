@@ -26,7 +26,7 @@ n_sim <- 50
 log_params <- log(c(1, 3, 1))
 
 # Initialize dimensions to test
-max_dim <- 48
+max_dim <- 24
 aerial_dims <- (2:max_dim)[max_dim %% (2:max_dim) == 0]
 latent_dims <- max_dim/aerial_dims
 l_D <- calc_latent_distance(max_dim, max_dim, 1, 1)
@@ -41,12 +41,33 @@ cl_pids <- clusterEvalQ(cl, Sys.getpid())
 clusterSetRNGStream(cl, 1337)
 clusterEvalQ(cl, { source("~/GitRepos/Research/CoS/funcs.R"); library(mvtnorm); library(spaMM) })
 
-# Run the simulation
-final_list <- apply(true_vals, 1, test_true_vals_geo, 
-  progress_file = progress_file, n_sim = n_sim, log_params = log_params,
-  aerial_dims = aerial_dims, latent_dims = latent_dims,
-  K_vec = K_vec, l_D = l_D, cl = cl)
+
+# Run the simulation with checkpointing
+checkpoint_file <- "checkpoint.rds"
+if (file.exists(checkpoint_file)) {
+  saved <- readRDS(checkpoint_file)
+  final_list <- saved$results
+  start_row <- saved$next_row
+  cat(sprintf("Resuming from parameter set %d\n", start_row))
+} else {
+  final_list <- vector("list", nrow(true_vals))
+  start_row <- 1
+}
+
+for (row_i in start_row:nrow(true_vals)) {
+  cat(sprintf("Starting parameter set %d/%d\n", row_i, nrow(true_vals)))
+  final_list[[row_i]] <- test_true_vals_geo(
+    true_vals[row_i, ],
+    progress_file = progress_file, n_sim = n_sim, log_params = log_params,
+    aerial_dims = aerial_dims, latent_dims = latent_dims,
+    K_vec = K_vec, l_D = l_D, cl = cl
+  )
+  # Save checkpoint and encourage GC
+  saveRDS(list(results = final_list, next_row = row_i + 1), checkpoint_file)
+  gc()
+}
 final_list <- as.data.frame(do.call(rbind, final_list))
+
 
 # Close Cluster
 on.exit({
