@@ -1,0 +1,150 @@
+%\documentclass[twocolumn]{article}\
+\documentclass{article}
+\usepackage{amsmath, amssymb, cancel, mathtools, bm}
+\usepackage[left=.5in, right=.5in, top=1in, bottom=1in]{geometry}
+\usepackage[most]{tcolorbox}
+\usepackage[skip=1em,indent=0pt]{parskip}
+\setlength{\parindent}{0pt}
+\newcommand{\svec}[1]{\underset{\sim}{\bm{#1}}} % Vector symbol (tilde under vector)
+\DeclareMathOperator{\EX}{\mathbb{E}} % Expected Value symbol
+\DeclareMathOperator{\ext}{\EX_{\theta}} % Expected Value symbol
+\DeclareMathOperator{\vart}{Var_{\theta}} % Expected Value symbol
+\newcommand{\indep}{\perp\!\!\!\!\perp} % Independence symbol
+\newcommand{\real}{\mathbb{R}} % Simplified 'Reals' indicator
+\newcommand{\pto}{\overset{P}{\to}}
+\newcommand{\asto}{\overset{a.s.}{\to}}
+\newcommand{\rthto}{\overset{L^r}{\to}}
+\newcommand{\dto}{\overset{D}{\to}}
+\newcommand{\xtb}{x^{\top}\svec{\beta}}
+\newcommand{\xitb}{x_i^{\top}\svec{\beta}}
+% Force all aggregate symbols to always put values above/below
+\let\Oldint=\int
+\let\Oldsum=\sum
+\let\Oldprod=\prod
+\let\Oldbigcup=\bigcup
+\let\Oldbigcap=\bigcap
+\let\Oldlim=\lim
+\renewcommand{\int}{\Oldint\limits} 
+\renewcommand{\sum}{\Oldsum\limits} 
+\renewcommand{\prod}{\Oldprod\limits} 
+\renewcommand{\bigcup}{\Oldbigcup\limits} 
+\renewcommand{\bigcap}{\Oldbigcap\limits} 
+\renewcommand{\lim}{\Oldlim\limits} 
+\newcommand{\infint}{\int_{-\infty}^{\infty}}
+\newcommand{\iiddist}{\overset{\mathrm{iid}}{\sim}}
+\newcommand{\inddist}{\overset{\mathrm{ind}}{\sim}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\boldred}[1]{\textbf{\textcolor{red}{#1}}}
+\usepackage[linktoc=all]{hyperref}
+
+
+
+\begin{document}
+
+\tableofcontents
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% New Terms %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{New Terms}
+
+\begin{itemize}
+    \item Spatial Confounding - There's the idea of 'do you get a different result if you include/exclude spatial component', but he described a more specific detail of looking at something with the X's
+    \item Latent State Models
+    \item Simpson's Paradox
+    \item Mahalanobis Distance
+    \item Balance (when referring to distances/similar X)
+    \item Gradient Boosting Regression - Performing boosting (fitting on the residuals) but using a specific gradient-based method
+    \item Kriging - Imputing/Interpolating spatial data based on surrounding info
+    \item Variogram
+    \item Euler Density
+    \item Discrepancy Matrix
+    \item Cross-Covariances
+    \item Predictive Process Covariance
+    \item Downscaling
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% Causal Inference %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Causal Inference}
+
+\subsection{Overview}
+
+Base concept of causality: in what situations can we say that the following is true:
+
+$$
+\EX[(Y_i(1) - Y_i(0))] \overset{?}{=} \EX[Y_i|Z_i=1, X_i = x] - \EX[Y_i|Z_1=0, X_i = x]
+$$
+
+Based on what we observe in the data (the right side), can we say that the difference between the observed outcomes is the same as the difference in outcome if the different treatements were applied to the same unit?
+
+Do we know what the 'ASsignment Mechanism" is? In a controlled experiment, we know how each unit gets their treatment. In observational studies, we usually don't. It could be that the 'natural' assignment mechanism assigns certain level of treatment to a group that is distinct from the non-treatment group, causing confounding.
+
+\subsection{Assumptions}
+
+Confounding: 
+
+To get this, we have to assume that we have measured all 'confounders'. ie. anything that could confound needs to be measured. This assumption is not something that can be empirically proven, but should be supported.
+
+Positivity: 
+
+All units have a positive probability (non-zero) of receiving the treatment
+
+\subsection{Distance}
+
+How similar sets of covariates are from others. Euclidean, Mahalanobis, Propensity
+
+Propensity: Probability of a certain treatment variable given the other covariates. $e_i(X_i) = e_i = P(Z_i = 1|X)$
+
+With this we can effectively remove the dependence on X and instead use the propensity, if the assumptions hold and $Z \indep (Y(0), Y(1)|X)$:
+
+$$
+\EX[(Y_i(1) - Y_i(0))|\hat{e}_i = e] \overset{?}{=} \EX[Y_i|Z_i=1, \hat{e}_i = e] - \EX[Y_i|Z_1=0, \hat{e}_i = e]
+$$
+
+It's just a means to an end, to see if we can get 'balance' on X
+
+\subsection{Restructure}
+
+Basically, you want to create similar groups in the data based on 'distance', then treat is as a blocked randomized experiment
+
+\underline{\textbf{Question}}: is this like clustering or something? Could you cluster just based on the Xs? Or does it require conditioning this on the effect on Z?
+
+
+\subsection{Process}
+
+He outlined an iterative process of trying to restructure, find balance in the covariates, then check diagnostics (ie. check the balance, etc.) DO NOT include anything with the response yet. This is purely looking at covariates. 
+
+Once you have iterated and gotten balance in Xs, assuming ignorability (confounding accounted for), then you can make estimation on response. 
+
+If the above process was followed, then the conclusions of the causal effects should be robust to the to the specific analysis strategy. 
+
+\subsection{Other stuff}
+
+General Spatial Model: $Y_i = \beta_Z Z_i + f(X_i, \beta) + \epsilon_i$
+
+\underline{\textbf{Question}}: Is this effectively a Mixed Model? Or does the function on the Xs exclude it/not fit in the framework of mixed models?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Geospatial Regression %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Spatial Regression}
+
+\subsection{Vecchia}
+
+Gaussian Process likelihood can be decomposed into the product of the likelihoods contribution from each point. If we basically 'truncate' the relationship to the nearest '$m$' neighbors $m<<n$, computation reduces from $O(n^3)$ to $O(nm^3)$.
+
+\underline{\textbf{APPLICATION}}: Speed up using \href{https://cran.r-project.org/web/packages/BRISC/index.html}{BRISC} R package for likelihood estimation. .8 seconds to get the estimation vs. 116 seconds using geoR. Uses Nearest-Neighbor Gaussian Process methods (NNGP).
+
+
+
+
+
+\end{document}
