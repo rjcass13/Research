@@ -1,0 +1,11 @@
+[Covariance: iCAR] Started.
+[Sim 1] Started.
+[Sim 7] Dim 1/9 (A=2) done in 220.9 secs.
+[Sim 29] Dim 1/9 (A=2) done in 220.9 secs.
+[Sim 1] Dim 1/9 (A=2) done in 250.8 secs.
+[Sim 23] Dim 1/9 (A=2) done in 281.5 secs.
+[Sim 40] Dim 1/9 (A=2) done in 282.1 secs.
+[Sim 45] Dim 1/9 (A=2) done in 1434.6 secs.
+[Sim 12] Dim 1/9 (A=2) done in 2052.1 secs.
+[Sim 1] Dim 1/9 (A=2) done in 2267.8 secs.
+[Sim 34] Dim 1/9 (A=2) done in 5459.8 secs.
