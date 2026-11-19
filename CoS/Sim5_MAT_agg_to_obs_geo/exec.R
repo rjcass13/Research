@@ -38,7 +38,6 @@ overall_start_time <- Sys.time()
 n_cores <- detectCores() - 1
 cl <- makeCluster(min(n_sim, n_cores))
 cl_pids <- clusterEvalQ(cl, Sys.getpid())
-clusterSetRNGStream(cl, 1337)
 clusterEvalQ(cl, { source("~/GitRepos/Research/CoS/funcs.R"); library(mvtnorm); library(spaMM) })
 
 
@@ -55,12 +54,13 @@ if (file.exists(checkpoint_file)) {
 }
 
 for (row_i in start_row:nrow(true_vals)) {
-  cat(sprintf("Starting parameter set %d/%d\n", row_i, nrow(true_vals)))
+  cat(sprintf("Starting parameter set %d/%d\n", row_i, nrow(true_vals)), file = progress_file, append = TRUE)
   final_list[[row_i]] <- test_true_vals_geo(
     true_vals[row_i, ],
     progress_file = progress_file, n_sim = n_sim, log_params = log_params,
     aerial_dims = aerial_dims, latent_dims = latent_dims,
-    K_vec = K_vec, l_D = l_D, cl = cl
+    K_vec = K_vec, l_D = l_D, cl = cl,
+    base_seed = row_i * 100000
   )
   # Save checkpoint and encourage GC
   saveRDS(list(results = final_list, next_row = row_i + 1), checkpoint_file)
@@ -81,7 +81,8 @@ colnames(final_list) <- c(
   "true_s2", "true_rho", "true_nu", 
   "est_s2_man", "est_rho_man", "est_nu_man",
   "est_s2_geo", "est_rho_geo", "est_nu_geo",
-  "total_var"
+  "hit_s2_geo", "hit_rho_geo", "hit_nu_geo",
+  "total_var", "seed"
 )
 write.csv(final_list, "square_48_sims_1_test.csv", row.names = FALSE)
 

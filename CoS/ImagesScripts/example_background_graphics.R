@@ -88,6 +88,7 @@ p3 <- ggplot(single_unit[-1,], aes(x = x, y = y)) +
 # Combined using patchwork:
 combined_plot_stacked <- p1 / p2 / p3
 combined_plot_square <- (p1 | p2) / (p3 | plot_spacer())
+combined_plot_horiztonal <- p1 + p2 + p3
 
 ggsave(
   filename = "areal_grid.png", 
@@ -117,6 +118,12 @@ ggsave(
   filename = "areal_latent_plots_stacked.png", 
   plot = combined_plot_stacked, 
   width = 5, height = 15, units = "in", dpi = 300
+)
+
+ggsave(
+  filename = "areal_latent_plots_horizontal.png", 
+  plot = combined_plot_horiztonal, 
+  width = 15, height = 5, units = "in", dpi = 300
 )
 
 # =========================================================================

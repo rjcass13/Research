@@ -227,7 +227,12 @@ as_spam_data <- function(y_obs, A) {
   )
 }
 
-test_true_vals_geo <- function(true_vals, n_sim, progress_file, log_params, aerial_dims, latent_dims, K_vec, l_D, cl) {
+# TRUE if x is within tol (log scale) of either bound
+near_bound <- function(x, lo, hi, tol = 1e-3) {
+  abs(log(x) - log(lo)) < tol | abs(log(x) - log(hi)) < tol
+}
+
+test_true_vals_geo <- function(true_vals, n_sim, progress_file, log_params, aerial_dims, latent_dims, K_vec, l_D, cl, base_seed) {
   # True Data
   sim_true_s2 <- true_vals[[1]]
   sim_true_rho <- true_vals[[2]]
@@ -240,7 +245,10 @@ test_true_vals_geo <- function(true_vals, n_sim, progress_file, log_params, aeri
   clusterExport(cl, c("sig_true", "chol_true"),
                 envir = environment())
 
+  seeds <- base_seed + seq_len(n_sim)
+  
   results_list <- parLapply(cl, 1:n_sim, run_one_sim_geo, 
+    seeds = seeds,
     aerial_dims = aerial_dims, latent_dims = latent_dims, 
     K_vec = K_vec, l_D = l_D, log_params = log_params,
     chol_true = chol_true, sim_true_s2 = sim_true_s2,
@@ -253,13 +261,15 @@ test_true_vals_geo <- function(true_vals, n_sim, progress_file, log_params, aeri
   res
 }
 
-run_one_sim_geo <- function(j, aerial_dims, latent_dims, K_vec, l_D, log_params, chol_true, sim_true_s2, sim_true_rho, sim_true_nu, progress_file) {
+run_one_sim_geo <- function(j, seeds, aerial_dims, latent_dims, K_vec, l_D, log_params, chol_true, sim_true_s2, sim_true_rho, sim_true_nu, progress_file) {
   
   cat(sprintf("[Sim %d] Started.\n", j), file = progress_file, append = TRUE)
+
+  set.seed(seeds[j])
   
   y_true <- as.vector(crossprod(chol_true, rnorm(nrow(chol_true))))
 
-  sim_rows <- matrix(NA, nrow = length(aerial_dims), ncol = 17)
+  sim_rows <- matrix(NA, nrow = length(aerial_dims), ncol = 21)
   for (i in seq_along(aerial_dims)) {
     A <- aerial_dims[i]
     L <- latent_dims[i]
@@ -279,18 +289,26 @@ run_one_sim_geo <- function(j, aerial_dims, latent_dims, K_vec, l_D, log_params,
     )
     man_sim_duration <- as.numeric(Sys.time() - man_sim_start_time, units = "secs")
 
-    # Do the geoR::likfit method
+    # Do the spaMM::fitme method
     start_sig <- exp(log_params[1])
     start_rho <- exp(log_params[2])
     start_nu <- exp(log_params[3])
     geo_sim_start_time <- Sys.time()
     geo_obs <- as_spam_data(y_obs, A)
+    low_lim <- exp(-10)
+    upr_lim <- exp(3)
+    # Finite cap: very large rho makes spaMM's Matern evaluate to NaN
+    rho_lo <- sqrt(2 * low_lim) / upr_lim
+    rho_hi <- 100
     fit_spamm <- tryCatch(
       spaMM::fitme(
-        obs ~ 1 + Matern(1 | x + y),
+        obs ~ 0 + Matern(1 | x + y),
         data   = geo_obs,
-        init   = list(lambda = start_sig, rho = 1/start_rho, nu = start_nu),
-        method = "REML"
+        init   = list(lambda = start_sig, rho = sqrt(2 * start_nu)/start_rho, nu = start_nu),
+        fixed = list(phi = 1e-6),
+        lower = list(lambda = low_lim, nu = low_lim, rho = rho_lo),
+        upper  = list(lambda = upr_lim, nu = upr_lim, rho = rho_hi),
+        method = "ML"
       ),
       error = function(e) {
         cat(sprintf("[Sim %d] spaMM error at A=%d: %s\n", j, A, conditionMessage(e)),
@@ -302,10 +320,14 @@ run_one_sim_geo <- function(j, aerial_dims, latent_dims, K_vec, l_D, log_params,
       spamm_s2  <- NA
       spamm_rho <- NA
       spamm_nu  <- NA
+      hit_s2 <- hit_rho <- hit_nu <- NA
     } else {
       spamm_s2  <- fit_spamm$lambda[[1]]
-      spamm_rho <- 1 / fit_spamm$corrPars[[1]]$rho   # spaMM's rho = 1/range
       spamm_nu  <- fit_spamm$corrPars[[1]]$nu
+      spamm_rho <- sqrt(2 * spamm_nu) / fit_spamm$corrPars[[1]]$rho   # spaMM's rho = sqrt(2 nu)/range
+      hit_s2  <- near_bound(spamm_s2, low_lim, upr_lim)
+      hit_nu  <- near_bound(spamm_nu, low_lim, upr_lim)
+      hit_rho <- near_bound(fit_spamm$corrPars[[1]]$rho, rho_lo, rho_hi)
     }
     geo_sim_duration <- as.numeric(Sys.time() - geo_sim_start_time, units = "secs")
 
@@ -314,6 +336,7 @@ run_one_sim_geo <- function(j, aerial_dims, latent_dims, K_vec, l_D, log_params,
     # true_s2, true_rho, true_nu, 
     # est_s2_man, est_rho_man, est_nu_man, 
     # est_s2_geo, est_rho_geo, est_nu_geo, 
+    # hit_s2_geo, hit_rho_geo, hit_nu_geo (1 = estimate at a bound),
     # total_variance
     sim_rows[i, ] <- c(
       man_sim_duration, geo_sim_duration, max_dim^2, 
@@ -321,7 +344,8 @@ run_one_sim_geo <- function(j, aerial_dims, latent_dims, K_vec, l_D, log_params,
       sim_true_s2, sim_true_rho, sim_true_nu,
       exp(val$par[1]), exp(val$par[2]), exp(val$par[3]),
       spamm_s2, spamm_rho, spamm_nu,
-      total_var
+      hit_s2, hit_rho, hit_nu,
+      total_var, seed = seeds[j]
     )
     cat(sprintf("[Sim %d] Dim %d/%d (A=%d) done in %.1f secs.\n", j, i, length(aerial_dims), A, man_sim_duration+geo_sim_duration),
         file = progress_file, append = TRUE)
